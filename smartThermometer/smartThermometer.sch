@@ -10413,7 +10413,7 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 <instance part="TP3" gate="G$1" x="25.4" y="73.66" rot="R90"/>
 <instance part="TP4" gate="G$1" x="27.94" y="76.2" rot="R90"/>
 <instance part="JP3" gate="A" x="203.2" y="-25.4"/>
-<instance part="+3V18" gate="G$1" x="172.72" y="-10.16"/>
+<instance part="+3V18" gate="G$1" x="175.26" y="-10.16"/>
 <instance part="GND36" gate="1" x="223.52" y="-40.64"/>
 <instance part="R24" gate="G$1" x="259.08" y="0" rot="R90"/>
 <instance part="+3V19" gate="G$1" x="259.08" y="10.16"/>
@@ -10818,12 +10818,12 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 <segment>
 <pinref part="JP3" gate="A" pin="VCC"/>
 <pinref part="+3V18" gate="G$1" pin="+3V3"/>
-<wire x1="182.88" y1="-35.56" x2="172.72" y2="-35.56" width="0.1524" layer="91"/>
-<wire x1="172.72" y1="-35.56" x2="172.72" y2="-15.24" width="0.1524" layer="91"/>
+<wire x1="182.88" y1="-35.56" x2="175.26" y2="-35.56" width="0.1524" layer="91"/>
+<wire x1="175.26" y1="-35.56" x2="175.26" y2="-15.24" width="0.1524" layer="91"/>
 <pinref part="JP3" gate="A" pin="VDD"/>
-<wire x1="172.72" y1="-15.24" x2="172.72" y2="-12.7" width="0.1524" layer="91"/>
-<wire x1="182.88" y1="-15.24" x2="172.72" y2="-15.24" width="0.1524" layer="91"/>
-<junction x="172.72" y="-15.24"/>
+<wire x1="175.26" y1="-15.24" x2="175.26" y2="-12.7" width="0.1524" layer="91"/>
+<wire x1="182.88" y1="-15.24" x2="175.26" y2="-15.24" width="0.1524" layer="91"/>
+<junction x="175.26" y="-15.24"/>
 </segment>
 <segment>
 <pinref part="R24" gate="G$1" pin="2"/>

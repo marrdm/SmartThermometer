@@ -10380,13 +10380,6 @@ EAGLE CAD Libraries on element14&lt;/a&gt;</description>
 <label x="15.24" y="144.78" size="1.778" layer="95"/>
 </segment>
 </net>
-<net name="CBUS0" class="0">
-<segment>
-<pinref part="IC2" gate="1" pin="CBUS0"/>
-<wire x1="7.62" y1="137.16" x2="15.24" y2="137.16" width="0.1524" layer="91"/>
-<label x="7.62" y="137.16" size="1.778" layer="95"/>
-</segment>
-</net>
 <net name="N$1" class="0">
 <segment>
 <pinref part="X2" gate="G$1" pin="2"/>
