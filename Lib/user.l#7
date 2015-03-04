@@ -127,10 +127,10 @@
 <text x="-4" y="1" size="1.27" layer="27">&gt;VALUE</text>
 </package>
 <package name="LED-RGB-EVERLIGHT">
-<smd name="4" x="-2.5" y="0.725" dx="1.8" dy="0.75" layer="1"/>
-<smd name="1" x="2.5" y="0.725" dx="1.8" dy="0.75" layer="1"/>
-<smd name="2" x="2.5" y="-0.725" dx="1.8" dy="0.75" layer="1"/>
-<smd name="3" x="-2.5" y="-0.725" dx="1.8" dy="0.75" layer="1"/>
+<smd name="4" x="-1.7" y="0.725" dx="1.8" dy="0.75" layer="1"/>
+<smd name="1" x="1.7" y="0.725" dx="1.8" dy="0.75" layer="1"/>
+<smd name="2" x="1.7" y="-0.725" dx="1.8" dy="0.75" layer="1"/>
+<smd name="3" x="-1.7" y="-0.725" dx="1.8" dy="0.75" layer="1"/>
 <wire x1="-1.75" y1="1.1" x2="1.75" y2="1.1" width="0.127" layer="21"/>
 <wire x1="1.75" y1="1.1" x2="1.75" y2="-1.1" width="0.127" layer="21"/>
 <wire x1="1.75" y1="-1.1" x2="-1.75" y2="-1.1" width="0.127" layer="21"/>
@@ -238,6 +238,34 @@ Source: PCA9534_3.pdf</description>
 <rectangle x1="-1.0766" y1="2.1828" x2="-0.8734" y2="3.3" layer="51"/>
 <rectangle x1="-1.7266" y1="2.1828" x2="-1.5234" y2="3.3" layer="51"/>
 <rectangle x1="-2.3766" y1="2.1828" x2="-2.1734" y2="3.3" layer="51"/>
+</package>
+<package name="SSOP20">
+<smd name="P$1" x="-2.925" y="-3.375" dx="0.42" dy="1.25" layer="1"/>
+<smd name="P$2" x="-2.275" y="-3.375" dx="0.42" dy="1.25" layer="1"/>
+<smd name="P$3" x="-1.625" y="-3.375" dx="0.42" dy="1.25" layer="1"/>
+<smd name="P$4" x="-0.975" y="-3.375" dx="0.42" dy="1.25" layer="1"/>
+<smd name="P$5" x="-0.325" y="-3.375" dx="0.42" dy="1.25" layer="1"/>
+<smd name="P$6" x="0.325" y="-3.375" dx="0.42" dy="1.25" layer="1"/>
+<smd name="P$7" x="0.975" y="-3.375" dx="0.42" dy="1.25" layer="1"/>
+<smd name="P$8" x="1.625" y="-3.375" dx="0.42" dy="1.25" layer="1"/>
+<smd name="P$9" x="2.275" y="-3.375" dx="0.42" dy="1.25" layer="1"/>
+<smd name="P$10" x="2.925" y="-3.375" dx="0.42" dy="1.25" layer="1"/>
+<smd name="P$11" x="2.925" y="3.375" dx="0.42" dy="1.25" layer="1"/>
+<smd name="P$12" x="2.275" y="3.375" dx="0.42" dy="1.25" layer="1"/>
+<smd name="P$13" x="1.625" y="3.375" dx="0.42" dy="1.25" layer="1"/>
+<smd name="P$14" x="0.975" y="3.375" dx="0.42" dy="1.25" layer="1"/>
+<smd name="P$15" x="0.325" y="3.375" dx="0.42" dy="1.25" layer="1"/>
+<smd name="P$16" x="-0.325" y="3.375" dx="0.42" dy="1.25" layer="1"/>
+<smd name="P$17" x="-0.975" y="3.375" dx="0.42" dy="1.25" layer="1"/>
+<smd name="P$18" x="-1.625" y="3.375" dx="0.42" dy="1.25" layer="1"/>
+<smd name="P$19" x="-2.275" y="3.375" dx="0.42" dy="1.25" layer="1"/>
+<smd name="P$20" x="-2.925" y="3.375" dx="0.42" dy="1.25" layer="1"/>
+<wire x1="-5.325" y1="2.56" x2="5.325" y2="2.56" width="0.127" layer="21"/>
+<wire x1="5.325" y1="2.56" x2="5.325" y2="-2.56" width="0.127" layer="21"/>
+<wire x1="5.325" y1="-2.56" x2="-5.325" y2="-2.56" width="0.127" layer="21"/>
+<wire x1="-5.325" y1="-2.56" x2="-5.325" y2="2.56" width="0.127" layer="21"/>
+<text x="-3.75" y="0.75" size="1.27" layer="25">&gt;NAME</text>
+<text x="-3.75" y="-1.75" size="1.27" layer="27">&gt;VALUE</text>
 </package>
 </packages>
 <symbols>
@@ -386,6 +414,33 @@ Source: PCA9534_3.pdf</description>
 <pin name="S0" x="17.78" y="7.62" length="middle" rot="R180"/>
 <pin name="2OE#" x="17.78" y="12.7" length="middle" rot="R180"/>
 <pin name="VCC" x="17.78" y="17.78" length="middle" rot="R180"/>
+</symbol>
+<symbol name="FT321XS">
+<pin name="RXD" x="22.86" y="22.86" length="middle" rot="R180"/>
+<pin name="RI#" x="22.86" y="-12.7" length="middle" rot="R180"/>
+<pin name="DSR#" x="22.86" y="-2.54" length="middle" rot="R180"/>
+<pin name="DCD#" x="22.86" y="-7.62" length="middle" rot="R180"/>
+<pin name="CTS#" x="22.86" y="7.62" length="middle" rot="R180"/>
+<pin name="CBUS2" x="-22.86" y="-17.78" length="middle"/>
+<pin name="USBDP" x="-22.86" y="-2.54" length="middle"/>
+<pin name="USBDM" x="-22.86" y="2.54" length="middle"/>
+<pin name="3V3OUT" x="-22.86" y="22.86" length="middle"/>
+<pin name="RESET#" x="-22.86" y="7.62" length="middle"/>
+<pin name="VCC" x="-22.86" y="17.78" length="middle"/>
+<pin name="GND" x="22.86" y="-22.86" length="middle" rot="R180"/>
+<pin name="CBUS1" x="-22.86" y="-12.7" length="middle"/>
+<pin name="CBUS0" x="-22.86" y="-7.62" length="middle"/>
+<pin name="CBUS3" x="-22.86" y="-22.86" length="middle"/>
+<pin name="TXD" x="22.86" y="17.78" length="middle" rot="R180"/>
+<pin name="DTR#" x="22.86" y="2.54" length="middle" rot="R180"/>
+<pin name="RTS#" x="22.86" y="12.7" length="middle" rot="R180"/>
+<pin name="VCCIO" x="-22.86" y="12.7" length="middle"/>
+<text x="-5.08" y="5.08" size="2.54" layer="95">&gt;NAME</text>
+<text x="-5.08" y="-5.08" size="2.54" layer="95">&gt;VALUE</text>
+<wire x1="-17.78" y1="25.4" x2="17.78" y2="25.4" width="0.254" layer="94"/>
+<wire x1="17.78" y1="25.4" x2="17.78" y2="-25.4" width="0.254" layer="94"/>
+<wire x1="17.78" y1="-25.4" x2="-17.78" y2="-25.4" width="0.254" layer="94"/>
+<wire x1="-17.78" y1="-25.4" x2="-17.78" y2="25.4" width="0.254" layer="94"/>
 </symbol>
 </symbols>
 <devicesets>
@@ -560,6 +615,39 @@ Source: PCA9534_3.pdf</description>
 <connect gate="G$1" pin="S0" pad="14"/>
 <connect gate="G$1" pin="S1" pad="2"/>
 <connect gate="G$1" pin="VCC" pad="16"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="FT231XS">
+<gates>
+<gate name="G$1" symbol="FT321XS" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="SSOP20">
+<connects>
+<connect gate="G$1" pin="3V3OUT" pad="P$10"/>
+<connect gate="G$1" pin="CBUS0" pad="P$15"/>
+<connect gate="G$1" pin="CBUS1" pad="P$14"/>
+<connect gate="G$1" pin="CBUS2" pad="P$7"/>
+<connect gate="G$1" pin="CBUS3" pad="P$16"/>
+<connect gate="G$1" pin="CTS#" pad="P$6"/>
+<connect gate="G$1" pin="DCD#" pad="P$5"/>
+<connect gate="G$1" pin="DSR#" pad="P$4"/>
+<connect gate="G$1" pin="DTR#" pad="P$18"/>
+<connect gate="G$1" pin="GND" pad="P$3 P$13"/>
+<connect gate="G$1" pin="RESET#" pad="P$11"/>
+<connect gate="G$1" pin="RI#" pad="P$2"/>
+<connect gate="G$1" pin="RTS#" pad="P$19"/>
+<connect gate="G$1" pin="RXD" pad="P$1"/>
+<connect gate="G$1" pin="TXD" pad="P$17"/>
+<connect gate="G$1" pin="USBDM" pad="P$9"/>
+<connect gate="G$1" pin="USBDP" pad="P$8"/>
+<connect gate="G$1" pin="VCC" pad="P$12"/>
+<connect gate="G$1" pin="VCCIO" pad="P$20"/>
 </connects>
 <technologies>
 <technology name=""/>
