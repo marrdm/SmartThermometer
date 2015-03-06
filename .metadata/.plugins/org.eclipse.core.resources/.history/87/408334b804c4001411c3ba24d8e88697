@@ -1,0 +1,20 @@
+/*
+ * pwm.c
+ *
+ *  Created on: 5 Mar 2015
+ *      Author: Marcus
+ */
+
+#include "pwm.h"
+
+void pwm_init(LPC_TMR_TypeDef timer, int frequency){
+	int prescale = SYSTEM_CLOCK / (frequency * 1000);
+
+	if(prescale){
+		return;
+	}
+}
+
+void pwm_enable_output(){
+
+}

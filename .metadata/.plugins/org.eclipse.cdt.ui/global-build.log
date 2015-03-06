@@ -1,0 +1,592 @@
+13:30:58 **** Build of configuration Debug for project CMSISv2p00_LPC11xx ****
+make -r all 
+Building file: ../src/core_cm0.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -I../inc -O0 -Os -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"src/core_cm0.d" -MT"src/core_cm0.o" -MT"src/core_cm0.d" -o "src/core_cm0.o" "../src/core_cm0.c"
+Finished building: ../src/core_cm0.c
+ 
+Building file: ../src/system_LPC11xx.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -I../inc -O0 -Os -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"src/system_LPC11xx.d" -MT"src/system_LPC11xx.o" -MT"src/system_LPC11xx.d" -o "src/system_LPC11xx.o" "../src/system_LPC11xx.c"
+Finished building: ../src/system_LPC11xx.c
+ 
+Building target: libCMSISv2p00_LPC11xx.a
+Invoking: MCU Archiver
+arm-none-eabi-ar -r  "libCMSISv2p00_LPC11xx.a"  ./src/core_cm0.o ./src/system_LPC11xx.o   
+c:\nxp\LPCXpresso_7.5.0_254\lpcxpresso\tools\bin\arm-none-eabi-ar.exe: creating libCMSISv2p00_LPC11xx.a
+Finished building target: libCMSISv2p00_LPC11xx.a
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size libCMSISv2p00_LPC11xx.a ; # arm-none-eabi-objdump -h -S libCMSISv2p00_LPC11xx.a >libCMSISv2p00_LPC11xx.lss
+   text	   data	    bss	    dec	    hex	filename
+      0	      0	      0	      0	      0	core_cm0.o (ex libCMSISv2p00_LPC11xx.a)
+    368	      4	      0	    372	    174	system_LPC11xx.o (ex libCMSISv2p00_LPC11xx.a)
+ 
+13:31:16 **** Build of configuration Debug for project Software ****
+make -r all 
+Building file: ../src/Software.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M0 -D__USE_CMSIS=CMSISv2p00_LPC11xx -D__LPC11XX__ -D__REDLIB__ -I"C:\Users\Marcus\Dropbox\E7020E (LP3 14-15)\Project\CMSISv2p00_LPC11xx\inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -specs=redlib.specs -MMD -MP -MF"src/Software.d" -MT"src/Software.o" -MT"src/Software.d" -o "src/Software.o" "../src/Software.c"
+Finished building: ../src/Software.c
+ 
+Building file: ../src/cr_startup_lpc11xx.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M0 -D__USE_CMSIS=CMSISv2p00_LPC11xx -D__LPC11XX__ -D__REDLIB__ -I"C:\Users\Marcus\Dropbox\E7020E (LP3 14-15)\Project\CMSISv2p00_LPC11xx\inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -specs=redlib.specs -MMD -MP -MF"src/cr_startup_lpc11xx.d" -MT"src/cr_startup_lpc11xx.o" -MT"src/cr_startup_lpc11xx.d" -o "src/cr_startup_lpc11xx.o" "../src/cr_startup_lpc11xx.c"
+Finished building: ../src/cr_startup_lpc11xx.c
+ 
+Building file: ../src/crp.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M0 -D__USE_CMSIS=CMSISv2p00_LPC11xx -D__LPC11XX__ -D__REDLIB__ -I"C:\Users\Marcus\Dropbox\E7020E (LP3 14-15)\Project\CMSISv2p00_LPC11xx\inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -specs=redlib.specs -MMD -MP -MF"src/crp.d" -MT"src/crp.o" -MT"src/crp.d" -o "src/crp.o" "../src/crp.c"
+Finished building: ../src/crp.c
+ 
+Building file: ../src/pwm.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M0 -D__USE_CMSIS=CMSISv2p00_LPC11xx -D__LPC11XX__ -D__REDLIB__ -I"C:\Users\Marcus\Dropbox\E7020E (LP3 14-15)\Project\CMSISv2p00_LPC11xx\inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -specs=redlib.specs -MMD -MP -MF"src/pwm.d" -MT"src/pwm.o" -MT"src/pwm.d" -o "src/pwm.o" "../src/pwm.c"
+../src/pwm.c:8:10: error: #include expects "FILENAME" or <FILENAME>
+ #include pwm.h
+          ^
+../src/pwm.c:10:14: error: unknown type name 'LPC_TMR_TypeDef'
+ int pwm_init(LPC_TMR_TypeDef timer, int frequency){
+              ^
+make: *** [src/pwm.o] Error 1
+13:33:11 **** Incremental Build of configuration Debug for project CMSISv2p00_LPC11xx ****
+make -r all 
+make: Nothing to be done for `all'.
+13:33:15 **** Incremental Build of configuration Debug for project Software ****
+make -r all 
+Building file: ../src/pwm.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M0 -D__USE_CMSIS=CMSISv2p00_LPC11xx -D__LPC11XX__ -D__REDLIB__ -I"C:\Users\Marcus\Dropbox\E7020E (LP3 14-15)\Project\CMSISv2p00_LPC11xx\inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -specs=redlib.specs -MMD -MP -MF"src/pwm.d" -MT"src/pwm.o" -MT"src/pwm.d" -o "src/pwm.o" "../src/pwm.c"
+../src/pwm.c:10:14: error: unknown type name 'LPC_TMR_TypeDef'
+ int pwm_init(LPC_TMR_TypeDef timer, int frequency){
+              ^
+make: *** [src/pwm.o] Error 1
+13:34:16 **** Incremental Build of configuration Debug for project CMSISv2p00_LPC11xx ****
+make -r all 
+make: Nothing to be done for `all'.
+13:34:22 **** Incremental Build of configuration Debug for project Software ****
+make -r all 
+Building file: ../src/pwm.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M0 -D__USE_CMSIS=CMSISv2p00_LPC11xx -D__LPC11XX__ -D__REDLIB__ -I"C:\Users\Marcus\Dropbox\E7020E (LP3 14-15)\Project\CMSISv2p00_LPC11xx\inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -specs=redlib.specs -MMD -MP -MF"src/pwm.d" -MT"src/pwm.o" -MT"src/pwm.d" -o "src/pwm.o" "../src/pwm.c"
+Finished building: ../src/pwm.c
+ 
+Building target: Software.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"C:\Users\Marcus\Dropbox\E7020E (LP3 14-15)\Project\CMSISv2p00_LPC11xx\Debug" -Xlinker -Map="Software.map" -Xlinker --gc-sections -mcpu=cortex-m0 -mthumb -T "Software_Debug.ld" -o "Software.axf"  ./src/Software.o ./src/cr_startup_lpc11xx.o ./src/crp.o ./src/pwm.o   -lCMSISv2p00_LPC11xx
+Finished building target: Software.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "Software.axf"; # arm-none-eabi-objcopy -v -O binary "Software.axf" "Software.bin" ; # checksum -p LPC11C24_301 -d "Software.bin";
+   text	   data	    bss	    dec	    hex	filename
+    948	      0	      4	    952	    3b8	Software.axf
+ 
+13:37:57 **** Incremental Build of configuration Debug for project CMSISv2p00_LPC11xx ****
+make -r all 
+make: Nothing to be done for `all'.
+13:38:02 **** Incremental Build of configuration Debug for project Software ****
+make -r all 
+Building file: ../src/Software.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M0 -D__USE_CMSIS=CMSISv2p00_LPC11xx -D__LPC11XX__ -D__REDLIB__ -I"C:\Users\Marcus\Dropbox\E7020E (LP3 14-15)\Project\CMSISv2p00_LPC11xx\inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -specs=redlib.specs -MMD -MP -MF"src/Software.d" -MT"src/Software.o" -MT"src/Software.d" -o "src/Software.o" "../src/Software.c"
+Finished building: ../src/Software.c
+ 
+Building target: Software.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"C:\Users\Marcus\Dropbox\E7020E (LP3 14-15)\Project\CMSISv2p00_LPC11xx\Debug" -Xlinker -Map="Software.map" -Xlinker --gc-sections -mcpu=cortex-m0 -mthumb -T "Software_Debug.ld" -o "Software.axf"  ./src/Software.o ./src/cr_startup_lpc11xx.o ./src/crp.o ./src/pwm.o   -lCMSISv2p00_LPC11xx
+Finished building target: Software.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "Software.axf"; # arm-none-eabi-objcopy -v -O binary "Software.axf" "Software.bin" ; # checksum -p LPC11C24_301 -d "Software.bin";
+   text	   data	    bss	    dec	    hex	filename
+    948	      0	      4	    952	    3b8	Software.axf
+ 
+13:38:46 **** Incremental Build of configuration Debug for project CMSISv2p00_LPC11xx ****
+make -r all 
+make: Nothing to be done for `all'.
+13:38:50 **** Incremental Build of configuration Debug for project Software ****
+make -r all 
+Building file: ../src/Software.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M0 -D__USE_CMSIS=CMSISv2p00_LPC11xx -D__LPC11XX__ -D__REDLIB__ -I"C:\Users\Marcus\Dropbox\E7020E (LP3 14-15)\Project\CMSISv2p00_LPC11xx\inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -specs=redlib.specs -MMD -MP -MF"src/Software.d" -MT"src/Software.o" -MT"src/Software.d" -o "src/Software.o" "../src/Software.c"
+Finished building: ../src/Software.c
+ 
+Building file: ../src/pwm.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M0 -D__USE_CMSIS=CMSISv2p00_LPC11xx -D__LPC11XX__ -D__REDLIB__ -I"C:\Users\Marcus\Dropbox\E7020E (LP3 14-15)\Project\CMSISv2p00_LPC11xx\inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -specs=redlib.specs -MMD -MP -MF"src/pwm.d" -MT"src/pwm.o" -MT"src/pwm.d" -o "src/pwm.o" "../src/pwm.c"
+../src/pwm.c: In function 'pwm_init':
+../src/pwm.c:12:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+Finished building: ../src/pwm.c
+ 
+Building target: Software.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"C:\Users\Marcus\Dropbox\E7020E (LP3 14-15)\Project\CMSISv2p00_LPC11xx\Debug" -Xlinker -Map="Software.map" -Xlinker --gc-sections -mcpu=cortex-m0 -mthumb -T "Software_Debug.ld" -o "Software.axf"  ./src/Software.o ./src/cr_startup_lpc11xx.o ./src/crp.o ./src/pwm.o   -lCMSISv2p00_LPC11xx
+Finished building target: Software.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "Software.axf"; # arm-none-eabi-objcopy -v -O binary "Software.axf" "Software.bin" ; # checksum -p LPC11C24_301 -d "Software.bin";
+   text	   data	    bss	    dec	    hex	filename
+    948	      0	      4	    952	    3b8	Software.axf
+ 
+13:40:47 **** Incremental Build of configuration Debug for project CMSISv2p00_LPC11xx ****
+make -r all 
+make: Nothing to be done for `all'.
+13:40:52 **** Incremental Build of configuration Debug for project Software ****
+make -r all 
+Building file: ../src/Software.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M0 -D__USE_CMSIS=CMSISv2p00_LPC11xx -D__LPC11XX__ -D__REDLIB__ -I"C:\Users\Marcus\Dropbox\E7020E (LP3 14-15)\Project\CMSISv2p00_LPC11xx\inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -specs=redlib.specs -MMD -MP -MF"src/Software.d" -MT"src/Software.o" -MT"src/Software.d" -o "src/Software.o" "../src/Software.c"
+Finished building: ../src/Software.c
+ 
+Building file: ../src/pwm.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M0 -D__USE_CMSIS=CMSISv2p00_LPC11xx -D__LPC11XX__ -D__REDLIB__ -I"C:\Users\Marcus\Dropbox\E7020E (LP3 14-15)\Project\CMSISv2p00_LPC11xx\inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -specs=redlib.specs -MMD -MP -MF"src/pwm.d" -MT"src/pwm.o" -MT"src/pwm.d" -o "src/pwm.o" "../src/pwm.c"
+In file included from ../src/pwm.h:8:0,
+                 from ../src/pwm.c:8:
+../src/pwm.c: In function 'pwm_init':
+../src/Software.h:18:22: error: expected expression before '=' token
+ #define SYSTEM_CLOCK = 12000000  // 12MHz
+                      ^
+../src/pwm.c:11:10: note: in expansion of macro 'SYSTEM_CLOCK'
+  int c = SYSTEM_CLOCK;
+          ^
+../src/pwm.c:11:6: warning: unused variable 'c' [-Wunused-variable]
+  int c = SYSTEM_CLOCK;
+      ^
+make: *** [src/pwm.o] Error 1
+13:42:14 **** Incremental Build of configuration Debug for project CMSISv2p00_LPC11xx ****
+make -r all 
+make: Nothing to be done for `all'.
+13:42:17 **** Incremental Build of configuration Debug for project Software ****
+make -r all 
+Building file: ../src/pwm.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M0 -D__USE_CMSIS=CMSISv2p00_LPC11xx -D__LPC11XX__ -D__REDLIB__ -I"C:\Users\Marcus\Dropbox\E7020E (LP3 14-15)\Project\CMSISv2p00_LPC11xx\inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -specs=redlib.specs -MMD -MP -MF"src/pwm.d" -MT"src/pwm.o" -MT"src/pwm.d" -o "src/pwm.o" "../src/pwm.c"
+In file included from ../src/pwm.h:8:0,
+                 from ../src/pwm.c:8:
+../src/pwm.c: In function 'pwm_init':
+../src/Software.h:18:22: error: expected expression before '=' token
+ #define SYSTEM_CLOCK = 12000000  // 12MHz
+                      ^
+../src/pwm.c:12:10: note: in expansion of macro 'SYSTEM_CLOCK'
+  c = 0 + SYSTEM_CLOCK;
+          ^
+../src/pwm.c:11:6: warning: variable 'c' set but not used [-Wunused-but-set-variable]
+  int c;
+      ^
+make: *** [src/pwm.o] Error 1
+13:42:46 **** Incremental Build of configuration Debug for project CMSISv2p00_LPC11xx ****
+make -r all 
+make: Nothing to be done for `all'.
+13:42:50 **** Incremental Build of configuration Debug for project Software ****
+make -r all 
+Building file: ../src/Software.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M0 -D__USE_CMSIS=CMSISv2p00_LPC11xx -D__LPC11XX__ -D__REDLIB__ -I"C:\Users\Marcus\Dropbox\E7020E (LP3 14-15)\Project\CMSISv2p00_LPC11xx\inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -specs=redlib.specs -MMD -MP -MF"src/Software.d" -MT"src/Software.o" -MT"src/Software.d" -o "src/Software.o" "../src/Software.c"
+Finished building: ../src/Software.c
+ 
+Building file: ../src/pwm.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M0 -D__USE_CMSIS=CMSISv2p00_LPC11xx -D__LPC11XX__ -D__REDLIB__ -I"C:\Users\Marcus\Dropbox\E7020E (LP3 14-15)\Project\CMSISv2p00_LPC11xx\inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -specs=redlib.specs -MMD -MP -MF"src/pwm.d" -MT"src/pwm.o" -MT"src/pwm.d" -o "src/pwm.o" "../src/pwm.c"
+../src/pwm.c: In function 'pwm_init':
+../src/pwm.c:11:6: warning: variable 'c' set but not used [-Wunused-but-set-variable]
+  int c;
+      ^
+Finished building: ../src/pwm.c
+ 
+Building target: Software.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"C:\Users\Marcus\Dropbox\E7020E (LP3 14-15)\Project\CMSISv2p00_LPC11xx\Debug" -Xlinker -Map="Software.map" -Xlinker --gc-sections -mcpu=cortex-m0 -mthumb -T "Software_Debug.ld" -o "Software.axf"  ./src/Software.o ./src/cr_startup_lpc11xx.o ./src/crp.o ./src/pwm.o   -lCMSISv2p00_LPC11xx
+Finished building target: Software.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "Software.axf"; # arm-none-eabi-objcopy -v -O binary "Software.axf" "Software.bin" ; # checksum -p LPC11C24_301 -d "Software.bin";
+   text	   data	    bss	    dec	    hex	filename
+    948	      0	      4	    952	    3b8	Software.axf
+ 
+14:29:14 **** Incremental Build of configuration Debug for project CMSISv2p00_LPC11xx ****
+make -r all 
+make: Nothing to be done for `all'.
+14:29:23 **** Incremental Build of configuration Debug for project Software ****
+make -r all 
+Building file: ../src/Software.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M0 -D__USE_CMSIS=CMSISv2p00_LPC11xx -D__LPC11XX__ -D__REDLIB__ -I"C:\Users\Marcus\Dropbox\E7020E (LP3 14-15)\Project\CMSISv2p00_LPC11xx\inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -specs=redlib.specs -MMD -MP -MF"src/Software.d" -MT"src/Software.o" -MT"src/Software.d" -o "src/Software.o" "../src/Software.c"
+Finished building: ../src/Software.c
+ 
+Building file: ../src/pwm.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M0 -D__USE_CMSIS=CMSISv2p00_LPC11xx -D__LPC11XX__ -D__REDLIB__ -I"C:\Users\Marcus\Dropbox\E7020E (LP3 14-15)\Project\CMSISv2p00_LPC11xx\inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -specs=redlib.specs -MMD -MP -MF"src/pwm.d" -MT"src/pwm.o" -MT"src/pwm.d" -o "src/pwm.o" "../src/pwm.c"
+Finished building: ../src/pwm.c
+ 
+Building target: Software.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"C:\Users\Marcus\Dropbox\E7020E (LP3 14-15)\Project\CMSISv2p00_LPC11xx\Debug" -Xlinker -Map="Software.map" -Xlinker --gc-sections -mcpu=cortex-m0 -mthumb -T "Software_Debug.ld" -o "Software.axf"  ./src/Software.o ./src/cr_startup_lpc11xx.o ./src/crp.o ./src/pwm.o   -lCMSISv2p00_LPC11xx
+Finished building target: Software.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "Software.axf"; # arm-none-eabi-objcopy -v -O binary "Software.axf" "Software.bin" ; # checksum -p LPC11C24_301 -d "Software.bin";
+   text	   data	    bss	    dec	    hex	filename
+    940	      0	      4	    944	    3b0	Software.axf
+ 
+15:08:29 **** Incremental Build of configuration Debug for project CMSISv2p00_LPC11xx ****
+make -r all 
+make: Nothing to be done for `all'.
+15:09:33 **** Incremental Build of configuration Debug for project CMSISv2p00_LPC11xx ****
+make -r all 
+make: Nothing to be done for `all'.
+15:09:37 **** Incremental Build of configuration Debug for project Software ****
+make -r all 
+Building file: ../src/Software.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M0 -D__USE_CMSIS=CMSISv2p00_LPC11xx -D__LPC11XX__ -D__REDLIB__ -I"C:\Users\Marcus\Dropbox\E7020E (LP3 14-15)\Project\CMSISv2p00_LPC11xx\inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -specs=redlib.specs -MMD -MP -MF"src/Software.d" -MT"src/Software.o" -MT"src/Software.d" -o "src/Software.o" "../src/Software.c"
+../src/Software.c: In function 'main':
+../src/Software.c:21:2: error: invalid initializer
+  LPC_TMR_TypeDef timer = LPC_TMR32B1;
+  ^
+../src/Software.c:26:7: error: invalid type argument of '->' (have 'LPC_TMR_TypeDef')
+  timer->PR = 28;//prescale;
+       ^
+../src/Software.c:27:7: error: invalid type argument of '->' (have 'LPC_TMR_TypeDef')
+  timer->MCR |= (1<<10);
+       ^
+../src/Software.c:28:7: error: invalid type argument of '->' (have 'LPC_TMR_TypeDef')
+  timer->MR3 = 255;
+       ^
+../src/Software.c:29:7: error: invalid type argument of '->' (have 'LPC_TMR_TypeDef')
+  timer->MR0 = 128;
+       ^
+../src/Software.c:31:7: error: invalid type argument of '->' (have 'LPC_TMR_TypeDef')
+  timer->PWMC = 1;
+       ^
+../src/Software.c:33:7: error: invalid type argument of '->' (have 'LPC_TMR_TypeDef')
+  timer->TCR = 0x2;  //Reset timer
+       ^
+../src/Software.c:34:7: error: invalid type argument of '->' (have 'LPC_TMR_TypeDef')
+  timer->TCR = 0x1;  //Start timer
+       ^
+make: *** [src/Software.o] Error 1
+15:10:20 **** Incremental Build of configuration Debug for project CMSISv2p00_LPC11xx ****
+make -r all 
+make: Nothing to be done for `all'.
+15:10:23 **** Incremental Build of configuration Debug for project Software ****
+make -r all 
+Building file: ../src/Software.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M0 -D__USE_CMSIS=CMSISv2p00_LPC11xx -D__LPC11XX__ -D__REDLIB__ -I"C:\Users\Marcus\Dropbox\E7020E (LP3 14-15)\Project\CMSISv2p00_LPC11xx\inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -specs=redlib.specs -MMD -MP -MF"src/Software.d" -MT"src/Software.o" -MT"src/Software.d" -o "src/Software.o" "../src/Software.c"
+Finished building: ../src/Software.c
+ 
+Building file: ../src/pwm.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M0 -D__USE_CMSIS=CMSISv2p00_LPC11xx -D__LPC11XX__ -D__REDLIB__ -I"C:\Users\Marcus\Dropbox\E7020E (LP3 14-15)\Project\CMSISv2p00_LPC11xx\inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -specs=redlib.specs -MMD -MP -MF"src/pwm.d" -MT"src/pwm.o" -MT"src/pwm.d" -o "src/pwm.o" "../src/pwm.c"
+../src/pwm.c: In function 'pwm_init':
+../src/pwm.c:16:7: error: invalid type argument of '->' (have 'LPC_TMR_TypeDef')
+  timer->PR = 28;//prescale;
+       ^
+../src/pwm.c:17:7: error: invalid type argument of '->' (have 'LPC_TMR_TypeDef')
+  timer->MCR |= (1<<10);
+       ^
+../src/pwm.c:18:7: error: invalid type argument of '->' (have 'LPC_TMR_TypeDef')
+  timer->MR3 = 255;
+       ^
+../src/pwm.c:19:7: error: invalid type argument of '->' (have 'LPC_TMR_TypeDef')
+  timer->MR0 = 128;
+       ^
+../src/pwm.c:21:7: error: invalid type argument of '->' (have 'LPC_TMR_TypeDef')
+  timer->PWMC = 1;
+       ^
+../src/pwm.c:23:7: error: invalid type argument of '->' (have 'LPC_TMR_TypeDef')
+  timer->TCR = 0x2;  //Reset timer
+       ^
+../src/pwm.c:24:7: error: invalid type argument of '->' (have 'LPC_TMR_TypeDef')
+  timer->TCR = 0x1;  //Start timer
+       ^
+make: *** [src/pwm.o] Error 1
+15:10:33 **** Incremental Build of configuration Debug for project CMSISv2p00_LPC11xx ****
+make -r all 
+make: Nothing to be done for `all'.
+15:10:37 **** Incremental Build of configuration Debug for project Software ****
+make -r all 
+Building file: ../src/pwm.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M0 -D__USE_CMSIS=CMSISv2p00_LPC11xx -D__LPC11XX__ -D__REDLIB__ -I"C:\Users\Marcus\Dropbox\E7020E (LP3 14-15)\Project\CMSISv2p00_LPC11xx\inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -specs=redlib.specs -MMD -MP -MF"src/pwm.d" -MT"src/pwm.o" -MT"src/pwm.d" -o "src/pwm.o" "../src/pwm.c"
+../src/pwm.c: In function 'pwm_init':
+../src/pwm.c:16:7: error: invalid type argument of '->' (have 'LPC_TMR_TypeDef')
+  timer->PR = 28;//prescale;
+       ^
+../src/pwm.c:17:7: error: invalid type argument of '->' (have 'LPC_TMR_TypeDef')
+  timer->MCR |= (1<<10);
+       ^
+../src/pwm.c:18:7: error: invalid type argument of '->' (have 'LPC_TMR_TypeDef')
+  timer->MR3 = 255;
+       ^
+../src/pwm.c:19:7: error: invalid type argument of '->' (have 'LPC_TMR_TypeDef')
+  timer->MR0 = 128;
+       ^
+../src/pwm.c:21:7: error: invalid type argument of '->' (have 'LPC_TMR_TypeDef')
+  timer->PWMC = 1;
+       ^
+../src/pwm.c:23:7: error: invalid type argument of '->' (have 'LPC_TMR_TypeDef')
+  timer->TCR = 0x2;  //Reset timer
+       ^
+../src/pwm.c:24:7: error: invalid type argument of '->' (have 'LPC_TMR_TypeDef')
+  timer->TCR = 0x1;  //Start timer
+       ^
+make: *** [src/pwm.o] Error 1
+15:11:09 **** Incremental Build of configuration Debug for project CMSISv2p00_LPC11xx ****
+make -r all 
+make: Nothing to be done for `all'.
+15:11:11 **** Incremental Build of configuration Debug for project Software ****
+make -r all 
+Building file: ../src/pwm.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M0 -D__USE_CMSIS=CMSISv2p00_LPC11xx -D__LPC11XX__ -D__REDLIB__ -I"C:\Users\Marcus\Dropbox\E7020E (LP3 14-15)\Project\CMSISv2p00_LPC11xx\inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -specs=redlib.specs -MMD -MP -MF"src/pwm.d" -MT"src/pwm.o" -MT"src/pwm.d" -o "src/pwm.o" "../src/pwm.c"
+Finished building: ../src/pwm.c
+ 
+Building target: Software.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"C:\Users\Marcus\Dropbox\E7020E (LP3 14-15)\Project\CMSISv2p00_LPC11xx\Debug" -Xlinker -Map="Software.map" -Xlinker --gc-sections -mcpu=cortex-m0 -mthumb -T "Software_Debug.ld" -o "Software.axf"  ./src/Software.o ./src/cr_startup_lpc11xx.o ./src/crp.o ./src/pwm.o   -lCMSISv2p00_LPC11xx
+Finished building target: Software.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "Software.axf"; # arm-none-eabi-objcopy -v -O binary "Software.axf" "Software.bin" ; # checksum -p LPC11C24_301 -d "Software.bin";
+   text	   data	    bss	    dec	    hex	filename
+   1028	      0	      4	   1032	    408	Software.axf
+ 
+15:11:46 **** Incremental Build of configuration Debug for project CMSISv2p00_LPC11xx ****
+make -r all 
+make: Nothing to be done for `all'.
+15:11:50 **** Incremental Build of configuration Debug for project Software ****
+make -r all 
+make: Nothing to be done for `all'.
+15:18:39 **** Incremental Build of configuration Debug for project CMSISv2p00_LPC11xx ****
+make -r all 
+make: Nothing to be done for `all'.
+15:18:42 **** Incremental Build of configuration Debug for project Software ****
+make -r all 
+Building file: ../src/Software.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M0 -D__USE_CMSIS=CMSISv2p00_LPC11xx -D__LPC11XX__ -D__REDLIB__ -I"C:\Users\Marcus\Dropbox\E7020E (LP3 14-15)\Project\CMSISv2p00_LPC11xx\inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -specs=redlib.specs -MMD -MP -MF"src/Software.d" -MT"src/Software.o" -MT"src/Software.d" -o "src/Software.o" "../src/Software.c"
+Finished building: ../src/Software.c
+ 
+Building target: Software.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"C:\Users\Marcus\Dropbox\E7020E (LP3 14-15)\Project\CMSISv2p00_LPC11xx\Debug" -Xlinker -Map="Software.map" -Xlinker --gc-sections -mcpu=cortex-m0 -mthumb -T "Software_Debug.ld" -o "Software.axf"  ./src/Software.o ./src/cr_startup_lpc11xx.o ./src/crp.o ./src/pwm.o   -lCMSISv2p00_LPC11xx
+Finished building target: Software.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "Software.axf"; # arm-none-eabi-objcopy -v -O binary "Software.axf" "Software.bin" ; # checksum -p LPC11C24_301 -d "Software.bin";
+   text	   data	    bss	    dec	    hex	filename
+   1032	      0	      4	   1036	    40c	Software.axf
+ 
+15:18:55 **** Incremental Build of configuration Debug for project CMSISv2p00_LPC11xx ****
+make -r all 
+make: Nothing to be done for `all'.
+15:18:58 **** Incremental Build of configuration Debug for project Software ****
+make -r all 
+make: Nothing to be done for `all'.
+15:19:07 **** Incremental Build of configuration Debug for project CMSISv2p00_LPC11xx ****
+make -r all 
+make: Nothing to be done for `all'.
+15:19:09 **** Incremental Build of configuration Debug for project Software ****
+make -r all 
+make: Nothing to be done for `all'.
+15:20:42 **** Incremental Build of configuration Debug for project CMSISv2p00_LPC11xx ****
+make -r all 
+make: Nothing to be done for `all'.
+15:20:44 **** Incremental Build of configuration Debug for project Software ****
+make -r all 
+Building file: ../src/Software.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M0 -D__USE_CMSIS=CMSISv2p00_LPC11xx -D__LPC11XX__ -D__REDLIB__ -I"C:\Users\Marcus\Dropbox\E7020E (LP3 14-15)\Project\CMSISv2p00_LPC11xx\inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -specs=redlib.specs -MMD -MP -MF"src/Software.d" -MT"src/Software.o" -MT"src/Software.d" -o "src/Software.o" "../src/Software.c"
+Command canceled
+15:20:50 **** Build of configuration Debug for project Software ****
+make -r all 
+Building file: ../src/Software.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M0 -D__USE_CMSIS=CMSISv2p00_LPC11xx -D__LPC11XX__ -D__REDLIB__ -I"C:\Users\Marcus\Dropbox\E7020E (LP3 14-15)\Project\CMSISv2p00_LPC11xx\inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -specs=redlib.specs -MMD -MP -MF"src/Software.d" -MT"src/Software.o" -MT"src/Software.d" -o "src/Software.o" "../src/Software.c"
+Finished building: ../src/Software.c
+ 
+Building target: Software.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"C:\Users\Marcus\Dropbox\E7020E (LP3 14-15)\Project\CMSISv2p00_LPC11xx\Debug" -Xlinker -Map="Software.map" -Xlinker --gc-sections -mcpu=cortex-m0 -mthumb -T "Software_Debug.ld" -o "Software.axf"  ./src/Software.o ./src/cr_startup_lpc11xx.o ./src/crp.o ./src/pwm.o   -lCMSISv2p00_LPC11xx
+Finished building target: Software.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "Software.axf"; # arm-none-eabi-objcopy -v -O binary "Software.axf" "Software.bin" ; # checksum -p LPC11C24_301 -d "Software.bin";
+   text	   data	    bss	    dec	    hex	filename
+   1032	      0	      4	   1036	    40c	Software.axf
+ 
+15:29:00 **** Incremental Build of configuration Debug for project CMSISv2p00_LPC11xx ****
+make -r all 
+make: Nothing to be done for `all'.
+15:29:03 **** Incremental Build of configuration Debug for project CMSISv2p00_LPC11xx ****
+make -r all 
+make: Nothing to be done for `all'.
+15:29:06 **** Incremental Build of configuration Debug for project Software ****
+make -r all 
+Building file: ../src/Software.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M0 -D__USE_CMSIS=CMSISv2p00_LPC11xx -D__LPC11XX__ -D__REDLIB__ -I"C:\Users\Marcus\Dropbox\E7020E (LP3 14-15)\Project\CMSISv2p00_LPC11xx\inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -specs=redlib.specs -MMD -MP -MF"src/Software.d" -MT"src/Software.o" -MT"src/Software.d" -o "src/Software.o" "../src/Software.c"
+Finished building: ../src/Software.c
+ 
+Building target: Software.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"C:\Users\Marcus\Dropbox\E7020E (LP3 14-15)\Project\CMSISv2p00_LPC11xx\Debug" -Xlinker -Map="Software.map" -Xlinker --gc-sections -mcpu=cortex-m0 -mthumb -T "Software_Debug.ld" -o "Software.axf"  ./src/Software.o ./src/cr_startup_lpc11xx.o ./src/crp.o ./src/pwm.o   -lCMSISv2p00_LPC11xx
+Finished building target: Software.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "Software.axf"; # arm-none-eabi-objcopy -v -O binary "Software.axf" "Software.bin" ; # checksum -p LPC11C24_301 -d "Software.bin";
+   text	   data	    bss	    dec	    hex	filename
+   1040	      0	      4	   1044	    414	Software.axf
+ 
+15:33:16 **** Incremental Build of configuration Debug for project CMSISv2p00_LPC11xx ****
+make -r all 
+make: Nothing to be done for `all'.
+15:33:18 **** Incremental Build of configuration Debug for project Software ****
+make -r all 
+make: Nothing to be done for `all'.
+15:33:46 **** Incremental Build of configuration Debug for project CMSISv2p00_LPC11xx ****
+make -r all 
+make: Nothing to be done for `all'.
+15:33:48 **** Incremental Build of configuration Debug for project Software ****
+make -r all 
+make: Nothing to be done for `all'.
+15:36:00 **** Incremental Build of configuration Debug for project CMSISv2p00_LPC11xx ****
+make -r all 
+make: Nothing to be done for `all'.
+15:36:03 **** Incremental Build of configuration Debug for project Software ****
+make -r all 
+Building file: ../src/Software.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M0 -D__USE_CMSIS=CMSISv2p00_LPC11xx -D__LPC11XX__ -D__REDLIB__ -I"C:\Users\Marcus\Dropbox\E7020E (LP3 14-15)\Project\CMSISv2p00_LPC11xx\inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -specs=redlib.specs -MMD -MP -MF"src/Software.d" -MT"src/Software.o" -MT"src/Software.d" -o "src/Software.o" "../src/Software.c"
+Finished building: ../src/Software.c
+ 
+Building target: Software.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"C:\Users\Marcus\Dropbox\E7020E (LP3 14-15)\Project\CMSISv2p00_LPC11xx\Debug" -Xlinker -Map="Software.map" -Xlinker --gc-sections -mcpu=cortex-m0 -mthumb -T "Software_Debug.ld" -o "Software.axf"  ./src/Software.o ./src/cr_startup_lpc11xx.o ./src/crp.o ./src/pwm.o   -lCMSISv2p00_LPC11xx
+Finished building target: Software.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "Software.axf"; # arm-none-eabi-objcopy -v -O binary "Software.axf" "Software.bin" ; # checksum -p LPC11C24_301 -d "Software.bin";
+   text	   data	    bss	    dec	    hex	filename
+   1104	      0	      4	   1108	    454	Software.axf
+ 
+15:37:39 **** Incremental Build of configuration Debug for project CMSISv2p00_LPC11xx ****
+make -r all 
+make: Nothing to be done for `all'.
+15:37:41 **** Incremental Build of configuration Debug for project Software ****
+make -r all 
+Building file: ../src/Software.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M0 -D__USE_CMSIS=CMSISv2p00_LPC11xx -D__LPC11XX__ -D__REDLIB__ -I"C:\Users\Marcus\Dropbox\E7020E (LP3 14-15)\Project\CMSISv2p00_LPC11xx\inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -specs=redlib.specs -MMD -MP -MF"src/Software.d" -MT"src/Software.o" -MT"src/Software.d" -o "src/Software.o" "../src/Software.c"
+Finished building: ../src/Software.c
+ 
+Building target: Software.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"C:\Users\Marcus\Dropbox\E7020E (LP3 14-15)\Project\CMSISv2p00_LPC11xx\Debug" -Xlinker -Map="Software.map" -Xlinker --gc-sections -mcpu=cortex-m0 -mthumb -T "Software_Debug.ld" -o "Software.axf"  ./src/Software.o ./src/cr_startup_lpc11xx.o ./src/crp.o ./src/pwm.o   -lCMSISv2p00_LPC11xx
+Finished building target: Software.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "Software.axf"; # arm-none-eabi-objcopy -v -O binary "Software.axf" "Software.bin" ; # checksum -p LPC11C24_301 -d "Software.bin";
+   text	   data	    bss	    dec	    hex	filename
+   1104	      0	      4	   1108	    454	Software.axf
+ 
+15:42:34 **** Incremental Build of configuration Debug for project CMSISv2p00_LPC11xx ****
+make -r all 
+make: Nothing to be done for `all'.
+15:42:51 **** Incremental Build of configuration Debug for project CMSISv2p00_LPC11xx ****
+make -r all 
+make: Nothing to be done for `all'.
+15:42:54 **** Build of configuration Debug for project Software ****
+make -r all 
+Building file: ../src/Software.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M0 -D__USE_CMSIS=CMSISv2p00_LPC11xx -D__LPC11XX__ -D__REDLIB__ -I"C:\Users\Marcus\Dropbox\E7020E (LP3 14-15)\Project\CMSISv2p00_LPC11xx\inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -specs=redlib.specs -MMD -MP -MF"src/Software.d" -MT"src/Software.o" -MT"src/Software.d" -o "src/Software.o" "../src/Software.c"
+Finished building: ../src/Software.c
+ 
+Building target: Software.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"C:\Users\Marcus\Dropbox\E7020E (LP3 14-15)\Project\CMSISv2p00_LPC11xx\Debug" -Xlinker -Map="Software.map" -Xlinker --gc-sections -mcpu=cortex-m0 -mthumb -T "Software_Debug.ld" -o "Software.axf"  ./src/Software.o ./src/cr_startup_lpc11xx.o ./src/crp.o ./src/pwm.o   -lCMSISv2p00_LPC11xx
+Finished building target: Software.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "Software.axf"; # arm-none-eabi-objcopy -v -O binary "Software.axf" "Software.bin" ; # checksum -p LPC11C24_301 -d "Software.bin";
+   text	   data	    bss	    dec	    hex	filename
+   1104	      0	      4	   1108	    454	Software.axf
+ 
+15:43:06 **** Incremental Build of configuration Debug for project CMSISv2p00_LPC11xx ****
+make -r all 
+make: Nothing to be done for `all'.
+15:43:08 **** Incremental Build of configuration Debug for project Software ****
+make -r all 
+make: Nothing to be done for `all'.
+15:44:13 **** Incremental Build of configuration Debug for project CMSISv2p00_LPC11xx ****
+make -r all 
+make: Nothing to be done for `all'.
+15:44:15 **** Incremental Build of configuration Debug for project Software ****
+make -r all 
+Building file: ../src/Software.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M0 -D__USE_CMSIS=CMSISv2p00_LPC11xx -D__LPC11XX__ -D__REDLIB__ -I"C:\Users\Marcus\Dropbox\E7020E (LP3 14-15)\Project\CMSISv2p00_LPC11xx\inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -specs=redlib.specs -MMD -MP -MF"src/Software.d" -MT"src/Software.o" -MT"src/Software.d" -o "src/Software.o" "../src/Software.c"
+Finished building: ../src/Software.c
+ 
+Building target: Software.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"C:\Users\Marcus\Dropbox\E7020E (LP3 14-15)\Project\CMSISv2p00_LPC11xx\Debug" -Xlinker -Map="Software.map" -Xlinker --gc-sections -mcpu=cortex-m0 -mthumb -T "Software_Debug.ld" -o "Software.axf"  ./src/Software.o ./src/cr_startup_lpc11xx.o ./src/crp.o ./src/pwm.o   -lCMSISv2p00_LPC11xx
+Finished building target: Software.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "Software.axf"; # arm-none-eabi-objcopy -v -O binary "Software.axf" "Software.bin" ; # checksum -p LPC11C24_301 -d "Software.bin";
+   text	   data	    bss	    dec	    hex	filename
+   1104	      0	      4	   1108	    454	Software.axf
+ 
+16:01:05 **** Incremental Build of configuration Debug for project Software ****
+make -r all 
+make: Nothing to be done for `all'.
+16:22:28 **** Incremental Build of configuration Debug for project CMSISv2p00_LPC11xx ****
+make -r all 
+make: Nothing to be done for `all'.
+16:22:32 **** Incremental Build of configuration Debug for project Software ****
+make -r all 
+make: Nothing to be done for `all'.
+16:23:40 **** Incremental Build of configuration Debug for project CMSISv2p00_LPC11xx ****
+make -r all 
+make: Nothing to be done for `all'.
+16:23:42 **** Incremental Build of configuration Debug for project Software ****
+make -r all 
+Building file: ../src/Software.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M0 -D__USE_CMSIS=CMSISv2p00_LPC11xx -D__LPC11XX__ -D__REDLIB__ -I"C:\Users\Marcus\Dropbox\E7020E (LP3 14-15)\Project\CMSISv2p00_LPC11xx\inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -specs=redlib.specs -MMD -MP -MF"src/Software.d" -MT"src/Software.o" -MT"src/Software.d" -o "src/Software.o" "../src/Software.c"
+Finished building: ../src/Software.c
+ 
+Building target: Software.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"C:\Users\Marcus\Dropbox\E7020E (LP3 14-15)\Project\CMSISv2p00_LPC11xx\Debug" -Xlinker -Map="Software.map" -Xlinker --gc-sections -mcpu=cortex-m0 -mthumb -T "Software_Debug.ld" -o "Software.axf"  ./src/Software.o ./src/cr_startup_lpc11xx.o ./src/crp.o ./src/pwm.o   -lCMSISv2p00_LPC11xx
+Finished building target: Software.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "Software.axf"; # arm-none-eabi-objcopy -v -O binary "Software.axf" "Software.bin" ; # checksum -p LPC11C24_301 -d "Software.bin";
+   text	   data	    bss	    dec	    hex	filename
+   1104	      0	      4	   1108	    454	Software.axf
+ 
+16:25:40 **** Incremental Build of configuration Debug for project Software ****
+make -r all 
+make: Nothing to be done for `all'.

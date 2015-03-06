@@ -1,0 +1,22 @@
+/*
+ * pwm.c
+ *
+ *  Created on: 5 Mar 2015
+ *      Author: Marcus
+ */
+
+#include "pwm.h"
+
+void pwm_init(LPC_TMR_TypeDef timer, int frequency, int reset_channel){
+	int prescale = SYSTEM_CLOCK / (frequency * 1000);
+
+	LPC_SYSCON->SYSAHBCLKCTRL |= (1<<9);		//Power up tmr0
+
+	timer->PR = prescale;
+	timer->MCR |= (1<<10);
+	timer->MR3 = 255;
+}
+
+void pwm_enable_output(int channel){
+
+}
