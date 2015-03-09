@@ -8,23 +8,34 @@
 ===============================================================================
 */
 
-
-
 #include "Software.h"
+
 // TODO: insert other include files here
 
 // TODO: insert other definitions and declarations here
 
 int main(void) {
 
-	LPC_TMR32B0->MR1;
-    // TODO: insert code here
 
-    // Force the counter to be placed into memory
-    volatile static int i = 0 ;
-    // Enter an infinite loop, just incrementing a counter
+	LPC_IOCON->R_PIO1_2 = 1;
+	LPC_IOCON->R_PIO0_11 = 1;
+	LPC_GPIO1->DIR |= (1<<2);
+	LPC_GPIO0->DIR |= (1<<11);
+
+	pwm_init();
+
+	int inc = 4;
+	int j = 0;
     while(1) {
-        i++ ;
+    	int i = 0;
+    	while(i<50000){
+    		i++;
+    	}
+    	j = j + inc;
+    	pwm_red(j);
+    	if(j > 255 || j <= 0){
+    		inc = - inc;
+    	}
     }
     return 0 ;
 }

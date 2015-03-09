@@ -440,3 +440,387 @@ java.lang.Exception: Remote communication error.  Target disconnected.: No error
 
 !ENTRY com.crt.log 1 0 2015-03-06 16:25:43.900
 !MESSAGE Drivers loaded in 1428 milliseconds
+!SESSION 2015-03-09 09:14:48.837 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.7.0_67
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=en_GB
+Command-line arguments:  -os win32 -ws win32 -arch x86
+
+!ENTRY org.eclipse.ui 4 4 2015-03-09 09:15:36.737
+!MESSAGE Plugin org.eclipse.cdt.ui, extension org.eclipse.ui.decorators, id org.eclipse.cdt.internal.ui.CustomBuildSettingsDecorator: Duplicate id found: org.eclipse.cdt.internal.ui.CustomBuildSettingsDecorator
+
+!ENTRY org.eclipse.ui 4 4 2015-03-09 09:15:36.854
+!MESSAGE Plugin org.eclipse.cdt.ui, extension org.eclipse.ui.decorators, id org.eclipse.cdt.internal.ui.CustomBuildSettingsDecorator: Unknown extension tag found: decorator
+
+!ENTRY com.crt.log 1 0 2015-03-09 09:19:55.717
+!MESSAGE Drivers loaded in 2630 milliseconds
+
+!ENTRY com.crt.dsfdebug 4 0 2015-03-09 09:19:57.731
+!MESSAGE 02: Failed on connect
+!SUBENTRY 1 com.crt.dsfdebug 4 0 2015-03-09 09:19:57.731
+!MESSAGE 02: Failed on connect
+!SUBENTRY 1 com.crt.dsfdebug 4 0 2015-03-09 09:19:57.731
+!MESSAGE Bad ACK returned from status - wire error.
+!SUBENTRY 1 com.crt.dsfdebug 4 0 2015-03-09 09:19:57.731
+!MESSAGE Emu(0): Connected. Was: None. DpID:     EDB6. Info: WIN64HS12
+
+!ENTRY org.eclipse.cdt.dsf.gdb 4 5012 2015-03-09 09:19:57.753
+!MESSAGE Error in final launch sequence
+!STACK 1
+org.eclipse.core.runtime.CoreException: Failed to execute MI command:
+-target-select extended-remote | crt_emu_lpc11_13_nxp -msg-port=61432 -g -mi -2 -pLPC11C24/301 -vendor=NXP -e0 -wire=winUSB -flash-driver=LPC11_12_13_32K_8K.cfx
+Error message from debugger back end:
+Remote communication error.  Target disconnected.: No error.
+	at org.eclipse.cdt.dsf.concurrent.Query.get(Query.java:115)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.launchDebugSession(GdbLaunchDelegate.java:234)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.launchDebugger(GdbLaunchDelegate.java:108)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.launch(GdbLaunchDelegate.java:96)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:885)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:739)
+	at com.crt.ctrlcenter.launch.BuildLaunchUtils$2.run(BuildLaunchUtils.java:854)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+Caused by: java.lang.Exception: Remote communication error.  Target disconnected.: No error.
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.processMIOutput(AbstractMIControl.java:926)
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.run(AbstractMIControl.java:755)
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10004 2015-03-09 09:19:57.880
+!MESSAGE Failed to execute MI command:
+-target-select extended-remote | crt_emu_lpc11_13_nxp -msg-port=61432 -g -mi -2 -pLPC11C24/301 -vendor=NXP -e0 -wire=winUSB -flash-driver=LPC11_12_13_32K_8K.cfx
+Error message from debugger back end:
+Remote communication error.  Target disconnected.: No error.
+!STACK 0
+java.lang.Exception: Remote communication error.  Target disconnected.: No error.
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.processMIOutput(AbstractMIControl.java:926)
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.run(AbstractMIControl.java:755)
+
+!ENTRY org.eclipse.cdt.dsf.gdb 4 5012 2015-03-09 09:20:20.680
+!MESSAGE Error in final launch sequence
+!STACK 1
+org.eclipse.core.runtime.CoreException: Failed to execute MI command:
+-target-select extended-remote | crt_emu_lpc11_13_nxp -msg-port=61435 -g -mi -2 -pLPC11C24/301 -vendor=NXP -e0 -wire=winUSB -flash-driver=LPC11_12_13_32K_8K.cfx
+Error message from debugger back end:
+Remote communication error.  Target disconnected.: No error.
+	at org.eclipse.cdt.dsf.concurrent.Query.get(Query.java:115)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.launchDebugSession(GdbLaunchDelegate.java:234)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.launchDebugger(GdbLaunchDelegate.java:108)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.launch(GdbLaunchDelegate.java:96)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:885)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:739)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1039)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1256)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+Caused by: java.lang.Exception: Remote communication error.  Target disconnected.: No error.
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.processMIOutput(AbstractMIControl.java:926)
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.run(AbstractMIControl.java:755)
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10004 2015-03-09 09:20:20.680
+!MESSAGE Failed to execute MI command:
+-target-select extended-remote | crt_emu_lpc11_13_nxp -msg-port=61435 -g -mi -2 -pLPC11C24/301 -vendor=NXP -e0 -wire=winUSB -flash-driver=LPC11_12_13_32K_8K.cfx
+Error message from debugger back end:
+Remote communication error.  Target disconnected.: No error.
+!STACK 0
+java.lang.Exception: Remote communication error.  Target disconnected.: No error.
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.processMIOutput(AbstractMIControl.java:926)
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.run(AbstractMIControl.java:755)
+
+!ENTRY com.crt.dsfdebug 4 0 2015-03-09 09:20:20.949
+!MESSAGE 02: Failed on connect
+!SUBENTRY 1 com.crt.dsfdebug 4 0 2015-03-09 09:20:20.949
+!MESSAGE 02: Failed on connect
+!SUBENTRY 1 com.crt.dsfdebug 4 0 2015-03-09 09:20:20.949
+!MESSAGE Bad ACK returned from status - wire error.
+!SUBENTRY 1 com.crt.dsfdebug 4 0 2015-03-09 09:20:20.949
+!MESSAGE Emu(0): Connected. Was: None. DpID:     EDB6. Info: WIN64HS12
+!SESSION 2015-03-09 09:20:46.360 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.7.0_67
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=en_GB
+Command-line arguments:  -os win32 -ws win32 -arch x86
+
+!ENTRY org.eclipse.ui 4 4 2015-03-09 09:20:59.324
+!MESSAGE Plugin org.eclipse.cdt.ui, extension org.eclipse.ui.decorators, id org.eclipse.cdt.internal.ui.CustomBuildSettingsDecorator: Duplicate id found: org.eclipse.cdt.internal.ui.CustomBuildSettingsDecorator
+
+!ENTRY org.eclipse.ui 4 4 2015-03-09 09:20:59.328
+!MESSAGE Plugin org.eclipse.cdt.ui, extension org.eclipse.ui.decorators, id org.eclipse.cdt.internal.ui.CustomBuildSettingsDecorator: Unknown extension tag found: decorator
+
+!ENTRY com.crt.log 1 0 2015-03-09 09:22:48.128
+!MESSAGE Drivers loaded in 3033 milliseconds
+
+!ENTRY org.eclipse.cdt.dsf.gdb 4 5012 2015-03-09 09:22:51.353
+!MESSAGE Error in final launch sequence
+!STACK 1
+org.eclipse.core.runtime.CoreException: Failed to execute MI command:
+-target-select extended-remote | crt_emu_lpc11_13_nxp -msg-port=61447 -g -mi -2 -pLPC11C24/301 -vendor=NXP -e0 -wire=winUSB -flash-driver=LPC11_12_13_32K_8K.cfx
+Error message from debugger back end:
+Remote communication error.  Target disconnected.: No error.
+	at org.eclipse.cdt.dsf.concurrent.Query.get(Query.java:115)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.launchDebugSession(GdbLaunchDelegate.java:234)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.launchDebugger(GdbLaunchDelegate.java:108)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.launch(GdbLaunchDelegate.java:96)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:885)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:739)
+	at com.crt.ctrlcenter.launch.BuildLaunchUtils$2.run(BuildLaunchUtils.java:854)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+Caused by: java.lang.Exception: Remote communication error.  Target disconnected.: No error.
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.processMIOutput(AbstractMIControl.java:926)
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.run(AbstractMIControl.java:755)
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10004 2015-03-09 09:22:51.432
+!MESSAGE Failed to execute MI command:
+-target-select extended-remote | crt_emu_lpc11_13_nxp -msg-port=61447 -g -mi -2 -pLPC11C24/301 -vendor=NXP -e0 -wire=winUSB -flash-driver=LPC11_12_13_32K_8K.cfx
+Error message from debugger back end:
+Remote communication error.  Target disconnected.: No error.
+!STACK 0
+java.lang.Exception: Remote communication error.  Target disconnected.: No error.
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.processMIOutput(AbstractMIControl.java:926)
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.run(AbstractMIControl.java:755)
+
+!ENTRY com.crt.dsfdebug 4 0 2015-03-09 09:22:51.901
+!MESSAGE 02: Failed on connect
+!SUBENTRY 1 com.crt.dsfdebug 4 0 2015-03-09 09:22:51.901
+!MESSAGE 02: Failed on connect
+!SUBENTRY 1 com.crt.dsfdebug 4 0 2015-03-09 09:22:51.901
+!MESSAGE Bad ACK returned from status - wire error.
+!SUBENTRY 1 com.crt.dsfdebug 4 0 2015-03-09 09:22:51.901
+!MESSAGE Emu(0): Connected. Was: None. DpID:     EDB6. Info: WIN64HS12
+
+!ENTRY com.crt.log 1 0 2015-03-09 09:23:26.532
+!MESSAGE Drivers loaded in 1263 milliseconds
+
+!ENTRY org.eclipse.cdt.dsf.gdb 4 5012 2015-03-09 09:23:26.873
+!MESSAGE Error in final launch sequence
+!STACK 1
+org.eclipse.core.runtime.CoreException: Failed to execute MI command:
+-target-select extended-remote | crt_emu_lpc11_13_nxp -msg-port=61449 -g -mi -2 -pLPC11C24/301 -vendor=NXP -e0 -wire=winUSB -flash-driver=LPC11_12_13_32K_8K.cfx
+Error message from debugger back end:
+Remote communication error.  Target disconnected.: No error.
+	at org.eclipse.cdt.dsf.concurrent.Query.get(Query.java:115)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.launchDebugSession(GdbLaunchDelegate.java:234)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.launchDebugger(GdbLaunchDelegate.java:108)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.launch(GdbLaunchDelegate.java:96)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:885)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:739)
+	at com.crt.ctrlcenter.launch.BuildLaunchUtils$2.run(BuildLaunchUtils.java:854)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+Caused by: java.lang.Exception: Remote communication error.  Target disconnected.: No error.
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.processMIOutput(AbstractMIControl.java:926)
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.run(AbstractMIControl.java:755)
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10004 2015-03-09 09:23:26.873
+!MESSAGE Failed to execute MI command:
+-target-select extended-remote | crt_emu_lpc11_13_nxp -msg-port=61449 -g -mi -2 -pLPC11C24/301 -vendor=NXP -e0 -wire=winUSB -flash-driver=LPC11_12_13_32K_8K.cfx
+Error message from debugger back end:
+Remote communication error.  Target disconnected.: No error.
+!STACK 0
+java.lang.Exception: Remote communication error.  Target disconnected.: No error.
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.processMIOutput(AbstractMIControl.java:926)
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.run(AbstractMIControl.java:755)
+
+!ENTRY com.crt.dsfdebug 4 0 2015-03-09 09:23:27.170
+!MESSAGE 02: Failed on connect
+!SUBENTRY 1 com.crt.dsfdebug 4 0 2015-03-09 09:23:27.170
+!MESSAGE 02: Failed on connect
+!SUBENTRY 1 com.crt.dsfdebug 4 0 2015-03-09 09:23:27.170
+!MESSAGE Bad ACK returned from status - wire error.
+!SUBENTRY 1 com.crt.dsfdebug 4 0 2015-03-09 09:23:27.170
+!MESSAGE Emu(0): Connected. Was: None. DpID:     EDB6. Info: WIN64HS12
+
+!ENTRY org.eclipse.cdt.dsf.gdb 4 5012 2015-03-09 09:24:28.818
+!MESSAGE Error in final launch sequence
+!STACK 1
+org.eclipse.core.runtime.CoreException: Failed to execute MI command:
+-target-select extended-remote | crt_emu_lpc11_13_nxp -msg-port=61451 -g -mi -2 -pLPC11C24/301 -vendor=NXP -e0 -wire=winUSB -flash-driver=LPC11_12_13_32K_8K.cfx
+Error message from debugger back end:
+Remote communication error.  Target disconnected.: No error.
+	at org.eclipse.cdt.dsf.concurrent.Query.get(Query.java:115)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.launchDebugSession(GdbLaunchDelegate.java:234)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.launchDebugger(GdbLaunchDelegate.java:108)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.launch(GdbLaunchDelegate.java:96)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:885)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:739)
+	at com.crt.ctrlcenter.launch.BuildLaunchUtils$2.run(BuildLaunchUtils.java:854)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+Caused by: java.lang.Exception: Remote communication error.  Target disconnected.: No error.
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.processMIOutput(AbstractMIControl.java:926)
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.run(AbstractMIControl.java:755)
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10004 2015-03-09 09:24:28.819
+!MESSAGE Failed to execute MI command:
+-target-select extended-remote | crt_emu_lpc11_13_nxp -msg-port=61451 -g -mi -2 -pLPC11C24/301 -vendor=NXP -e0 -wire=winUSB -flash-driver=LPC11_12_13_32K_8K.cfx
+Error message from debugger back end:
+Remote communication error.  Target disconnected.: No error.
+!STACK 0
+java.lang.Exception: Remote communication error.  Target disconnected.: No error.
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.processMIOutput(AbstractMIControl.java:926)
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.run(AbstractMIControl.java:755)
+
+!ENTRY com.crt.dsfdebug 4 0 2015-03-09 09:24:29.108
+!MESSAGE 02: Failed on connect
+!SUBENTRY 1 com.crt.dsfdebug 4 0 2015-03-09 09:24:29.108
+!MESSAGE 02: Failed on connect
+!SUBENTRY 1 com.crt.dsfdebug 4 0 2015-03-09 09:24:29.108
+!MESSAGE Bad ACK returned from status - wire error.
+!SUBENTRY 1 com.crt.dsfdebug 4 0 2015-03-09 09:24:29.108
+!MESSAGE Emu(0): Connected. Was: None. DpID:     EDB6. Info: WIN64HS12
+
+!ENTRY com.crt.log 1 0 2015-03-09 10:46:38.130
+!MESSAGE Drivers loaded in 3058 milliseconds
+
+!ENTRY org.eclipse.jface 2 0 2015-03-09 10:52:01.345
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2015-03-09 10:52:01.345
+!MESSAGE A conflict occurred for ALT+ARROW_LEFT:
+Binding(ALT+ARROW_LEFT,
+	ParameterizedCommand(Command(org.eclipse.cdt.ui.hover.backwardMacroExpansion,Back,
+		Steps backward in macro expansions,
+		Category(org.eclipse.cdt.ui.category.source,C/C++ Source,C/C++ Source Actions,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@d6e5bd,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.cdt.ui.macroExpansionHoverScope,,,system)
+Binding(ALT+ARROW_LEFT,
+	ParameterizedCommand(Command(org.eclipse.ui.navigate.backwardHistory,Backward History,
+		Move backward in the editor navigation history,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@84ec22,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2015-03-09 10:52:01.345
+!MESSAGE A conflict occurred for ALT+ARROW_RIGHT:
+Binding(ALT+ARROW_RIGHT,
+	ParameterizedCommand(Command(org.eclipse.cdt.ui.hover.forwardMacroExpansion,Forward,
+		Steps forward in macro expansions,
+		Category(org.eclipse.cdt.ui.category.source,C/C++ Source,C/C++ Source Actions,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@aaec0b,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.cdt.ui.macroExpansionHoverScope,,,system)
+Binding(ALT+ARROW_RIGHT,
+	ParameterizedCommand(Command(org.eclipse.ui.navigate.forwardHistory,Forward History,
+		Move forward in the editor navigation history,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@16f0517,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2015-03-09 10:52:01.345
+!MESSAGE A conflict occurred for F3:
+Binding(F3,
+	ParameterizedCommand(Command(org.eclipse.cdt.ui.edit.opendecl,Open Declaration,
+		Opens an editor on the selected element's declaration(s),
+		Category(org.eclipse.cdt.ui.category.source,C/C++ Source,C/C++ Source Actions,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@1b7601b,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.cdt.ui.cEditorScope,,,system)
+Binding(F3,
+	ParameterizedCommand(Command(org.eclipse.cdt.ui.edit.opendecl,Open Declaration,
+		Opens an editor on the selected element's declaration(s),
+		Category(org.eclipse.cdt.ui.category.source,C/C++ Source,C/C++ Source Actions,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@1b7601b,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.cdt.ui.macroExpansionHoverScope,,,system)
+
+!ENTRY com.crt.log 1 0 2015-03-09 11:11:38.475
+!MESSAGE Drivers loaded in 1833 milliseconds
+
+!ENTRY com.crt.log 1 0 2015-03-09 11:43:20.507
+!MESSAGE Drivers loaded in 1322 milliseconds
+
+!ENTRY com.crt.dsfdebug 4 0 2015-03-09 11:44:42.290
+!MESSAGE 16: Target error from status-poll
+!SUBENTRY 1 com.crt.dsfdebug 4 0 2015-03-09 11:44:42.290
+!MESSAGE 16: Target error from status-poll
+!SUBENTRY 1 com.crt.dsfdebug 4 0 2015-03-09 11:44:42.290
+!MESSAGE Not connected to emulator.
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2015-03-09 11:46:36.505
+!MESSAGE Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.mi.service.MIRunControl$9@147223c): Status ERROR: org.eclipse.cdt.dsf.gdb code=10004 Interrupt failed. null' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10004 2015-03-09 11:46:36.505
+!MESSAGE Interrupt failed.
+
+!ENTRY org.eclipse.cdt.dsf 4 10004 2015-03-09 11:46:36.510
+!MESSAGE Invalid breakpoint parameter(s)
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10004 2015-03-09 11:46:36.510
+!MESSAGE Invalid breakpoint parameter(s)
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2015-03-09 11:49:09.003
+!MESSAGE Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.concurrent.RequestMonitor@3eefe5): Status ERROR: org.eclipse.cdt.dsf.gdb code=10004 Interrupt failed. null' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10004 2015-03-09 11:49:09.003
+!MESSAGE Interrupt failed.
+
+!ENTRY com.crt.log 1 0 2015-03-09 11:49:18.296
+!MESSAGE Drivers loaded in 1756 milliseconds
+
+!ENTRY com.crt.dsfdebug 4 0 2015-03-09 11:52:44.575
+!MESSAGE 16: Target error from status-poll
+!SUBENTRY 1 com.crt.dsfdebug 4 0 2015-03-09 11:52:44.575
+!MESSAGE 16: Target error from status-poll
+!SUBENTRY 1 com.crt.dsfdebug 4 0 2015-03-09 11:52:44.575
+!MESSAGE Bad ACK returned from status - wire error.
+
+!ENTRY org.eclipse.cdt.dsf 4 -1 2015-03-09 11:59:18.261
+!MESSAGE Invocation exception when calling a service event handler method
+!STACK 0
+java.lang.reflect.InvocationTargetException
+	at sun.reflect.GeneratedMethodAccessor33.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.cdt.dsf.service.DsfSession.doDispatchEvent(DsfSession.java:519)
+	at org.eclipse.cdt.dsf.service.DsfSession.access$2(DsfSession.java:463)
+	at org.eclipse.cdt.dsf.service.DsfSession$3.run(DsfSession.java:390)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(Unknown Source)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: java.util.concurrent.RejectedExecutionException: Display org.eclipse.swt.widgets.Display@19e897 is disposed
+	at org.eclipse.cdt.dsf.ui.concurrent.SimpleDisplayExecutor.execute(SimpleDisplayExecutor.java:85)
+	at org.eclipse.cdt.dsf.ui.viewmodel.AbstractVMAdapter.handleEvent(AbstractVMAdapter.java:260)
+	at org.eclipse.cdt.dsf.ui.viewmodel.datamodel.AbstractDMVMAdapter.eventDispatched(AbstractDMVMAdapter.java:103)
+	... 13 more
+Caused by: org.eclipse.swt.SWTException: Device is disposed
+	at org.eclipse.swt.SWT.error(SWT.java:4441)
+	at org.eclipse.swt.SWT.error(SWT.java:4356)
+	at org.eclipse.swt.SWT.error(SWT.java:4327)
+	at org.eclipse.swt.widgets.Display.error(Display.java:1258)
+	at org.eclipse.swt.widgets.Display.asyncExec(Display.java:709)
+	at org.eclipse.cdt.dsf.ui.concurrent.SimpleDisplayExecutor.execute(SimpleDisplayExecutor.java:77)
+	... 15 more
+Root exception:
+java.util.concurrent.RejectedExecutionException: Display org.eclipse.swt.widgets.Display@19e897 is disposed
+	at org.eclipse.cdt.dsf.ui.concurrent.SimpleDisplayExecutor.execute(SimpleDisplayExecutor.java:85)
+	at org.eclipse.cdt.dsf.ui.viewmodel.AbstractVMAdapter.handleEvent(AbstractVMAdapter.java:260)
+	at org.eclipse.cdt.dsf.ui.viewmodel.datamodel.AbstractDMVMAdapter.eventDispatched(AbstractDMVMAdapter.java:103)
+	at sun.reflect.GeneratedMethodAccessor33.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.cdt.dsf.service.DsfSession.doDispatchEvent(DsfSession.java:519)
+	at org.eclipse.cdt.dsf.service.DsfSession.access$2(DsfSession.java:463)
+	at org.eclipse.cdt.dsf.service.DsfSession$3.run(DsfSession.java:390)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(Unknown Source)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: org.eclipse.swt.SWTException: Device is disposed
+	at org.eclipse.swt.SWT.error(SWT.java:4441)
+	at org.eclipse.swt.SWT.error(SWT.java:4356)
+	at org.eclipse.swt.SWT.error(SWT.java:4327)
+	at org.eclipse.swt.widgets.Display.error(Display.java:1258)
+	at org.eclipse.swt.widgets.Display.asyncExec(Display.java:709)
+	at org.eclipse.cdt.dsf.ui.concurrent.SimpleDisplayExecutor.execute(SimpleDisplayExecutor.java:77)
+	... 15 more
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2015-03-09 11:59:18.263
+!MESSAGE Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.mi.service.MIRunControl$9@b7cfa1): Status ERROR: org.eclipse.cdt.dsf.gdb code=10001 Context cannot be suspended. null' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10001 2015-03-09 11:59:18.263
+!MESSAGE Context cannot be suspended.
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2015-03-09 11:59:18.277
+!MESSAGE Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.mi.service.MIRunControl$9@8d233b): Status ERROR: org.eclipse.cdt.dsf.gdb code=10001 Context cannot be suspended. null' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10001 2015-03-09 11:59:18.277
+!MESSAGE Context cannot be suspended.

@@ -1,0 +1,20 @@
+/*
+ * pwm.c
+ *
+ *  Created on: 5 Mar 2015
+ *      Author: Marcus
+ */
+
+#include "pwm.h"
+
+void pwm_init(){
+}
+
+void pwm_red(int value){
+	if(value < 0){
+		value = 0;
+	}else if(value > 255){
+		value = 255;
+	}
+	LPC_TMR32B1->MR0;
+}
