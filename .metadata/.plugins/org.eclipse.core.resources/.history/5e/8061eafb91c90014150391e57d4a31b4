@@ -92,7 +92,6 @@ void cycle_colour(){
 }
 
 void parser(char str[], int len){
-	/*
 	char short_str[16];
 	int short_len = 0;
 	int i = 0;
@@ -113,7 +112,7 @@ void parser(char str[], int len){
 
 	i = 0;
 	while(i<short_len){
-		if(short_str[i] != command_on[i]){
+		if(short_str[i]){
 			break;
 		}
 		if(i == 2){
@@ -126,7 +125,7 @@ void parser(char str[], int len){
 
 	i = 0;
 	while(i<short_len){
-		if(short_str[i] != command_off[i]){
+		if(short_str[i]){
 			break;
 		}
 		if(i == 3){
@@ -139,7 +138,7 @@ void parser(char str[], int len){
 
 	i = 0;
 	while(i<len){
-		if(short_str[i] != command_blink[i]){
+		if(short_str[i]){
 			break;
 		}
 		if(i == 4){
@@ -162,7 +161,6 @@ void parser(char str[], int len){
 	UART_send("ERROR, could not parse:\t", 24);
 	UART_send(str, len);
 	UART_send("\n", 1);
-	*/
 }
 
 void TIMER32_0_IRQHandler (void){

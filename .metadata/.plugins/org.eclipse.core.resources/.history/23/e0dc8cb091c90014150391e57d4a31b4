@@ -92,7 +92,6 @@ void cycle_colour(){
 }
 
 void parser(char str[], int len){
-	/*
 	char short_str[16];
 	int short_len = 0;
 	int i = 0;
@@ -162,7 +161,6 @@ void parser(char str[], int len){
 	UART_send("ERROR, could not parse:\t", 24);
 	UART_send(str, len);
 	UART_send("\n", 1);
-	*/
 }
 
 void TIMER32_0_IRQHandler (void){

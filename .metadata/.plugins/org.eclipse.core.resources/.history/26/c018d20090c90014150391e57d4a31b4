@@ -13,6 +13,7 @@
 // TODO: insert other include files here
 
 // TODO: insert other definitions and declarations here
+void cycle_colour();
 
 int main(void) {
 
@@ -22,27 +23,28 @@ int main(void) {
 	LPC_GPIO1->DIR |= (1<<2);
 	LPC_GPIO0->DIR |= (1<<11);
 
-	LPC_SYSCON->SYSAHBCLKCTRL |= (1<<10);		//Power up tmr0
-	LPC_IOCON->R_PIO1_1 = 3;
-
-	LPC_TMR32B1->PR = 28;
-	LPC_TMR32B1->MCR |= (1<<10);
-	LPC_TMR32B1->MR3 = 0;
-	LPC_TMR32B1->MR0 = 200;
-
-	LPC_TMR32B1->PWMC = (1<<0);
-	LPC_TMR32B1->PWMC |= (1<<3);
-
-	LPC_TMR32B1->TCR = 0x2;		//Reset timer
-	LPC_TMR32B1->TCR = 0x1;		//Start timer
-
+	pwm_init();
 
     while(1) {
     	int i = 0;
-    	while(i<100000){
+    	while(i<10000){
     		i++;
     	}
-    	LPC_TMR32B1->MR0 += 8;
+    	cycle_colour();
     }
     return 0 ;
+}
+
+void cycle_colour(){
+	static int colour = 255;
+	static int colour_inc = 1;
+
+	colour += colour_inc;
+	pwm_red(colour - 255);
+	pwm_blue(255 - colour);
+	pwm_green(255 - (colour/2));
+
+	if(colour > 511 || colour <= 0){
+		colour_inc = - colour_inc;
+	}
 }
