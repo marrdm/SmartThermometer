@@ -183,7 +183,7 @@ END GROUP
                 0x00008000                __top_MFlash32 = 0x8000
                 0x10002000                __top_RamLoc8 = 0x10002000
 
-.text           0x00000000      0xba4
+.text           0x00000000      0xbec
  FILL mask 0xff
                 0x00000000                __vectors_start__ = ABSOLUTE (.)
  *(.isr_vector)
@@ -192,7 +192,7 @@ END GROUP
                 0x000000c0                . = ALIGN (0x4)
                 0x000000c0                __section_table_start = .
                 0x000000c0                __data_section_table = .
-                0x000000c0        0x4 LONG 0xba4 LOADADDR (.data)
+                0x000000c0        0x4 LONG 0xbec LOADADDR (.data)
                 0x000000c4        0x4 LONG 0x10000000 ADDR (.data)
                 0x000000c8        0x4 LONG 0x8 SIZEOF (.data)
                 0x000000cc                __data_section_table_end = .
@@ -239,92 +239,92 @@ END GROUP
                 0x00000300       0x2c ./src/Software.o
  .text.NVIC_SetPriority
                 0x0000032c       0xe0 ./src/Software.o
- .text.main     0x0000040c      0x1c8 ./src/Software.o
+ .text.main     0x0000040c      0x210 ./src/Software.o
                 0x0000040c                main
  .text.cycle_colour
-                0x000005d4       0x70 ./src/Software.o
-                0x000005d4                cycle_colour
- .text.parser   0x00000644       0x10 ./src/Software.o
-                0x00000644                parser
+                0x0000061c       0x70 ./src/Software.o
+                0x0000061c                cycle_colour
+ .text.parser   0x0000068c       0x10 ./src/Software.o
+                0x0000068c                parser
  .text.TIMER32_0_IRQHandler
-                0x00000654       0x24 ./src/Software.o
-                0x00000654                TIMER32_0_IRQHandler
+                0x0000069c       0x24 ./src/Software.o
+                0x0000069c                TIMER32_0_IRQHandler
  .text.UART_IRQHandler
-                0x00000678       0x88 ./src/Software.o
-                0x00000678                UART_IRQHandler
+                0x000006c0       0x88 ./src/Software.o
+                0x000006c0                UART_IRQHandler
  .text.PIOINT1_IRQHandler
-                0x00000700       0x20 ./src/Software.o
-                0x00000700                PIOINT1_IRQHandler
+                0x00000748       0x20 ./src/Software.o
+                0x00000748                PIOINT1_IRQHandler
  .text.ADC_IRQHandler
-                0x00000720       0xbc ./src/Software.o
-                0x00000720                ADC_IRQHandler
+                0x00000768       0xbc ./src/Software.o
+                0x00000768                ADC_IRQHandler
  .text.pwm_init
-                0x000007dc       0xc0 ./src/pwm.o
-                0x000007dc                pwm_init
- .text.pwm_red  0x0000089c       0x34 ./src/pwm.o
-                0x0000089c                pwm_red
+                0x00000824       0xc0 ./src/pwm.o
+                0x00000824                pwm_init
+ .text.pwm_red  0x000008e4       0x34 ./src/pwm.o
+                0x000008e4                pwm_red
  .text.pwm_green
-                0x000008d0       0x34 ./src/pwm.o
-                0x000008d0                pwm_green
+                0x00000918       0x34 ./src/pwm.o
+                0x00000918                pwm_green
  .text.pwm_blue
-                0x00000904       0x34 ./src/pwm.o
-                0x00000904                pwm_blue
+                0x0000094c       0x34 ./src/pwm.o
+                0x0000094c                pwm_blue
  .text.SystemInit
-                0x00000938       0x90 C:\Users\jeffrey\Documents\E7020E\SmartThermometer\CMSISv2p00_LPC11xx\Debug\libCMSISv2p00_LPC11xx.a(system_LPC11xx.o)
-                0x00000938                SystemInit
+                0x00000980       0x90 C:\Users\jeffrey\Documents\E7020E\SmartThermometer\CMSISv2p00_LPC11xx\Debug\libCMSISv2p00_LPC11xx.a(system_LPC11xx.o)
+                0x00000980                SystemInit
  .text.__weak_main
-                0x000009c8        0x8 c:/nxp/lpcxpresso_7.5.0_254/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv6-m\libcr_c.a(__weak__main.o)
-                0x000009c8                __weak_main
-                0x000009c8                __main
+                0x00000a10        0x8 c:/nxp/lpcxpresso_7.5.0_254/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv6-m\libcr_c.a(__weak__main.o)
+                0x00000a10                __weak_main
+                0x00000a10                __main
  .text.__aeabi_division_idivmod
-                0x000009d0       0x78 c:/nxp/lpcxpresso_7.5.0_254/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/4.8.4/armv6-m\libcr_eabihelpers.a(division_32.o)
-                0x000009d0                __aeabi_idivmod
-                0x000009d0                __aeabi_idiv
-                0x000009d6                __aeabi_uidivmod
-                0x000009d6                __aeabi_uidiv
+                0x00000a18       0x78 c:/nxp/lpcxpresso_7.5.0_254/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/4.8.4/armv6-m\libcr_eabihelpers.a(division_32.o)
+                0x00000a18                __aeabi_idivmod
+                0x00000a18                __aeabi_idiv
+                0x00000a1e                __aeabi_uidivmod
+                0x00000a1e                __aeabi_uidiv
  .text.__aeabi_division_idiv0
-                0x00000a48        0x2 c:/nxp/lpcxpresso_7.5.0_254/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/4.8.4/armv6-m\libcr_eabihelpers.a(division_idiv0.o)
-                0x00000a48                __aeabi_idiv0
- *fill*         0x00000a4a        0x2 
+                0x00000a90        0x2 c:/nxp/lpcxpresso_7.5.0_254/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/4.8.4/armv6-m\libcr_eabihelpers.a(division_idiv0.o)
+                0x00000a90                __aeabi_idiv0
+ *fill*         0x00000a92        0x2 
  .text.__aeabi_fdiv
-                0x00000a4c       0xe0 c:/nxp/lpcxpresso_7.5.0_254/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/4.8.4/armv6-m\libcr_eabihelpers.a(float.o)
-                0x00000a4c                __aeabi_fdiv
+                0x00000a94       0xe0 c:/nxp/lpcxpresso_7.5.0_254/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/4.8.4/armv6-m\libcr_eabihelpers.a(float.o)
+                0x00000a94                __aeabi_fdiv
  .text.__bhs_ui2f
-                0x00000b2c       0x60 c:/nxp/lpcxpresso_7.5.0_254/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/4.8.4/armv6-m\libcr_eabihelpers.a(float.o)
-                0x00000b2c                __bhs_ui2f
+                0x00000b74       0x60 c:/nxp/lpcxpresso_7.5.0_254/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/4.8.4/armv6-m\libcr_eabihelpers.a(float.o)
+                0x00000b74                __bhs_ui2f
  .text.__aeabi_i2f
-                0x00000b8c       0x16 c:/nxp/lpcxpresso_7.5.0_254/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/4.8.4/armv6-m\libcr_eabihelpers.a(float.o)
-                0x00000b8c                __aeabi_i2f
+                0x00000bd4       0x16 c:/nxp/lpcxpresso_7.5.0_254/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/4.8.4/armv6-m\libcr_eabihelpers.a(float.o)
+                0x00000bd4                __aeabi_i2f
  *(.rodata .rodata.* .constdata .constdata.*)
-                0x00000ba4                . = ALIGN (0x4)
- *fill*         0x00000ba2        0x2 ff
+                0x00000bec                . = ALIGN (0x4)
+ *fill*         0x00000bea        0x2 ff
 
-.glue_7         0x00000ba4        0x0
+.glue_7         0x00000bec        0x0
  .glue_7        0x00000000        0x0 linker stubs
 
-.glue_7t        0x00000ba4        0x0
+.glue_7t        0x00000bec        0x0
  .glue_7t       0x00000000        0x0 linker stubs
 
-.vfp11_veneer   0x00000ba4        0x0
+.vfp11_veneer   0x00000bec        0x0
  .vfp11_veneer  0x00000000        0x0 linker stubs
 
-.v4_bx          0x00000ba4        0x0
+.v4_bx          0x00000bec        0x0
  .v4_bx         0x00000000        0x0 linker stubs
 
-.iplt           0x00000ba4        0x0
+.iplt           0x00000bec        0x0
  .iplt          0x00000000        0x0 ./src/Software.o
 
-.rel.dyn        0x00000ba4        0x0
+.rel.dyn        0x00000bec        0x0
  .rel.iplt      0x00000000        0x0 ./src/Software.o
 
 .ARM.extab
  *(.ARM.extab* .gnu.linkonce.armextab.*)
-                0x00000ba4                __exidx_start = .
+                0x00000bec                __exidx_start = .
 
 .ARM.exidx
  *(.ARM.exidx* .gnu.linkonce.armexidx.*)
-                0x00000ba4                __exidx_end = .
-                0x00000ba4                _etext = .
+                0x00000bec                __exidx_end = .
+                0x00000bec                _etext = .
 
 .uninit_RESERVED
                 0x10000000        0x0
@@ -332,7 +332,7 @@ END GROUP
                 0x10000000                . = ALIGN (0x4)
                 0x10000000                _end_uninit_RESERVED = .
 
-.data           0x10000000        0x8 load address 0x00000ba4
+.data           0x10000000        0x8 load address 0x00000bec
  FILL mask 0xff
                 0x10000000                _data = .
  *(vtable)
@@ -345,10 +345,10 @@ END GROUP
                 0x10000008                . = ALIGN (0x4)
                 0x10000008                _edata = .
 
-.igot.plt       0x10000008        0x0 load address 0x00000bac
+.igot.plt       0x10000008        0x0 load address 0x00000bf4
  .igot.plt      0x00000000        0x0 ./src/Software.o
 
-.bss            0x10000008       0x20 load address 0x00000bac
+.bss            0x10000008       0x20 load address 0x00000bf4
                 0x10000008                _bss = .
  *(.bss*)
  .bss.voltage   0x10000008        0x4 ./src/Software.o
@@ -366,7 +366,7 @@ END GROUP
                 0x10000028                _ebss = .
                 0x10000028                PROVIDE (end, .)
 
-.noinit         0x10000028        0x0 load address 0x00000bac
+.noinit         0x10000028        0x0 load address 0x00000bf4
                 0x10000028                _noinit = .
  *(.noinit*)
                 0x10000028                . = ALIGN (0x4)
@@ -426,12 +426,12 @@ OUTPUT(Software.axf elf32-littlearm)
  .debug_macro   0x000014ca      0x13b C:\Users\jeffrey\Documents\E7020E\SmartThermometer\CMSISv2p00_LPC11xx\Debug\libCMSISv2p00_LPC11xx.a(system_LPC11xx.o)
  .debug_macro   0x00001605      0x81a C:\Users\jeffrey\Documents\E7020E\SmartThermometer\CMSISv2p00_LPC11xx\Debug\libCMSISv2p00_LPC11xx.a(system_LPC11xx.o)
 
-.debug_line     0x00000000      0x812
- .debug_line    0x00000000      0x31e ./src/Software.o
- .debug_line    0x0000031e       0xc2 ./src/cr_startup_lpc11xx.o
- .debug_line    0x000003e0       0x78 ./src/crp.o
- .debug_line    0x00000458      0x1f3 ./src/pwm.o
- .debug_line    0x0000064b      0x1c7 C:\Users\jeffrey\Documents\E7020E\SmartThermometer\CMSISv2p00_LPC11xx\Debug\libCMSISv2p00_LPC11xx.a(system_LPC11xx.o)
+.debug_line     0x00000000      0x818
+ .debug_line    0x00000000      0x324 ./src/Software.o
+ .debug_line    0x00000324       0xc2 ./src/cr_startup_lpc11xx.o
+ .debug_line    0x000003e6       0x78 ./src/crp.o
+ .debug_line    0x0000045e      0x1f3 ./src/pwm.o
+ .debug_line    0x00000651      0x1c7 C:\Users\jeffrey\Documents\E7020E\SmartThermometer\CMSISv2p00_LPC11xx\Debug\libCMSISv2p00_LPC11xx.a(system_LPC11xx.o)
 
 .debug_str      0x00000000     0x62b3
  .debug_str     0x00000000     0x5b65 ./src/Software.o

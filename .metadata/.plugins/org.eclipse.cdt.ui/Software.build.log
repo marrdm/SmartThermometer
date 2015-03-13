@@ -1,4 +1,4 @@
-16:02:37 **** Incremental Build of configuration Debug for project Software ****
+16:23:31 **** Build of configuration Debug for project Software ****
 make -r all 
 Building file: ../src/Software.c
 Invoking: MCU C Compiler
@@ -14,8 +14,8 @@ make --no-print-directory post-build
 Performing post-build steps
 arm-none-eabi-size "Software.axf"; # arm-none-eabi-objcopy -v -O binary "Software.axf" "Software.bin" ; # checksum -p LPC11C24_301 -d "Software.bin";
    text	   data	    bss	    dec	    hex	filename
-   2980	      8	     32	   3020	    bcc	Software.axf
+   3052	      8	     32	   3092	    c14	Software.axf
  
 
-16:02:37 Build Finished (took 429ms)
+16:23:31 Build Finished (took 429ms)
 
