@@ -1530,3 +1530,817 @@ arm-none-eabi-size "Software.axf"; # arm-none-eabi-objcopy -v -O binary "Softwar
    text	   data	    bss	    dec	    hex	filename
    1376	      0	      0	   1376	    560	Software.axf
  
+15:09:30 **** Incremental Build of configuration Debug for project CMSISv2p00_LPC11xx ****
+make -r all 
+make: Nothing to be done for `all'.
+15:09:36 **** Incremental Build of configuration Debug for project Software ****
+make -r all 
+Building file: ../src/Software.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M0 -D__USE_CMSIS=CMSISv2p00_LPC11xx -D__LPC11XX__ -D__REDLIB__ -I"C:\Users\Marcus\Dropbox\E7020E (LP3 14-15)\Project\CMSISv2p00_LPC11xx\inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -specs=redlib.specs -MMD -MP -MF"src/Software.d" -MT"src/Software.o" -MT"src/Software.d" -o "src/Software.o" "../src/Software.c"
+../src/Software.c: In function 'main':
+../src/Software.c:25:2: warning: implicit declaration of function 'pwm_init' [-Wimplicit-function-declaration]
+  pwm_init();
+  ^
+../src/Software.c:35:6: warning: implicit declaration of function 'pwm_red' [-Wimplicit-function-declaration]
+      pwm_red(j);
+      ^
+../src/Software.c:37:6: warning: implicit declaration of function 'pwm_green' [-Wimplicit-function-declaration]
+      pwm_green(255 - j);
+      ^
+Finished building: ../src/Software.c
+ 
+Building target: Software.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"C:\Users\Marcus\Dropbox\E7020E (LP3 14-15)\Project\CMSISv2p00_LPC11xx\Debug" -Xlinker -Map="Software.map" -Xlinker --gc-sections -mcpu=cortex-m0 -mthumb -T "Software_Debug.ld" -o "Software.axf"  ./src/Software.o ./src/cr_startup_lpc11xx.o ./src/crp.o ./src/pwm.o   -lCMSISv2p00_LPC11xx
+Finished building target: Software.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "Software.axf"; # arm-none-eabi-objcopy -v -O binary "Software.axf" "Software.bin" ; # checksum -p LPC11C24_301 -d "Software.bin";
+   text	   data	    bss	    dec	    hex	filename
+   1384	      0	      0	   1384	    568	Software.axf
+ 
+15:14:03 **** Incremental Build of configuration Debug for project CMSISv2p00_LPC11xx ****
+make -r all 
+make: Nothing to be done for `all'.
+15:14:07 **** Incremental Build of configuration Debug for project Software ****
+make -r all 
+Building file: ../src/Software.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M0 -D__USE_CMSIS=CMSISv2p00_LPC11xx -D__LPC11XX__ -D__REDLIB__ -I"C:\Users\Marcus\Dropbox\E7020E (LP3 14-15)\Project\CMSISv2p00_LPC11xx\inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -specs=redlib.specs -MMD -MP -MF"src/Software.d" -MT"src/Software.o" -MT"src/Software.d" -o "src/Software.o" "../src/Software.c"
+../src/Software.c: In function 'main':
+../src/Software.c:25:2: warning: implicit declaration of function 'pwm_init' [-Wimplicit-function-declaration]
+  pwm_init();
+  ^
+../src/Software.c:35:6: warning: implicit declaration of function 'pwm_red' [-Wimplicit-function-declaration]
+      pwm_red(255 + j);
+      ^
+../src/Software.c:36:6: warning: implicit declaration of function 'pwm_blue' [-Wimplicit-function-declaration]
+      pwm_blue(255 - j);
+      ^
+Finished building: ../src/Software.c
+ 
+Building target: Software.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"C:\Users\Marcus\Dropbox\E7020E (LP3 14-15)\Project\CMSISv2p00_LPC11xx\Debug" -Xlinker -Map="Software.map" -Xlinker --gc-sections -mcpu=cortex-m0 -mthumb -T "Software_Debug.ld" -o "Software.axf"  ./src/Software.o ./src/cr_startup_lpc11xx.o ./src/crp.o ./src/pwm.o   -lCMSISv2p00_LPC11xx
+Finished building target: Software.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "Software.axf"; # arm-none-eabi-objcopy -v -O binary "Software.axf" "Software.bin" ; # checksum -p LPC11C24_301 -d "Software.bin";
+   text	   data	    bss	    dec	    hex	filename
+   1384	      0	      0	   1384	    568	Software.axf
+ 
+15:15:15 **** Incremental Build of configuration Debug for project CMSISv2p00_LPC11xx ****
+make -r all 
+make: Nothing to be done for `all'.
+15:15:17 **** Incremental Build of configuration Debug for project Software ****
+make -r all 
+Building file: ../src/Software.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M0 -D__USE_CMSIS=CMSISv2p00_LPC11xx -D__LPC11XX__ -D__REDLIB__ -I"C:\Users\Marcus\Dropbox\E7020E (LP3 14-15)\Project\CMSISv2p00_LPC11xx\inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -specs=redlib.specs -MMD -MP -MF"src/Software.d" -MT"src/Software.o" -MT"src/Software.d" -o "src/Software.o" "../src/Software.c"
+../src/Software.c: In function 'main':
+../src/Software.c:25:2: warning: implicit declaration of function 'pwm_init' [-Wimplicit-function-declaration]
+  pwm_init();
+  ^
+../src/Software.c:35:6: warning: implicit declaration of function 'pwm_red' [-Wimplicit-function-declaration]
+      pwm_red(j - 255);
+      ^
+../src/Software.c:36:6: warning: implicit declaration of function 'pwm_blue' [-Wimplicit-function-declaration]
+      pwm_blue(255 - j);
+      ^
+Finished building: ../src/Software.c
+ 
+Building target: Software.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"C:\Users\Marcus\Dropbox\E7020E (LP3 14-15)\Project\CMSISv2p00_LPC11xx\Debug" -Xlinker -Map="Software.map" -Xlinker --gc-sections -mcpu=cortex-m0 -mthumb -T "Software_Debug.ld" -o "Software.axf"  ./src/Software.o ./src/cr_startup_lpc11xx.o ./src/crp.o ./src/pwm.o   -lCMSISv2p00_LPC11xx
+Finished building target: Software.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "Software.axf"; # arm-none-eabi-objcopy -v -O binary "Software.axf" "Software.bin" ; # checksum -p LPC11C24_301 -d "Software.bin";
+   text	   data	    bss	    dec	    hex	filename
+   1384	      0	      0	   1384	    568	Software.axf
+ 
+15:16:35 **** Incremental Build of configuration Debug for project CMSISv2p00_LPC11xx ****
+make -r all 
+make: Nothing to be done for `all'.
+15:16:38 **** Incremental Build of configuration Debug for project Software ****
+make -r all 
+Building file: ../src/Software.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M0 -D__USE_CMSIS=CMSISv2p00_LPC11xx -D__LPC11XX__ -D__REDLIB__ -I"C:\Users\Marcus\Dropbox\E7020E (LP3 14-15)\Project\CMSISv2p00_LPC11xx\inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -specs=redlib.specs -MMD -MP -MF"src/Software.d" -MT"src/Software.o" -MT"src/Software.d" -o "src/Software.o" "../src/Software.c"
+../src/Software.c: In function 'main':
+../src/Software.c:25:2: warning: implicit declaration of function 'pwm_init' [-Wimplicit-function-declaration]
+  pwm_init();
+  ^
+../src/Software.c:35:6: warning: implicit declaration of function 'pwm_red' [-Wimplicit-function-declaration]
+      pwm_red(j - 255);
+      ^
+../src/Software.c:36:6: warning: implicit declaration of function 'pwm_blue' [-Wimplicit-function-declaration]
+      pwm_blue(255 - j);
+      ^
+../src/Software.c:37:6: warning: implicit declaration of function 'pwm_green' [-Wimplicit-function-declaration]
+      pwm_green(255 - (j/2));
+      ^
+Finished building: ../src/Software.c
+ 
+Building target: Software.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"C:\Users\Marcus\Dropbox\E7020E (LP3 14-15)\Project\CMSISv2p00_LPC11xx\Debug" -Xlinker -Map="Software.map" -Xlinker --gc-sections -mcpu=cortex-m0 -mthumb -T "Software_Debug.ld" -o "Software.axf"  ./src/Software.o ./src/cr_startup_lpc11xx.o ./src/crp.o ./src/pwm.o   -lCMSISv2p00_LPC11xx
+Finished building target: Software.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "Software.axf"; # arm-none-eabi-objcopy -v -O binary "Software.axf" "Software.bin" ; # checksum -p LPC11C24_301 -d "Software.bin";
+   text	   data	    bss	    dec	    hex	filename
+   1456	      0	      0	   1456	    5b0	Software.axf
+ 
+15:17:53 **** Incremental Build of configuration Debug for project CMSISv2p00_LPC11xx ****
+make -r all 
+make: Nothing to be done for `all'.
+15:17:55 **** Incremental Build of configuration Debug for project Software ****
+make -r all 
+Building file: ../src/Software.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M0 -D__USE_CMSIS=CMSISv2p00_LPC11xx -D__LPC11XX__ -D__REDLIB__ -I"C:\Users\Marcus\Dropbox\E7020E (LP3 14-15)\Project\CMSISv2p00_LPC11xx\inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -specs=redlib.specs -MMD -MP -MF"src/Software.d" -MT"src/Software.o" -MT"src/Software.d" -o "src/Software.o" "../src/Software.c"
+../src/Software.c: In function 'main':
+../src/Software.c:25:2: warning: implicit declaration of function 'pwm_init' [-Wimplicit-function-declaration]
+  pwm_init();
+  ^
+../src/Software.c:35:6: warning: implicit declaration of function 'pwm_red' [-Wimplicit-function-declaration]
+      pwm_red(j - 255);
+      ^
+../src/Software.c:36:6: warning: implicit declaration of function 'pwm_blue' [-Wimplicit-function-declaration]
+      pwm_blue(255 - j);
+      ^
+../src/Software.c:37:6: warning: implicit declaration of function 'pwm_green' [-Wimplicit-function-declaration]
+      pwm_green(255 - (j/2));
+      ^
+Finished building: ../src/Software.c
+ 
+Building target: Software.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"C:\Users\Marcus\Dropbox\E7020E (LP3 14-15)\Project\CMSISv2p00_LPC11xx\Debug" -Xlinker -Map="Software.map" -Xlinker --gc-sections -mcpu=cortex-m0 -mthumb -T "Software_Debug.ld" -o "Software.axf"  ./src/Software.o ./src/cr_startup_lpc11xx.o ./src/crp.o ./src/pwm.o   -lCMSISv2p00_LPC11xx
+Finished building target: Software.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "Software.axf"; # arm-none-eabi-objcopy -v -O binary "Software.axf" "Software.bin" ; # checksum -p LPC11C24_301 -d "Software.bin";
+   text	   data	    bss	    dec	    hex	filename
+   1456	      0	      0	   1456	    5b0	Software.axf
+ 
+15:18:21 **** Incremental Build of configuration Debug for project CMSISv2p00_LPC11xx ****
+make -r all 
+make: Nothing to be done for `all'.
+15:18:23 **** Incremental Build of configuration Debug for project Software ****
+make -r all 
+Building file: ../src/Software.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M0 -D__USE_CMSIS=CMSISv2p00_LPC11xx -D__LPC11XX__ -D__REDLIB__ -I"C:\Users\Marcus\Dropbox\E7020E (LP3 14-15)\Project\CMSISv2p00_LPC11xx\inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -specs=redlib.specs -MMD -MP -MF"src/Software.d" -MT"src/Software.o" -MT"src/Software.d" -o "src/Software.o" "../src/Software.c"
+../src/Software.c: In function 'main':
+../src/Software.c:25:2: warning: implicit declaration of function 'pwm_init' [-Wimplicit-function-declaration]
+  pwm_init();
+  ^
+../src/Software.c:35:6: warning: implicit declaration of function 'pwm_red' [-Wimplicit-function-declaration]
+      pwm_red(j - 255);
+      ^
+../src/Software.c:36:6: warning: implicit declaration of function 'pwm_blue' [-Wimplicit-function-declaration]
+      pwm_blue(255 - j);
+      ^
+../src/Software.c:37:6: warning: implicit declaration of function 'pwm_green' [-Wimplicit-function-declaration]
+      pwm_green(255 - (j/2));
+      ^
+Finished building: ../src/Software.c
+ 
+Building target: Software.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"C:\Users\Marcus\Dropbox\E7020E (LP3 14-15)\Project\CMSISv2p00_LPC11xx\Debug" -Xlinker -Map="Software.map" -Xlinker --gc-sections -mcpu=cortex-m0 -mthumb -T "Software_Debug.ld" -o "Software.axf"  ./src/Software.o ./src/cr_startup_lpc11xx.o ./src/crp.o ./src/pwm.o   -lCMSISv2p00_LPC11xx
+Finished building target: Software.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "Software.axf"; # arm-none-eabi-objcopy -v -O binary "Software.axf" "Software.bin" ; # checksum -p LPC11C24_301 -d "Software.bin";
+   text	   data	    bss	    dec	    hex	filename
+   1456	      0	      0	   1456	    5b0	Software.axf
+ 
+16:03:47 **** Incremental Build of configuration Debug for project CMSISv2p00_LPC11xx ****
+make -r all 
+make: Nothing to be done for `all'.
+16:03:49 **** Incremental Build of configuration Debug for project Software ****
+make -r all 
+make: Nothing to be done for `all'.
+15:26:47 **** Incremental Build of configuration Debug for project CMSISv2p00_LPC11xx ****
+make -r all 
+make: Nothing to be done for `all'.
+15:27:01 **** Incremental Build of configuration Debug for project Software ****
+make -r all 
+Building file: ../src/Software.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M0 -D__USE_CMSIS=CMSISv2p00_LPC11xx -D__LPC11XX__ -D__REDLIB__ -I"C:\Users\Marcus\Dropbox\E7020E (LP3 14-15)\Project\CMSISv2p00_LPC11xx\inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -specs=redlib.specs -MMD -MP -MF"src/Software.d" -MT"src/Software.o" -MT"src/Software.d" -o "src/Software.o" "../src/Software.c"
+../src/Software.c: In function 'main':
+../src/Software.c:25:2: warning: implicit declaration of function 'pwm_init' [-Wimplicit-function-declaration]
+  pwm_init();
+  ^
+../src/Software.c:32:6: warning: implicit declaration of function 'cycle_colour' [-Wimplicit-function-declaration]
+      cycle_colour();
+      ^
+../src/Software.c: At top level:
+../src/Software.c:37:6: warning: conflicting types for 'cycle_colour' [enabled by default]
+ void cycle_colour(){
+      ^
+../src/Software.c:32:6: note: previous implicit declaration of 'cycle_colour' was here
+      cycle_colour();
+      ^
+../src/Software.c: In function 'cycle_colour':
+../src/Software.c:42:2: warning: implicit declaration of function 'pwm_red' [-Wimplicit-function-declaration]
+  pwm_red(colour - 255);
+  ^
+../src/Software.c:43:2: warning: implicit declaration of function 'pwm_blue' [-Wimplicit-function-declaration]
+  pwm_blue(255 - colour);
+  ^
+../src/Software.c:44:2: warning: implicit declaration of function 'pwm_green' [-Wimplicit-function-declaration]
+  pwm_green(255 - (colour/2));
+  ^
+Finished building: ../src/Software.c
+ 
+Building target: Software.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"C:\Users\Marcus\Dropbox\E7020E (LP3 14-15)\Project\CMSISv2p00_LPC11xx\Debug" -Xlinker -Map="Software.map" -Xlinker --gc-sections -mcpu=cortex-m0 -mthumb -T "Software_Debug.ld" -o "Software.axf"  ./src/Software.o ./src/cr_startup_lpc11xx.o ./src/crp.o ./src/pwm.o   -lCMSISv2p00_LPC11xx
+Finished building target: Software.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "Software.axf"; # arm-none-eabi-objcopy -v -O binary "Software.axf" "Software.bin" ; # checksum -p LPC11C24_301 -d "Software.bin";
+   text	   data	    bss	    dec	    hex	filename
+   1488	      8	      0	   1496	    5d8	Software.axf
+ 
+15:27:36 **** Incremental Build of configuration Debug for project CMSISv2p00_LPC11xx ****
+make -r all 
+make: Nothing to be done for `all'.
+15:27:40 **** Incremental Build of configuration Debug for project Software ****
+make -r all 
+Building file: ../src/Software.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M0 -D__USE_CMSIS=CMSISv2p00_LPC11xx -D__LPC11XX__ -D__REDLIB__ -I"C:\Users\Marcus\Dropbox\E7020E (LP3 14-15)\Project\CMSISv2p00_LPC11xx\inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -specs=redlib.specs -MMD -MP -MF"src/Software.d" -MT"src/Software.o" -MT"src/Software.d" -o "src/Software.o" "../src/Software.c"
+../src/Software.c: In function 'main':
+../src/Software.c:26:2: warning: implicit declaration of function 'pwm_init' [-Wimplicit-function-declaration]
+  pwm_init();
+  ^
+../src/Software.c: In function 'cycle_colour':
+../src/Software.c:43:2: warning: implicit declaration of function 'pwm_red' [-Wimplicit-function-declaration]
+  pwm_red(colour - 255);
+  ^
+../src/Software.c:44:2: warning: implicit declaration of function 'pwm_blue' [-Wimplicit-function-declaration]
+  pwm_blue(255 - colour);
+  ^
+../src/Software.c:45:2: warning: implicit declaration of function 'pwm_green' [-Wimplicit-function-declaration]
+  pwm_green(255 - (colour/2));
+  ^
+Finished building: ../src/Software.c
+ 
+Building target: Software.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"C:\Users\Marcus\Dropbox\E7020E (LP3 14-15)\Project\CMSISv2p00_LPC11xx\Debug" -Xlinker -Map="Software.map" -Xlinker --gc-sections -mcpu=cortex-m0 -mthumb -T "Software_Debug.ld" -o "Software.axf"  ./src/Software.o ./src/cr_startup_lpc11xx.o ./src/crp.o ./src/pwm.o   -lCMSISv2p00_LPC11xx
+Finished building target: Software.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "Software.axf"; # arm-none-eabi-objcopy -v -O binary "Software.axf" "Software.bin" ; # checksum -p LPC11C24_301 -d "Software.bin";
+   text	   data	    bss	    dec	    hex	filename
+   1488	      8	      0	   1496	    5d8	Software.axf
+ 
+13:40:58 **** Incremental Build of configuration Debug for project CMSISv2p00_LPC11xx ****
+make -r all 
+make: Nothing to be done for `all'.
+13:41:08 **** Incremental Build of configuration Debug for project Software ****
+make -r all 
+Building file: ../src/Software.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M0 -D__USE_CMSIS=CMSISv2p00_LPC11xx -D__LPC11XX__ -D__REDLIB__ -I"C:\Users\Marcus\Dropbox\E7020E (LP3 14-15)\Project\CMSISv2p00_LPC11xx\inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -specs=redlib.specs -MMD -MP -MF"src/Software.d" -MT"src/Software.o" -MT"src/Software.d" -o "src/Software.o" "../src/Software.c"
+In file included from ../src/pwm.h:8:0,
+                 from ../src/Software.h:14,
+                 from ../src/pwm.h:8,
+                 from ../src/Software.h:14,
+                 from ../src/pwm.h:8,
+                 from ../src/Software.h:14,
+                 from ../src/pwm.h:8,
+                 from ../src/Software.h:14,
+                 from ../src/pwm.h:8,
+                 from ../src/Software.h:14,
+                 from ../src/pwm.h:8,
+                 from ../src/Software.h:14,
+                 from ../src/pwm.h:8,
+                 from ../src/Software.h:14,
+                 from ../src/pwm.h:8,
+                 from ../src/Software.h:14,
+                 from ../src/pwm.h:8,
+                 from ../src/Software.h:14,
+                 from ../src/pwm.h:8,
+                 from ../src/Software.h:14,
+                 from ../src/pwm.h:8,
+                 from ../src/Software.h:14,
+                 from ../src/pwm.h:8,
+                 from ../src/Software.h:14,
+                 from ../src/pwm.h:8,
+                 from ../src/Software.h:14,
+                 from ../src/pwm.h:8,
+                 from ../src/Software.h:14,
+                 from ../src/pwm.h:8,
+                 from ../src/Software.h:14,
+                 from ../src/pwm.h:8,
+                 from ../src/Software.h:14,
+                 from ../src/pwm.h:8,
+                 from ../src/Software.h:14,
+                 from ../src/pwm.h:8,
+                 from ../src/Software.h:14,
+                 from ../src/pwm.h:8,
+                 from ../src/Software.h:14,
+                 from ../src/pwm.h:8,
+                 from ../src/Software.h:14,
+                 from ../src/pwm.h:8,
+                 from ../src/Software.h:14,
+                 from ../src/pwm.h:8,
+                 from ../src/Software.h:14,
+                 from ../src/pwm.h:8,
+                 from ../src/Software.h:14,
+                 from ../src/pwm.h:8,
+                 from ../src/Software.h:14,
+                 from ../src/pwm.h:8,
+                 from ../src/Software.h:14,
+                 from ../src/pwm.h:8,
+                 from ../src/Software.h:14,
+                 from ../src/pwm.h:8,
+                 from ../src/Software.h:14,
+                 from ../src/pwm.h:8,
+                 from ../src/Software.h:14,
+                 from ../src/pwm.h:8,
+                 from ../src/Software.h:14,
+                 from ../src/pwm.h:8,
+                 from ../src/Software.h:14,
+                 from ../src/pwm.h:8,
+                 from ../src/Software.h:14,
+                 from ../src/pwm.h:8,
+                 from ../src/Software.h:14,
+                 from ../src/pwm.h:8,
+                 from ../src/Software.h:14,
+                 from ../src/pwm.h:8,
+                 from ../src/Software.h:14,
+                 from ../src/pwm.h:8,
+                 from ../src/Software.h:14,
+                 from ../src/pwm.h:8,
+                 from ../src/Software.h:14,
+                 from ../src/pwm.h:8,
+                 from ../src/Software.h:14,
+                 from ../src/pwm.h:8,
+                 from ../src/Software.h:14,
+                 from ../src/pwm.h:8,
+                 from ../src/Software.h:14,
+                 from ../src/pwm.h:8,
+                 from ../src/Software.h:14,
+                 from ../src/pwm.h:8,
+                 from ../src/Software.h:14,
+                 from ../src/pwm.h:8,
+                 from ../src/Software.h:14,
+                 from ../src/pwm.h:8,
+                 from ../src/Software.h:14,
+                 from ../src/pwm.h:8,
+                 from ../src/Software.h:14,
+                 from ../src/pwm.h:8,
+                 from ../src/Software.h:14,
+                 from ../src/pwm.h:8,
+                 from ../src/Software.h:14,
+                 from ../src/pwm.h:8,
+                 from ../src/Software.h:14,
+                 from ../src/pwm.h:8,
+                 from ../src/Software.h:14,
+                 from ../src/pwm.h:8,
+                 from ../src/Software.h:14,
+                 from ../src/pwm.h:8,
+                 from ../src/Software.h:14,
+                 from ../src/pwm.h:8,
+                 from ../src/Software.h:14,
+                 from ../src/pwm.h:8,
+                 from ../src/Software.h:14,
+                 from ../src/pwm.h:8,
+                 from ../src/Software.h:14,
+                 from ../src/pwm.h:8,
+                 from ../src/Software.h:14,
+                 from ../src/pwm.h:8,
+                 from ../src/Software.h:14,
+                 from ../src/pwm.h:8,
+                 from ../src/Software.h:14,
+                 from ../src/pwm.h:8,
+                 from ../src/Software.h:14,
+                 from ../src/pwm.h:8,
+                 from ../src/Software.h:14,
+                 from ../src/pwm.h:8,
+                 from ../src/Software.h:14,
+                 from ../src/pwm.h:8,
+                 from ../src/Software.h:14,
+                 from ../src/pwm.h:8,
+                 from ../src/Software.h:14,
+                 from ../src/pwm.h:8,
+                 from ../src/Software.h:14,
+                 from ../src/pwm.h:8,
+                 from ../src/Software.h:14,
+                 from ../src/pwm.h:8,
+                 from ../src/Software.h:14,
+                 from ../src/pwm.h:8,
+                 from ../src/Software.h:14,
+                 from ../src/pwm.h:8,
+                 from ../src/Software.h:14,
+                 from ../src/pwm.h:8,
+                 from ../src/Software.h:14,
+                 from ../src/pwm.h:8,
+                 from ../src/Software.h:14,
+                 from ../src/pwm.h:8,
+                 from ../src/Software.h:14,
+                 from ../src/pwm.h:8,
+                 from ../src/Software.h:14,
+                 from ../src/pwm.h:8,
+                 from ../src/Software.h:14,
+                 from ../src/pwm.h:8,
+                 from ../src/Software.h:14,
+                 from ../src/pwm.h:8,
+                 from ../src/Software.h:14,
+                 from ../src/pwm.h:8,
+                 from ../src/Software.h:14,
+                 from ../src/pwm.h:8,
+                 from ../src/Software.h:14,
+                 from ../src/pwm.h:8,
+                 from ../src/Software.h:14,
+                 from ../src/pwm.h:8,
+                 from ../src/Software.h:14,
+                 from ../src/pwm.h:8,
+                 from ../src/Software.h:14,
+                 from ../src/pwm.h:8,
+                 from ../src/Software.h:14,
+                 from ../src/pwm.h:8,
+                 from ../src/Software.h:14,
+                 from ../src/pwm.h:8,
+                 from ../src/Software.h:14,
+                 from ../src/pwm.h:8,
+                 from ../src/Software.h:14,
+                 from ../src/pwm.h:8,
+                 from ../src/Software.h:14,
+                 from ../src/pwm.h:8,
+                 from ../src/Software.h:14,
+                 from ../src/pwm.h:8,
+                 from ../src/Software.h:14,
+                 from ../src/pwm.h:8,
+                 from ../src/Software.h:14,
+                 from ../src/pwm.h:8,
+                 from ../src/Software.h:14,
+                 from ../src/pwm.h:8,
+                 from ../src/Software.h:14,
+                 from ../src/pwm.h:8,
+                 from ../src/Software.h:14,
+                 from ../src/pwm.h:8,
+                 from ../src/Software.h:14,
+                 from ../src/pwm.h:8,
+                 from ../src/Software.h:14,
+                 from ../src/pwm.h:8,
+                 from ../src/Software.h:14,
+                 from ../src/pwm.h:8,
+                 from ../src/Software.h:14,
+                 from ../src/pwm.h:8,
+                 from ../src/Software.h:14,
+                 from ../src/pwm.h:8,
+                 from ../src/Software.h:14,
+                 from ../src/pwm.h:8,
+                 from ../src/Software.h:14,
+                 from ../src/pwm.h:8,
+                 from ../src/Software.h:14,
+                 from ../src/pwm.h:8,
+                 from ../src/Software.h:14,
+                 from ../src/pwm.h:8,
+                 from ../src/Software.h:14,
+                 from ../src/Software.c:11:
+../src/Software.h:9:21: error: #include nested too deeply
+ #include "LPC11xx.h"
+                     ^
+../src/Software.h:12:31: error: #include nested too deeply
+ #include <cr_section_macros.h>
+                               ^
+../src/Software.h:14:17: error: #include nested too deeply
+ #include "pwm.h"
+                 ^
+make: *** [src/Software.o] Error 1
+13:44:07 **** Incremental Build of configuration Debug for project CMSISv2p00_LPC11xx ****
+make -r all 
+make: Nothing to be done for `all'.
+13:44:12 **** Incremental Build of configuration Debug for project Software ****
+make -r all 
+Building file: ../src/Software.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M0 -D__USE_CMSIS=CMSISv2p00_LPC11xx -D__LPC11XX__ -D__REDLIB__ -I"C:\Users\Marcus\Dropbox\E7020E (LP3 14-15)\Project\CMSISv2p00_LPC11xx\inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -specs=redlib.specs -MMD -MP -MF"src/Software.d" -MT"src/Software.o" -MT"src/Software.d" -o "src/Software.o" "../src/Software.c"
+../src/Software.c: In function 'main':
+../src/Software.c:21:2: error: 'LPC_IOCON' undeclared (first use in this function)
+  LPC_IOCON->R_PIO1_2 = 1;
+  ^
+../src/Software.c:21:2: note: each undeclared identifier is reported only once for each function it appears in
+../src/Software.c:23:2: error: 'LPC_GPIO1' undeclared (first use in this function)
+  LPC_GPIO1->DIR |= (1<<2);
+  ^
+../src/Software.c:24:2: error: 'LPC_GPIO0' undeclared (first use in this function)
+  LPC_GPIO0->DIR |= (1<<11);
+  ^
+../src/Software.c:26:2: warning: implicit declaration of function 'pwm_init' [-Wimplicit-function-declaration]
+  pwm_init();
+  ^
+../src/Software.c: In function 'cycle_colour':
+../src/Software.c:43:2: warning: implicit declaration of function 'pwm_red' [-Wimplicit-function-declaration]
+  pwm_red(colour - 255);
+  ^
+../src/Software.c:44:2: warning: implicit declaration of function 'pwm_blue' [-Wimplicit-function-declaration]
+  pwm_blue(255 - colour);
+  ^
+../src/Software.c:45:2: warning: implicit declaration of function 'pwm_green' [-Wimplicit-function-declaration]
+  pwm_green(255 - (colour/2));
+  ^
+make: *** [src/Software.o] Error 1
+13:44:42 **** Incremental Build of configuration Debug for project CMSISv2p00_LPC11xx ****
+make -r all 
+make: Nothing to be done for `all'.
+13:44:47 **** Incremental Build of configuration Debug for project Software ****
+make -r all 
+Building file: ../src/Software.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M0 -D__USE_CMSIS=CMSISv2p00_LPC11xx -D__LPC11XX__ -D__REDLIB__ -I"C:\Users\Marcus\Dropbox\E7020E (LP3 14-15)\Project\CMSISv2p00_LPC11xx\inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -specs=redlib.specs -MMD -MP -MF"src/Software.d" -MT"src/Software.o" -MT"src/Software.d" -o "src/Software.o" "../src/Software.c"
+In file included from ../src/pwm.h:8:0,
+                 from ../src/Software.h:14,
+                 from ../src/pwm.h:8,
+                 from ../src/Software.h:14,
+                 from ../src/pwm.h:8,
+                 from ../src/Software.h:14,
+                 from ../src/pwm.h:8,
+                 from ../src/Software.h:14,
+                 from ../src/pwm.h:8,
+                 from ../src/Software.h:14,
+                 from ../src/pwm.h:8,
+                 from ../src/Software.h:14,
+                 from ../src/pwm.h:8,
+                 from ../src/Software.h:14,
+                 from ../src/pwm.h:8,
+                 from ../src/Software.h:14,
+                 from ../src/pwm.h:8,
+                 from ../src/Software.h:14,
+                 from ../src/pwm.h:8,
+                 from ../src/Software.h:14,
+                 from ../src/pwm.h:8,
+                 from ../src/Software.h:14,
+                 from ../src/pwm.h:8,
+                 from ../src/Software.h:14,
+                 from ../src/pwm.h:8,
+                 from ../src/Software.h:14,
+                 from ../src/pwm.h:8,
+                 from ../src/Software.h:14,
+                 from ../src/pwm.h:8,
+                 from ../src/Software.h:14,
+                 from ../src/pwm.h:8,
+                 from ../src/Software.h:14,
+                 from ../src/pwm.h:8,
+                 from ../src/Software.h:14,
+                 from ../src/pwm.h:8,
+                 from ../src/Software.h:14,
+                 from ../src/pwm.h:8,
+                 from ../src/Software.h:14,
+                 from ../src/pwm.h:8,
+                 from ../src/Software.h:14,
+                 from ../src/pwm.h:8,
+                 from ../src/Software.h:14,
+                 from ../src/pwm.h:8,
+                 from ../src/Software.h:14,
+                 from ../src/pwm.h:8,
+                 from ../src/Software.h:14,
+                 from ../src/pwm.h:8,
+                 from ../src/Software.h:14,
+                 from ../src/pwm.h:8,
+                 from ../src/Software.h:14,
+                 from ../src/pwm.h:8,
+                 from ../src/Software.h:14,
+                 from ../src/pwm.h:8,
+                 from ../src/Software.h:14,
+                 from ../src/pwm.h:8,
+                 from ../src/Software.h:14,
+                 from ../src/pwm.h:8,
+                 from ../src/Software.h:14,
+                 from ../src/pwm.h:8,
+                 from ../src/Software.h:14,
+                 from ../src/pwm.h:8,
+                 from ../src/Software.h:14,
+                 from ../src/pwm.h:8,
+                 from ../src/Software.h:14,
+                 from ../src/pwm.h:8,
+                 from ../src/Software.h:14,
+                 from ../src/pwm.h:8,
+                 from ../src/Software.h:14,
+                 from ../src/pwm.h:8,
+                 from ../src/Software.h:14,
+                 from ../src/pwm.h:8,
+                 from ../src/Software.h:14,
+                 from ../src/pwm.h:8,
+                 from ../src/Software.h:14,
+                 from ../src/pwm.h:8,
+                 from ../src/Software.h:14,
+                 from ../src/pwm.h:8,
+                 from ../src/Software.h:14,
+                 from ../src/pwm.h:8,
+                 from ../src/Software.h:14,
+                 from ../src/pwm.h:8,
+                 from ../src/Software.h:14,
+                 from ../src/pwm.h:8,
+                 from ../src/Software.h:14,
+                 from ../src/pwm.h:8,
+                 from ../src/Software.h:14,
+                 from ../src/pwm.h:8,
+                 from ../src/Software.h:14,
+                 from ../src/pwm.h:8,
+                 from ../src/Software.h:14,
+                 from ../src/pwm.h:8,
+                 from ../src/Software.h:14,
+                 from ../src/pwm.h:8,
+                 from ../src/Software.h:14,
+                 from ../src/pwm.h:8,
+                 from ../src/Software.h:14,
+                 from ../src/pwm.h:8,
+                 from ../src/Software.h:14,
+                 from ../src/pwm.h:8,
+                 from ../src/Software.h:14,
+                 from ../src/pwm.h:8,
+                 from ../src/Software.h:14,
+                 from ../src/pwm.h:8,
+                 from ../src/Software.h:14,
+                 from ../src/pwm.h:8,
+                 from ../src/Software.h:14,
+                 from ../src/pwm.h:8,
+                 from ../src/Software.h:14,
+                 from ../src/pwm.h:8,
+                 from ../src/Software.h:14,
+                 from ../src/pwm.h:8,
+                 from ../src/Software.h:14,
+                 from ../src/pwm.h:8,
+                 from ../src/Software.h:14,
+                 from ../src/pwm.h:8,
+                 from ../src/Software.h:14,
+                 from ../src/pwm.h:8,
+                 from ../src/Software.h:14,
+                 from ../src/pwm.h:8,
+                 from ../src/Software.h:14,
+                 from ../src/pwm.h:8,
+                 from ../src/Software.h:14,
+                 from ../src/pwm.h:8,
+                 from ../src/Software.h:14,
+                 from ../src/pwm.h:8,
+                 from ../src/Software.h:14,
+                 from ../src/pwm.h:8,
+                 from ../src/Software.h:14,
+                 from ../src/pwm.h:8,
+                 from ../src/Software.h:14,
+                 from ../src/pwm.h:8,
+                 from ../src/Software.h:14,
+                 from ../src/pwm.h:8,
+                 from ../src/Software.h:14,
+                 from ../src/pwm.h:8,
+                 from ../src/Software.h:14,
+                 from ../src/pwm.h:8,
+                 from ../src/Software.h:14,
+                 from ../src/pwm.h:8,
+                 from ../src/Software.h:14,
+                 from ../src/pwm.h:8,
+                 from ../src/Software.h:14,
+                 from ../src/pwm.h:8,
+                 from ../src/Software.h:14,
+                 from ../src/pwm.h:8,
+                 from ../src/Software.h:14,
+                 from ../src/pwm.h:8,
+                 from ../src/Software.h:14,
+                 from ../src/pwm.h:8,
+                 from ../src/Software.h:14,
+                 from ../src/pwm.h:8,
+                 from ../src/Software.h:14,
+                 from ../src/pwm.h:8,
+                 from ../src/Software.h:14,
+                 from ../src/pwm.h:8,
+                 from ../src/Software.h:14,
+                 from ../src/pwm.h:8,
+                 from ../src/Software.h:14,
+                 from ../src/pwm.h:8,
+                 from ../src/Software.h:14,
+                 from ../src/pwm.h:8,
+                 from ../src/Software.h:14,
+                 from ../src/pwm.h:8,
+                 from ../src/Software.h:14,
+                 from ../src/pwm.h:8,
+                 from ../src/Software.h:14,
+                 from ../src/pwm.h:8,
+                 from ../src/Software.h:14,
+                 from ../src/pwm.h:8,
+                 from ../src/Software.h:14,
+                 from ../src/pwm.h:8,
+                 from ../src/Software.h:14,
+                 from ../src/pwm.h:8,
+                 from ../src/Software.h:14,
+                 from ../src/pwm.h:8,
+                 from ../src/Software.h:14,
+                 from ../src/pwm.h:8,
+                 from ../src/Software.h:14,
+                 from ../src/pwm.h:8,
+                 from ../src/Software.h:14,
+                 from ../src/pwm.h:8,
+                 from ../src/Software.h:14,
+                 from ../src/pwm.h:8,
+                 from ../src/Software.h:14,
+                 from ../src/pwm.h:8,
+                 from ../src/Software.h:14,
+                 from ../src/pwm.h:8,
+                 from ../src/Software.h:14,
+                 from ../src/pwm.h:8,
+                 from ../src/Software.h:14,
+                 from ../src/pwm.h:8,
+                 from ../src/Software.h:14,
+                 from ../src/pwm.h:8,
+                 from ../src/Software.h:14,
+                 from ../src/pwm.h:8,
+                 from ../src/Software.h:14,
+                 from ../src/pwm.h:8,
+                 from ../src/Software.h:14,
+                 from ../src/Software.c:11:
+../src/Software.h:9:21: error: #include nested too deeply
+ #include "LPC11xx.h"
+                     ^
+../src/Software.h:12:31: error: #include nested too deeply
+ #include <cr_section_macros.h>
+                               ^
+../src/Software.h:14:17: error: #include nested too deeply
+ #include "pwm.h"
+                 ^
+make: *** [src/Software.o] Error 1
+13:47:09 **** Incremental Build of configuration Debug for project CMSISv2p00_LPC11xx ****
+make -r all 
+make: Nothing to be done for `all'.
+13:47:13 **** Incremental Build of configuration Debug for project Software ****
+make -r all 
+Building file: ../src/Software.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M0 -D__USE_CMSIS=CMSISv2p00_LPC11xx -D__LPC11XX__ -D__REDLIB__ -I"C:\Users\Marcus\Dropbox\E7020E (LP3 14-15)\Project\CMSISv2p00_LPC11xx\inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -specs=redlib.specs -MMD -MP -MF"src/Software.d" -MT"src/Software.o" -MT"src/Software.d" -o "src/Software.o" "../src/Software.c"
+Finished building: ../src/Software.c
+ 
+Building file: ../src/pwm.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M0 -D__USE_CMSIS=CMSISv2p00_LPC11xx -D__LPC11XX__ -D__REDLIB__ -I"C:\Users\Marcus\Dropbox\E7020E (LP3 14-15)\Project\CMSISv2p00_LPC11xx\inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -specs=redlib.specs -MMD -MP -MF"src/pwm.d" -MT"src/pwm.o" -MT"src/pwm.d" -o "src/pwm.o" "../src/pwm.c"
+../src/pwm.c: In function 'pwm_init':
+../src/pwm.c:15:2: error: 'LPC_SYSCON' undeclared (first use in this function)
+  LPC_SYSCON->SYSAHBCLKCTRL |= (3<<9);  //Power up CT32B0 and CT32B0
+  ^
+../src/pwm.c:15:2: note: each undeclared identifier is reported only once for each function it appears in
+../src/pwm.c:17:2: error: 'LPC_IOCON' undeclared (first use in this function)
+  LPC_IOCON->R_PIO1_1 = 3;
+  ^
+../src/pwm.c:21:2: error: 'LPC_TMR32B1' undeclared (first use in this function)
+  LPC_TMR32B1->PR = 28;      //set prescaler
+  ^
+../src/pwm.c:34:2: error: 'LPC_TMR32B0' undeclared (first use in this function)
+  LPC_TMR32B0->PR = 28;      //set prescaler
+  ^
+../src/pwm.c: In function 'pwm_red':
+../src/pwm.c:51:2: error: 'LPC_TMR32B1' undeclared (first use in this function)
+  LPC_TMR32B1->MR0 = 255 - value;
+  ^
+../src/pwm.c: In function 'pwm_green':
+../src/pwm.c:60:2: error: 'LPC_TMR32B0' undeclared (first use in this function)
+  LPC_TMR32B0->MR3 = 255 - value;
+  ^
+../src/pwm.c: In function 'pwm_blue':
+../src/pwm.c:69:2: error: 'LPC_TMR32B1' undeclared (first use in this function)
+  LPC_TMR32B1->MR1 = 255 - value;
+  ^
+make: *** [src/pwm.o] Error 1
+13:47:35 **** Incremental Build of configuration Debug for project CMSISv2p00_LPC11xx ****
+make -r all 
+make: Nothing to be done for `all'.
+13:47:39 **** Incremental Build of configuration Debug for project Software ****
+make -r all 
+Building file: ../src/Software.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M0 -D__USE_CMSIS=CMSISv2p00_LPC11xx -D__LPC11XX__ -D__REDLIB__ -I"C:\Users\Marcus\Dropbox\E7020E (LP3 14-15)\Project\CMSISv2p00_LPC11xx\inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -specs=redlib.specs -MMD -MP -MF"src/Software.d" -MT"src/Software.o" -MT"src/Software.d" -o "src/Software.o" "../src/Software.c"
+Finished building: ../src/Software.c
+ 
+Building file: ../src/pwm.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M0 -D__USE_CMSIS=CMSISv2p00_LPC11xx -D__LPC11XX__ -D__REDLIB__ -I"C:\Users\Marcus\Dropbox\E7020E (LP3 14-15)\Project\CMSISv2p00_LPC11xx\inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -specs=redlib.specs -MMD -MP -MF"src/pwm.d" -MT"src/pwm.o" -MT"src/pwm.d" -o "src/pwm.o" "../src/pwm.c"
+Finished building: ../src/pwm.c
+ 
+Building target: Software.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"C:\Users\Marcus\Dropbox\E7020E (LP3 14-15)\Project\CMSISv2p00_LPC11xx\Debug" -Xlinker -Map="Software.map" -Xlinker --gc-sections -mcpu=cortex-m0 -mthumb -T "Software_Debug.ld" -o "Software.axf"  ./src/Software.o ./src/cr_startup_lpc11xx.o ./src/crp.o ./src/pwm.o   -lCMSISv2p00_LPC11xx
+Finished building target: Software.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "Software.axf"; # arm-none-eabi-objcopy -v -O binary "Software.axf" "Software.bin" ; # checksum -p LPC11C24_301 -d "Software.bin";
+   text	   data	    bss	    dec	    hex	filename
+   1488	      8	      0	   1496	    5d8	Software.axf
+ 

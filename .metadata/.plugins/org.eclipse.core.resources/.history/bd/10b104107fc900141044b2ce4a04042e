@@ -5,9 +5,7 @@
  *      Author: Marcus
  */
 
-#ifdef __USE_CMSIS
-#include "LPC11xx.h"
-#endif
+#include "Software.h"
 
 void pwm_init();
 void pwm_red(int value);

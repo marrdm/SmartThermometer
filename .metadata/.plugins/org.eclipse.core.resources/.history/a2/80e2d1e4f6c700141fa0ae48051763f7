@@ -13,7 +13,6 @@
 // TODO: insert other include files here
 
 // TODO: insert other definitions and declarations here
-void cycle_colour();
 
 int main(void) {
 
@@ -25,26 +24,25 @@ int main(void) {
 
 	pwm_init();
 
+	int k = 1;
+	int j = 255;
     while(1) {
     	int i = 0;
-    	while(i<10000){
+    	while(i<50000){
     		i++;
     	}
-    	cycle_colour();
+    	j = j + k;
+    	pwm_red(j - 255);
+    	pwm_blue(255 - j);
+    	pwm_green(255 - (j/2));
+    	if(j > 511 || j <= 0){
+    		k = - k;
+    	}
     }
     return 0 ;
 }
 
 void cycle_colour(){
 	static int colour = 255;
-	static int colour_inc = 1;
 
-	colour += colour_inc;
-	pwm_red(colour - 255);
-	pwm_blue(255 - colour);
-	pwm_green(255 - (colour/2));
-
-	if(colour > 511 || colour <= 0){
-		colour_inc = - colour_inc;
-	}
 }

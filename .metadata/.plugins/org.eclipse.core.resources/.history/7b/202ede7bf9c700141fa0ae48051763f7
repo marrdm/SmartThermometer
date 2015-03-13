@@ -13,7 +13,6 @@
 // TODO: insert other include files here
 
 // TODO: insert other definitions and declarations here
-void cycle_colour();
 
 int main(void) {
 
@@ -27,7 +26,7 @@ int main(void) {
 
     while(1) {
     	int i = 0;
-    	while(i<10000){
+    	while(i<50000){
     		i++;
     	}
     	cycle_colour();

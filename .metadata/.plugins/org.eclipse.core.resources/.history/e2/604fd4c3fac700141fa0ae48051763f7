@@ -13,7 +13,6 @@
 // TODO: insert other include files here
 
 // TODO: insert other definitions and declarations here
-void cycle_colour();
 
 int main(void) {
 
