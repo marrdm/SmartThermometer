@@ -9,6 +9,11 @@ c:/nxp/lpcxpresso_7.5.0_254/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/4.8.4/
 c:/nxp/lpcxpresso_7.5.0_254/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/4.8.4/armv6-m\libcr_eabihelpers.a(division_idiv0.o)
                               c:/nxp/lpcxpresso_7.5.0_254/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/4.8.4/armv6-m\libcr_eabihelpers.a(division_32.o) (__aeabi_idiv0)
 
+Allocating common symbols
+Common symbol       size              file
+
+uart_transmit_buf   0x20              ./src/uart.o
+
 Discarded input sections
 
  .group         0x00000000        0x8 ./src/Software.o
@@ -43,6 +48,8 @@ Discarded input sections
  .group         0x00000000        0x8 ./src/pwm.o
  .group         0x00000000        0x8 ./src/pwm.o
  .group         0x00000000        0x8 ./src/pwm.o
+ .group         0x00000000        0x8 ./src/pwm.o
+ .group         0x00000000        0x8 ./src/pwm.o
  .text          0x00000000        0x0 ./src/pwm.o
  .data          0x00000000        0x0 ./src/pwm.o
  .bss           0x00000000        0x0 ./src/pwm.o
@@ -54,6 +61,27 @@ Discarded input sections
  .debug_macro   0x00000000      0x5b2 ./src/pwm.o
  .debug_macro   0x00000000      0x237 ./src/pwm.o
  .debug_macro   0x00000000      0x131 ./src/pwm.o
+ .debug_macro   0x00000000       0x82 ./src/pwm.o
+ .debug_macro   0x00000000       0x16 ./src/pwm.o
+ .group         0x00000000        0x8 ./src/uart.o
+ .text          0x00000000        0x0 ./src/uart.o
+ .data          0x00000000        0x0 ./src/uart.o
+ .bss           0x00000000        0x0 ./src/uart.o
+ .text.int2str  0x00000000       0x18 ./src/uart.o
+ .debug_info    0x00000000       0xaa ./src/uart.o
+ .debug_abbrev  0x00000000       0x93 ./src/uart.o
+ .debug_aranges
+                0x00000000       0x20 ./src/uart.o
+ .debug_ranges  0x00000000       0x10 ./src/uart.o
+ .debug_macro   0x00000000       0x11 ./src/uart.o
+ .debug_macro   0x00000000      0x820 ./src/uart.o
+ .debug_line    0x00000000       0x3f ./src/uart.o
+ .debug_str     0x00000000     0x232c ./src/uart.o
+ .comment       0x00000000       0x71 ./src/uart.o
+ .ARM.attributes
+                0x00000000       0x31 ./src/uart.o
+ .debug_frame   0x00000000       0x30 ./src/uart.o
+ COMMON         0x00000000       0x20 ./src/uart.o
  .group         0x00000000        0x8 C:\Users\Marcus\Dropbox\E7020E (LP3 14-15)\Project\CMSISv2p00_LPC11xx\Debug\libCMSISv2p00_LPC11xx.a(system_LPC11xx.o)
  .group         0x00000000        0x8 C:\Users\Marcus\Dropbox\E7020E (LP3 14-15)\Project\CMSISv2p00_LPC11xx\Debug\libCMSISv2p00_LPC11xx.a(system_LPC11xx.o)
  .group         0x00000000        0x8 C:\Users\Marcus\Dropbox\E7020E (LP3 14-15)\Project\CMSISv2p00_LPC11xx\Debug\libCMSISv2p00_LPC11xx.a(system_LPC11xx.o)
@@ -109,6 +137,7 @@ LOAD ./src/Software.o
 LOAD ./src/cr_startup_lpc11xx.o
 LOAD ./src/crp.o
 LOAD ./src/pwm.o
+LOAD ./src/uart.o
 LOAD C:\Users\Marcus\Dropbox\E7020E (LP3 14-15)\Project\CMSISv2p00_LPC11xx\Debug\libCMSISv2p00_LPC11xx.a
 START GROUP
 LOAD c:/nxp/lpcxpresso_7.5.0_254/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv6-m\libcr_c.a
@@ -297,42 +326,42 @@ OUTPUT(Software.axf elf32-littlearm)
  .debug_ranges  0x00000068       0x28 ./src/pwm.o
  .debug_ranges  0x00000090       0x18 C:\Users\Marcus\Dropbox\E7020E (LP3 14-15)\Project\CMSISv2p00_LPC11xx\Debug\libCMSISv2p00_LPC11xx.a(system_LPC11xx.o)
 
-.debug_macro    0x00000000     0x1e1f
- .debug_macro   0x00000000       0x8c ./src/Software.o
- .debug_macro   0x0000008c      0x820 ./src/Software.o
- .debug_macro   0x000008ac       0x1c ./src/Software.o
- .debug_macro   0x000008c8       0x2e ./src/Software.o
- .debug_macro   0x000008f6       0x10 ./src/Software.o
- .debug_macro   0x00000906      0x12d ./src/Software.o
- .debug_macro   0x00000a33      0x5b2 ./src/Software.o
- .debug_macro   0x00000fe5      0x237 ./src/Software.o
- .debug_macro   0x0000121c      0x131 ./src/Software.o
- .debug_macro   0x0000134d       0x82 ./src/Software.o
- .debug_macro   0x000013cf       0x16 ./src/Software.o
- .debug_macro   0x000013e5       0x1d ./src/cr_startup_lpc11xx.o
- .debug_macro   0x00001402       0x1a ./src/crp.o
- .debug_macro   0x0000141c       0x34 ./src/crp.o
- .debug_macro   0x00001450       0x7a ./src/pwm.o
- .debug_macro   0x000014ca      0x13b C:\Users\Marcus\Dropbox\E7020E (LP3 14-15)\Project\CMSISv2p00_LPC11xx\Debug\libCMSISv2p00_LPC11xx.a(system_LPC11xx.o)
- .debug_macro   0x00001605      0x81a C:\Users\Marcus\Dropbox\E7020E (LP3 14-15)\Project\CMSISv2p00_LPC11xx\Debug\libCMSISv2p00_LPC11xx.a(system_LPC11xx.o)
+.debug_macro    0x00000000     0x1e51
+ .debug_macro   0x00000000       0x9c ./src/Software.o
+ .debug_macro   0x0000009c      0x820 ./src/Software.o
+ .debug_macro   0x000008bc       0x1c ./src/Software.o
+ .debug_macro   0x000008d8       0x2e ./src/Software.o
+ .debug_macro   0x00000906       0x10 ./src/Software.o
+ .debug_macro   0x00000916      0x12d ./src/Software.o
+ .debug_macro   0x00000a43      0x5b2 ./src/Software.o
+ .debug_macro   0x00000ff5      0x237 ./src/Software.o
+ .debug_macro   0x0000122c      0x131 ./src/Software.o
+ .debug_macro   0x0000135d       0x82 ./src/Software.o
+ .debug_macro   0x000013df       0x16 ./src/Software.o
+ .debug_macro   0x000013f5       0x1d ./src/cr_startup_lpc11xx.o
+ .debug_macro   0x00001412       0x1a ./src/crp.o
+ .debug_macro   0x0000142c       0x34 ./src/crp.o
+ .debug_macro   0x00001460       0x9c ./src/pwm.o
+ .debug_macro   0x000014fc      0x13b C:\Users\Marcus\Dropbox\E7020E (LP3 14-15)\Project\CMSISv2p00_LPC11xx\Debug\libCMSISv2p00_LPC11xx.a(system_LPC11xx.o)
+ .debug_macro   0x00001637      0x81a C:\Users\Marcus\Dropbox\E7020E (LP3 14-15)\Project\CMSISv2p00_LPC11xx\Debug\libCMSISv2p00_LPC11xx.a(system_LPC11xx.o)
 
-.debug_line     0x00000000      0x727
+.debug_line     0x00000000      0x78a
  .debug_line    0x00000000      0x233 ./src/Software.o
  .debug_line    0x00000233       0xc2 ./src/cr_startup_lpc11xx.o
  .debug_line    0x000002f5       0x78 ./src/crp.o
- .debug_line    0x0000036d      0x1f3 ./src/pwm.o
- .debug_line    0x00000560      0x1c7 C:\Users\Marcus\Dropbox\E7020E (LP3 14-15)\Project\CMSISv2p00_LPC11xx\Debug\libCMSISv2p00_LPC11xx.a(system_LPC11xx.o)
+ .debug_line    0x0000036d      0x256 ./src/pwm.o
+ .debug_line    0x000005c3      0x1c7 C:\Users\Marcus\Dropbox\E7020E (LP3 14-15)\Project\CMSISv2p00_LPC11xx\Debug\libCMSISv2p00_LPC11xx.a(system_LPC11xx.o)
 
-.debug_str      0x00000000     0x5f9f
- .debug_str     0x00000000     0x55f4 ./src/Software.o
-                               0x5674 (size before relaxing)
- .debug_str     0x000055f4      0x178 ./src/cr_startup_lpc11xx.o
+.debug_str      0x00000000     0x5fb4
+ .debug_str     0x00000000     0x5609 ./src/Software.o
+                               0x5689 (size before relaxing)
+ .debug_str     0x00005609      0x178 ./src/cr_startup_lpc11xx.o
                                0x247c (size before relaxing)
- .debug_str     0x0000576c       0xe9 ./src/crp.o
+ .debug_str     0x00005781       0xe9 ./src/crp.o
                                0x23de (size before relaxing)
- .debug_str     0x00005855      0x294 ./src/pwm.o
-                               0x542e (size before relaxing)
- .debug_str     0x00005ae9      0x4b6 C:\Users\Marcus\Dropbox\E7020E (LP3 14-15)\Project\CMSISv2p00_LPC11xx\Debug\libCMSISv2p00_LPC11xx.a(system_LPC11xx.o)
+ .debug_str     0x0000586a      0x294 ./src/pwm.o
+                               0x58c3 (size before relaxing)
+ .debug_str     0x00005afe      0x4b6 C:\Users\Marcus\Dropbox\E7020E (LP3 14-15)\Project\CMSISv2p00_LPC11xx\Debug\libCMSISv2p00_LPC11xx.a(system_LPC11xx.o)
                                0x5597 (size before relaxing)
 
 .comment        0x00000000       0xe0

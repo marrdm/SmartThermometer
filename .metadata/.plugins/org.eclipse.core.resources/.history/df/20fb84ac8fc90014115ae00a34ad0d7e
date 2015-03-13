@@ -1,0 +1,51 @@
+/*
+ * uart.c
+ *
+ *  Created on: 13 Mar 2015
+ *      Author: Marcus
+ */
+
+int uart_tx_buf_size = 32;
+int uart_tx_buf_start = 0;
+int uart_tx_buf_end = 0;
+char uart_tx_buf[uart_tx_buf_size];
+
+int uart_tx_active = 0;
+
+
+int uart_send(char str[], int len){
+
+	if(uart_tx_buf_end == uart_tx_buf_start){
+		return len;									//Buffer overflow
+	}
+
+	int i = 0;
+	while(i < len){
+
+		uart_tx_buf_end++;
+		if(uart_tx_buf_end >= uart_tx_buf_size){
+			uart_tx_buf_end = 0;
+		}
+
+		uart_tx_buf[uart_tx_buf_end] = str[i];
+		i++;
+
+		if(uart_tx_buf_end == uart_tx_buf_start){
+			break;									//Buffer overflow
+		}
+	}
+
+	if(!uart_tx_active){
+		uart_transmit();
+	}
+	return (len - i);
+}
+
+void uart_transmit(){
+
+}
+
+int int2str(int number, char string[], int len){
+
+	return 0;
+}

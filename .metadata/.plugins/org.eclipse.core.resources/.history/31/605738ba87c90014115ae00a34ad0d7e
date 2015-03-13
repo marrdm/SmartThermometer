@@ -1,0 +1,15 @@
+/*
+ * uart.c
+ *
+ *  Created on: 13 Mar 2015
+ *      Author: Marcus
+ */
+
+char uart_transmit_buf[32];
+
+int int2str(int number, char string[], int len){
+
+qw
+
+	return 0;
+}

@@ -5,6 +5,9 @@
  *      Author: Marcus
  */
 
+#ifndef SOFTWARE_H_
+#define SOFTWARE_H_
+
 #ifdef __USE_CMSIS
 #include "LPC11xx.h"
 #endif
@@ -17,3 +20,4 @@
 #define MAIN_CLOCK 0				//
 #define SYSTEM_CLOCK 12000000		// 12MHz
 
+#endif /* SOFTWARE_H_ */

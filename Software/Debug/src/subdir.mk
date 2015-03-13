@@ -7,19 +7,22 @@ C_SRCS += \
 ../src/Software.c \
 ../src/cr_startup_lpc11xx.c \
 ../src/crp.c \
-../src/pwm.c 
+../src/pwm.c \
+../src/uart.c 
 
 OBJS += \
 ./src/Software.o \
 ./src/cr_startup_lpc11xx.o \
 ./src/crp.o \
-./src/pwm.o 
+./src/pwm.o \
+./src/uart.o 
 
 C_DEPS += \
 ./src/Software.d \
 ./src/cr_startup_lpc11xx.d \
 ./src/crp.d \
-./src/pwm.d 
+./src/pwm.d \
+./src/uart.d 
 
 
 # Each subdirectory must supply rules for building sources it contributes

@@ -1,18 +1,13 @@
-13:47:39 **** Incremental Build of configuration Debug for project Software ****
+14:49:13 **** Incremental Build of configuration Debug for project Software ****
 make -r all 
-Building file: ../src/Software.c
+Building file: ../src/uart.c
 Invoking: MCU C Compiler
-arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M0 -D__USE_CMSIS=CMSISv2p00_LPC11xx -D__LPC11XX__ -D__REDLIB__ -I"C:\Users\Marcus\Dropbox\E7020E (LP3 14-15)\Project\CMSISv2p00_LPC11xx\inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -specs=redlib.specs -MMD -MP -MF"src/Software.d" -MT"src/Software.o" -MT"src/Software.d" -o "src/Software.o" "../src/Software.c"
-Finished building: ../src/Software.c
- 
-Building file: ../src/pwm.c
-Invoking: MCU C Compiler
-arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M0 -D__USE_CMSIS=CMSISv2p00_LPC11xx -D__LPC11XX__ -D__REDLIB__ -I"C:\Users\Marcus\Dropbox\E7020E (LP3 14-15)\Project\CMSISv2p00_LPC11xx\inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -specs=redlib.specs -MMD -MP -MF"src/pwm.d" -MT"src/pwm.o" -MT"src/pwm.d" -o "src/pwm.o" "../src/pwm.c"
-Finished building: ../src/pwm.c
+arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M0 -D__USE_CMSIS=CMSISv2p00_LPC11xx -D__LPC11XX__ -D__REDLIB__ -I"C:\Users\Marcus\Dropbox\E7020E (LP3 14-15)\Project\CMSISv2p00_LPC11xx\inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -specs=redlib.specs -MMD -MP -MF"src/uart.d" -MT"src/uart.o" -MT"src/uart.d" -o "src/uart.o" "../src/uart.c"
+Finished building: ../src/uart.c
  
 Building target: Software.axf
 Invoking: MCU Linker
-arm-none-eabi-gcc -nostdlib -L"C:\Users\Marcus\Dropbox\E7020E (LP3 14-15)\Project\CMSISv2p00_LPC11xx\Debug" -Xlinker -Map="Software.map" -Xlinker --gc-sections -mcpu=cortex-m0 -mthumb -T "Software_Debug.ld" -o "Software.axf"  ./src/Software.o ./src/cr_startup_lpc11xx.o ./src/crp.o ./src/pwm.o   -lCMSISv2p00_LPC11xx
+arm-none-eabi-gcc -nostdlib -L"C:\Users\Marcus\Dropbox\E7020E (LP3 14-15)\Project\CMSISv2p00_LPC11xx\Debug" -Xlinker -Map="Software.map" -Xlinker --gc-sections -mcpu=cortex-m0 -mthumb -T "Software_Debug.ld" -o "Software.axf"  ./src/Software.o ./src/cr_startup_lpc11xx.o ./src/crp.o ./src/pwm.o ./src/uart.o   -lCMSISv2p00_LPC11xx
 Finished building target: Software.axf
  
 make --no-print-directory post-build
@@ -22,5 +17,5 @@ arm-none-eabi-size "Software.axf"; # arm-none-eabi-objcopy -v -O binary "Softwar
    1488	      8	      0	   1496	    5d8	Software.axf
  
 
-13:47:42 Build Finished (took 3s.532ms)
+14:49:14 Build Finished (took 1s.296ms)
 
