@@ -30,13 +30,7 @@ void PIOINT1_IRQHandler (void);
 void ADC_IRQHandler (void);
 
 int main(void) {
-												//timer 32B0 setup code
-	LPC_SYSCON->SYSAHBCLKCTRL |= (1<<9);
-	LPC_TMR32B0->MCR |= 0b11;
-	LPC_TMR32B0->PR = 48 - 1;
-	LPC_TMR32B0->MR0 = 1*1000 * 1000 * 10 - 1;		//interrupt every 10 seconds
-	LPC_TMR32B0->TCR |= 2;
-	LPC_TMR32B0->TCR |= 1;
+
 
 	LPC_IOCON->R_PIO1_2 = 1;
 	LPC_IOCON->R_PIO0_11 = 1;

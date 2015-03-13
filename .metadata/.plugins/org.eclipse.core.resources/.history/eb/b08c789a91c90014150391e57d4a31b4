@@ -22,21 +22,13 @@ int sum = 0;
 int i = 0;
 char string[16];
 
-void parser(char str[], int len);
-
 void TIMER32_0_IRQHandler (void);
 void UART_IRQHandler (void);
 void PIOINT1_IRQHandler (void);
 void ADC_IRQHandler (void);
 
 int main(void) {
-												//timer 32B0 setup code
-	LPC_SYSCON->SYSAHBCLKCTRL |= (1<<9);
-	LPC_TMR32B0->MCR |= 0b11;
-	LPC_TMR32B0->PR = 48 - 1;
-	LPC_TMR32B0->MR0 = 1*1000 * 1000 * 10 - 1;		//interrupt every 10 seconds
-	LPC_TMR32B0->TCR |= 2;
-	LPC_TMR32B0->TCR |= 1;
+
 
 	LPC_IOCON->R_PIO1_2 = 1;
 	LPC_IOCON->R_PIO0_11 = 1;
@@ -95,80 +87,6 @@ void cycle_colour(){
 	if(colour > 511 || colour <= 0){
 		colour_inc = - colour_inc;
 	}
-}
-
-void parser(char str[], int len){
-	/*
-	char short_str[16];
-	int short_len = 0;
-	int i = 0;
-
-	int blink_val;
-
-	if(len >= 16){
-		UART_send("ERROR, string too long! \n\r", 26);
-		return;
-	}
-	while(i<len){
-		if(str[i] != ' '){
-			short_str[short_len] = str[i];
-			short_len++;
-		}
-		i++;
-	}
-
-	i = 0;
-	while(i<short_len){
-		if(short_str[i] != command_on[i]){
-			break;
-		}
-		if(i == 2){
-			on();
-			UART_send("Status on \r\n", 12);
-			return;
-		}
-		i++;
-	}
-
-	i = 0;
-	while(i<short_len){
-		if(short_str[i] != command_off[i]){
-			break;
-		}
-		if(i == 3){
-			off();
-			UART_send("Status off \r\n", 13);
-			return;
-		}
-		i++;
-	}
-
-	i = 0;
-	while(i<len){
-		if(short_str[i] != command_blink[i]){
-			break;
-		}
-		if(i == 4){
-			if(str2int(&short_str[5], short_len - 6, &blink_val) == 0){
-				if(blink_val > 0){
-					blink(blink_val, -1);
-
-					UART_send("status blink: ", 15);
-					UART_send(&short_str[5], short_len - 6);
-					UART_send("\r\n", 2);
-
-					return;
-				}
-			}
-
-
-		}
-		i++;
-	}
-	UART_send("ERROR, could not parse:\t", 24);
-	UART_send(str, len);
-	UART_send("\n", 1);
-	*/
 }
 
 void TIMER32_0_IRQHandler (void){

@@ -2344,6 +2344,7 @@ arm-none-eabi-size "Software.axf"; # arm-none-eabi-objcopy -v -O binary "Softwar
    text	   data	    bss	    dec	    hex	filename
    1488	      8	      0	   1496	    5d8	Software.axf
  
+<<<<<<< HEAD
 14:30:55 **** Incremental Build of configuration Debug for project CMSISv2p00_LPC11xx ****
 make -r all 
 make: Nothing to be done for `all'.
@@ -2398,12 +2399,272 @@ Finished building: ../src/uart.c
 Building target: Software.axf
 Invoking: MCU Linker
 arm-none-eabi-gcc -nostdlib -L"C:\Users\Marcus\Dropbox\E7020E (LP3 14-15)\Project\CMSISv2p00_LPC11xx\Debug" -Xlinker -Map="Software.map" -Xlinker --gc-sections -mcpu=cortex-m0 -mthumb -T "Software_Debug.ld" -o "Software.axf"  ./src/Software.o ./src/cr_startup_lpc11xx.o ./src/crp.o ./src/pwm.o ./src/uart.o   -lCMSISv2p00_LPC11xx
+=======
+15:48:32 **** Incremental Build of configuration Debug for project CMSISv2p00_LPC11xx ****
+make -r all 
+Building file: ../src/system_LPC11xx.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -I../inc -O0 -Os -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"src/system_LPC11xx.d" -MT"src/system_LPC11xx.o" -MT"src/system_LPC11xx.d" -o "src/system_LPC11xx.o" "../src/system_LPC11xx.c"
+Finished building: ../src/system_LPC11xx.c
+ 
+Building target: libCMSISv2p00_LPC11xx.a
+Invoking: MCU Archiver
+arm-none-eabi-ar -r  "libCMSISv2p00_LPC11xx.a"  ./src/core_cm0.o ./src/system_LPC11xx.o   
+c:\nxp\LPCXpresso_7.5.0_254\lpcxpresso\tools\bin\arm-none-eabi-ar.exe: creating libCMSISv2p00_LPC11xx.a
+Finished building target: libCMSISv2p00_LPC11xx.a
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size libCMSISv2p00_LPC11xx.a ; # arm-none-eabi-objdump -h -S libCMSISv2p00_LPC11xx.a >libCMSISv2p00_LPC11xx.lss
+   text	   data	    bss	    dec	    hex	filename
+      0	      0	      0	      0	      0	core_cm0.o (ex libCMSISv2p00_LPC11xx.a)
+    368	      4	      0	    372	    174	system_LPC11xx.o (ex libCMSISv2p00_LPC11xx.a)
+ 
+15:48:34 **** Incremental Build of configuration Debug for project Software ****
+make -r all 
+Building file: ../src/Software.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M0 -D__USE_CMSIS=CMSISv2p00_LPC11xx -D__LPC11XX__ -D__REDLIB__ -I"C:\Users\jeffrey\Documents\E7020E\SmartThermometer\CMSISv2p00_LPC11xx\inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -specs=redlib.specs -MMD -MP -MF"src/Software.d" -MT"src/Software.o" -MT"src/Software.d" -o "src/Software.o" "../src/Software.c"
+../src/Software.c: In function 'main':
+../src/Software.c:62:2: error: too few arguments to function 'NVIC_SetPriority'
+  NVIC_SetPriority(ADC_IRQn);     //enable ADC interrupt
+  ^
+In file included from C:\Users\jeffrey\Documents\E7020E\SmartThermometer\CMSISv2p00_LPC11xx\inc/LPC11xx.h:118:0,
+                 from ../src/Software.h:9,
+                 from ../src/Software.c:11:
+C:\Users\jeffrey\Documents\E7020E\SmartThermometer\CMSISv2p00_LPC11xx\inc/core_cm0.h:522:22: note: declared here
+ static __INLINE void NVIC_SetPriority(IRQn_Type IRQn, uint32_t priority)
+                      ^
+../src/Software.c: In function 'UART_IRQHandler':
+../src/Software.c:102:8: error: 'i' undeclared (first use in this function)
+     if(i < 16){
+        ^
+../src/Software.c:102:8: note: each undeclared identifier is reported only once for each function it appears in
+../src/Software.c:103:6: error: 'string' undeclared (first use in this function)
+      string[i] = c;
+      ^
+../src/Software.c:110:6: warning: implicit declaration of function 'parser' [-Wimplicit-function-declaration]
+      parser(string, i);
+      ^
+make: *** [src/Software.o] Error 1
+15:49:51 **** Incremental Build of configuration Debug for project CMSISv2p00_LPC11xx ****
+make -r all 
+make: Nothing to be done for `all'.
+15:49:53 **** Incremental Build of configuration Debug for project Software ****
+make -r all 
+Building file: ../src/Software.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M0 -D__USE_CMSIS=CMSISv2p00_LPC11xx -D__LPC11XX__ -D__REDLIB__ -I"C:\Users\jeffrey\Documents\E7020E\SmartThermometer\CMSISv2p00_LPC11xx\inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -specs=redlib.specs -MMD -MP -MF"src/Software.d" -MT"src/Software.o" -MT"src/Software.d" -o "src/Software.o" "../src/Software.c"
+../src/Software.c: In function 'UART_IRQHandler':
+../src/Software.c:105:6: warning: implicit declaration of function 'parser' [-Wimplicit-function-declaration]
+      parser(string, i);
+      ^
+../src/Software.c:105:13: error: 'string' undeclared (first use in this function)
+      parser(string, i);
+             ^
+../src/Software.c:105:13: note: each undeclared identifier is reported only once for each function it appears in
+../src/Software.c:105:21: error: 'i' undeclared (first use in this function)
+      parser(string, i);
+                     ^
+make: *** [src/Software.o] Error 1
+15:53:57 **** Incremental Build of configuration Debug for project CMSISv2p00_LPC11xx ****
+make -r all 
+make: Nothing to be done for `all'.
+15:53:58 **** Incremental Build of configuration Debug for project Software ****
+make -r all 
+Building file: ../src/Software.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M0 -D__USE_CMSIS=CMSISv2p00_LPC11xx -D__LPC11XX__ -D__REDLIB__ -I"C:\Users\jeffrey\Documents\E7020E\SmartThermometer\CMSISv2p00_LPC11xx\inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -specs=redlib.specs -MMD -MP -MF"src/Software.d" -MT"src/Software.o" -MT"src/Software.d" -o "src/Software.o" "../src/Software.c"
+../src/Software.c: In function 'UART_IRQHandler':
+../src/Software.c:111:6: warning: implicit declaration of function 'parser' [-Wimplicit-function-declaration]
+      parser(string, i);
+      ^
+Finished building: ../src/Software.c
+ 
+Building file: ../src/cr_startup_lpc11xx.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M0 -D__USE_CMSIS=CMSISv2p00_LPC11xx -D__LPC11XX__ -D__REDLIB__ -I"C:\Users\jeffrey\Documents\E7020E\SmartThermometer\CMSISv2p00_LPC11xx\inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -specs=redlib.specs -MMD -MP -MF"src/cr_startup_lpc11xx.d" -MT"src/cr_startup_lpc11xx.o" -MT"src/cr_startup_lpc11xx.d" -o "src/cr_startup_lpc11xx.o" "../src/cr_startup_lpc11xx.c"
+Finished building: ../src/cr_startup_lpc11xx.c
+ 
+Building file: ../src/crp.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M0 -D__USE_CMSIS=CMSISv2p00_LPC11xx -D__LPC11XX__ -D__REDLIB__ -I"C:\Users\jeffrey\Documents\E7020E\SmartThermometer\CMSISv2p00_LPC11xx\inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -specs=redlib.specs -MMD -MP -MF"src/crp.d" -MT"src/crp.o" -MT"src/crp.d" -o "src/crp.o" "../src/crp.c"
+Finished building: ../src/crp.c
+ 
+Building file: ../src/pwm.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M0 -D__USE_CMSIS=CMSISv2p00_LPC11xx -D__LPC11XX__ -D__REDLIB__ -I"C:\Users\jeffrey\Documents\E7020E\SmartThermometer\CMSISv2p00_LPC11xx\inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -specs=redlib.specs -MMD -MP -MF"src/pwm.d" -MT"src/pwm.o" -MT"src/pwm.d" -o "src/pwm.o" "../src/pwm.c"
+Finished building: ../src/pwm.c
+ 
+Building target: Software.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"C:\Users\jeffrey\Documents\E7020E\SmartThermometer\CMSISv2p00_LPC11xx\Debug" -Xlinker -Map="Software.map" -Xlinker --gc-sections -mcpu=cortex-m0 -mthumb -T "Software_Debug.ld" -o "Software.axf"  ./src/Software.o ./src/cr_startup_lpc11xx.o ./src/crp.o ./src/pwm.o   -lCMSISv2p00_LPC11xx
+./src/Software.o: In function `UART_IRQHandler':
+C:\Users\jeffrey\Documents\E7020E\SmartThermometer\Software\Debug/../src/Software.c:111: undefined reference to `parser'
+collect2.exe: error: ld returned 1 exit status
+make: *** [Software.axf] Error 1
+15:59:52 **** Incremental Build of configuration Debug for project CMSISv2p00_LPC11xx ****
+make -r all 
+make: Nothing to be done for `all'.
+15:59:53 **** Incremental Build of configuration Debug for project Software ****
+make -r all 
+Building file: ../src/Software.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M0 -D__USE_CMSIS=CMSISv2p00_LPC11xx -D__LPC11XX__ -D__REDLIB__ -I"C:\Users\jeffrey\Documents\E7020E\SmartThermometer\CMSISv2p00_LPC11xx\inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -specs=redlib.specs -MMD -MP -MF"src/Software.d" -MT"src/Software.o" -MT"src/Software.d" -o "src/Software.o" "../src/Software.c"
+../src/Software.c: In function 'parser':
+../src/Software.c:102:3: warning: implicit declaration of function 'UART_send' [-Wimplicit-function-declaration]
+   UART_send("ERROR, string too long! \n\r", 26);
+   ^
+../src/Software.c:115:22: error: 'command_on' undeclared (first use in this function)
+   if(short_str[i] != command_on[i]){
+                      ^
+../src/Software.c:115:22: note: each undeclared identifier is reported only once for each function it appears in
+../src/Software.c:119:4: warning: implicit declaration of function 'on' [-Wimplicit-function-declaration]
+    on();
+    ^
+../src/Software.c:128:22: error: 'command_off' undeclared (first use in this function)
+   if(short_str[i] != command_off[i]){
+                      ^
+../src/Software.c:132:4: warning: implicit declaration of function 'off' [-Wimplicit-function-declaration]
+    off();
+    ^
+../src/Software.c:141:22: error: 'command_blink' undeclared (first use in this function)
+   if(short_str[i] != command_blink[i]){
+                      ^
+../src/Software.c:145:4: warning: implicit declaration of function 'str2int' [-Wimplicit-function-declaration]
+    if(str2int(&short_str[5], short_len - 6, &blink_val) == 0){
+    ^
+../src/Software.c:147:6: warning: implicit declaration of function 'blink' [-Wimplicit-function-declaration]
+      blink(blink_val, -1);
+      ^
+make: *** [src/Software.o] Error 1
+16:00:29 **** Incremental Build of configuration Debug for project CMSISv2p00_LPC11xx ****
+make -r all 
+make: Nothing to be done for `all'.
+16:00:30 **** Incremental Build of configuration Debug for project Software ****
+make -r all 
+Building file: ../src/Software.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M0 -D__USE_CMSIS=CMSISv2p00_LPC11xx -D__LPC11XX__ -D__REDLIB__ -I"C:\Users\jeffrey\Documents\E7020E\SmartThermometer\CMSISv2p00_LPC11xx\inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -specs=redlib.specs -MMD -MP -MF"src/Software.d" -MT"src/Software.o" -MT"src/Software.d" -o "src/Software.o" "../src/Software.c"
+../src/Software.c: In function 'parser':
+../src/Software.c:102:3: warning: implicit declaration of function 'UART_send' [-Wimplicit-function-declaration]
+   UART_send("ERROR, string too long! \n\r", 26);
+   ^
+../src/Software.c:115:22: error: 'command_on' undeclared (first use in this function)
+   if(short_str[i] != command_on[i]){
+                      ^
+../src/Software.c:115:22: note: each undeclared identifier is reported only once for each function it appears in
+../src/Software.c:119:4: warning: implicit declaration of function 'on' [-Wimplicit-function-declaration]
+    on();
+    ^
+../src/Software.c:128:22: error: 'command_off' undeclared (first use in this function)
+   if(short_str[i] != command_off[i]){
+                      ^
+../src/Software.c:132:4: warning: implicit declaration of function 'off' [-Wimplicit-function-declaration]
+    off();
+    ^
+../src/Software.c:145:4: warning: implicit declaration of function 'str2int' [-Wimplicit-function-declaration]
+    if(str2int(&short_str[5], short_len - 6, &blink_val) == 0){
+    ^
+../src/Software.c:147:6: warning: implicit declaration of function 'blink' [-Wimplicit-function-declaration]
+      blink(blink_val, -1);
+      ^
+make: *** [src/Software.o] Error 1
+16:00:52 **** Build of configuration Debug for project CMSISv2p00_LPC11xx ****
+make -r all 
+make: Nothing to be done for `all'.
+16:00:53 **** Build of configuration Debug for project Software ****
+make -r all 
+Building file: ../src/Software.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M0 -D__USE_CMSIS=CMSISv2p00_LPC11xx -D__LPC11XX__ -D__REDLIB__ -I"C:\Users\jeffrey\Documents\E7020E\SmartThermometer\CMSISv2p00_LPC11xx\inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -specs=redlib.specs -MMD -MP -MF"src/Software.d" -MT"src/Software.o" -MT"src/Software.d" -o "src/Software.o" "../src/Software.c"
+../src/Software.c: In function 'parser':
+../src/Software.c:102:3: warning: implicit declaration of function 'UART_send' [-Wimplicit-function-declaration]
+   UART_send("ERROR, string too long! \n\r", 26);
+   ^
+../src/Software.c:115:22: error: 'command_on' undeclared (first use in this function)
+   if(short_str[i] != command_on[i]){
+                      ^
+../src/Software.c:115:22: note: each undeclared identifier is reported only once for each function it appears in
+../src/Software.c:119:4: warning: implicit declaration of function 'on' [-Wimplicit-function-declaration]
+    on();
+    ^
+../src/Software.c:132:4: warning: implicit declaration of function 'off' [-Wimplicit-function-declaration]
+    off();
+    ^
+../src/Software.c:145:4: warning: implicit declaration of function 'str2int' [-Wimplicit-function-declaration]
+    if(str2int(&short_str[5], short_len - 6, &blink_val) == 0){
+    ^
+../src/Software.c:147:6: warning: implicit declaration of function 'blink' [-Wimplicit-function-declaration]
+      blink(blink_val, -1);
+      ^
+make: *** [src/Software.o] Error 1
+16:01:09 **** Incremental Build of configuration Debug for project CMSISv2p00_LPC11xx ****
+make -r all 
+make: Nothing to be done for `all'.
+16:01:10 **** Incremental Build of configuration Debug for project Software ****
+make -r all 
+Building file: ../src/Software.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M0 -D__USE_CMSIS=CMSISv2p00_LPC11xx -D__LPC11XX__ -D__REDLIB__ -I"C:\Users\jeffrey\Documents\E7020E\SmartThermometer\CMSISv2p00_LPC11xx\inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -specs=redlib.specs -MMD -MP -MF"src/Software.d" -MT"src/Software.o" -MT"src/Software.d" -o "src/Software.o" "../src/Software.c"
+../src/Software.c: In function 'parser':
+../src/Software.c:102:3: warning: implicit declaration of function 'UART_send' [-Wimplicit-function-declaration]
+   UART_send("ERROR, string too long! \n\r", 26);
+   ^
+../src/Software.c:119:4: warning: implicit declaration of function 'on' [-Wimplicit-function-declaration]
+    on();
+    ^
+../src/Software.c:132:4: warning: implicit declaration of function 'off' [-Wimplicit-function-declaration]
+    off();
+    ^
+../src/Software.c:145:4: warning: implicit declaration of function 'str2int' [-Wimplicit-function-declaration]
+    if(str2int(&short_str[5], short_len - 6, &blink_val) == 0){
+    ^
+../src/Software.c:147:6: warning: implicit declaration of function 'blink' [-Wimplicit-function-declaration]
+      blink(blink_val, -1);
+      ^
+Finished building: ../src/Software.c
+ 
+Building target: Software.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"C:\Users\jeffrey\Documents\E7020E\SmartThermometer\CMSISv2p00_LPC11xx\Debug" -Xlinker -Map="Software.map" -Xlinker --gc-sections -mcpu=cortex-m0 -mthumb -T "Software_Debug.ld" -o "Software.axf"  ./src/Software.o ./src/cr_startup_lpc11xx.o ./src/crp.o ./src/pwm.o   -lCMSISv2p00_LPC11xx
+./src/Software.o: In function `parser':
+C:\Users\jeffrey\Documents\E7020E\SmartThermometer\Software\Debug/../src/Software.c:102: undefined reference to `UART_send'
+C:\Users\jeffrey\Documents\E7020E\SmartThermometer\Software\Debug/../src/Software.c:119: undefined reference to `on'
+C:\Users\jeffrey\Documents\E7020E\SmartThermometer\Software\Debug/../src/Software.c:120: undefined reference to `UART_send'
+C:\Users\jeffrey\Documents\E7020E\SmartThermometer\Software\Debug/../src/Software.c:132: undefined reference to `off'
+C:\Users\jeffrey\Documents\E7020E\SmartThermometer\Software\Debug/../src/Software.c:133: undefined reference to `UART_send'
+C:\Users\jeffrey\Documents\E7020E\SmartThermometer\Software\Debug/../src/Software.c:145: undefined reference to `str2int'
+C:\Users\jeffrey\Documents\E7020E\SmartThermometer\Software\Debug/../src/Software.c:147: undefined reference to `blink'
+C:\Users\jeffrey\Documents\E7020E\SmartThermometer\Software\Debug/../src/Software.c:149: undefined reference to `UART_send'
+C:\Users\jeffrey\Documents\E7020E\SmartThermometer\Software\Debug/../src/Software.c:150: undefined reference to `UART_send'
+C:\Users\jeffrey\Documents\E7020E\SmartThermometer\Software\Debug/../src/Software.c:151: undefined reference to `UART_send'
+C:\Users\jeffrey\Documents\E7020E\SmartThermometer\Software\Debug/../src/Software.c:161: undefined reference to `UART_send'
+C:\Users\jeffrey\Documents\E7020E\SmartThermometer\Software\Debug/../src/Software.c:162: undefined reference to `UART_send'
+./src/Software.o:C:\Users\jeffrey\Documents\E7020E\SmartThermometer\Software\Debug/../src/Software.c:163: more undefined references to `UART_send' follow
+collect2.exe: error: ld returned 1 exit status
+make: *** [Software.axf] Error 1
+16:02:36 **** Incremental Build of configuration Debug for project CMSISv2p00_LPC11xx ****
+make -r all 
+make: Nothing to be done for `all'.
+16:02:37 **** Incremental Build of configuration Debug for project Software ****
+make -r all 
+Building file: ../src/Software.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M0 -D__USE_CMSIS=CMSISv2p00_LPC11xx -D__LPC11XX__ -D__REDLIB__ -I"C:\Users\jeffrey\Documents\E7020E\SmartThermometer\CMSISv2p00_LPC11xx\inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -specs=redlib.specs -MMD -MP -MF"src/Software.d" -MT"src/Software.o" -MT"src/Software.d" -o "src/Software.o" "../src/Software.c"
+Finished building: ../src/Software.c
+ 
+Building target: Software.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"C:\Users\jeffrey\Documents\E7020E\SmartThermometer\CMSISv2p00_LPC11xx\Debug" -Xlinker -Map="Software.map" -Xlinker --gc-sections -mcpu=cortex-m0 -mthumb -T "Software_Debug.ld" -o "Software.axf"  ./src/Software.o ./src/cr_startup_lpc11xx.o ./src/crp.o ./src/pwm.o   -lCMSISv2p00_LPC11xx
+>>>>>>> f6c7b8f91b70bcb2482f5957e40ff145666090f9
 Finished building target: Software.axf
  
 make --no-print-directory post-build
 Performing post-build steps
 arm-none-eabi-size "Software.axf"; # arm-none-eabi-objcopy -v -O binary "Software.axf" "Software.bin" ; # checksum -p LPC11C24_301 -d "Software.bin";
    text	   data	    bss	    dec	    hex	filename
+<<<<<<< HEAD
    1488	      8	      0	   1496	    5d8	Software.axf
  
 14:48:44 **** Incremental Build of configuration Debug for project CMSISv2p00_LPC11xx ****
@@ -2439,11 +2700,185 @@ Finished building: ../src/uart.c
 Building target: Software.axf
 Invoking: MCU Linker
 arm-none-eabi-gcc -nostdlib -L"C:\Users\Marcus\Dropbox\E7020E (LP3 14-15)\Project\CMSISv2p00_LPC11xx\Debug" -Xlinker -Map="Software.map" -Xlinker --gc-sections -mcpu=cortex-m0 -mthumb -T "Software_Debug.ld" -o "Software.axf"  ./src/Software.o ./src/cr_startup_lpc11xx.o ./src/crp.o ./src/pwm.o ./src/uart.o   -lCMSISv2p00_LPC11xx
+=======
+   2980	      8	     32	   3020	    bcc	Software.axf
+ 
+16:23:29 **** Build of configuration Debug for project CMSISv2p00_LPC11xx ****
+make -r all 
+make: Nothing to be done for `all'.
+16:23:31 **** Build of configuration Debug for project Software ****
+make -r all 
+Building file: ../src/Software.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M0 -D__USE_CMSIS=CMSISv2p00_LPC11xx -D__LPC11XX__ -D__REDLIB__ -I"C:\Users\jeffrey\Documents\E7020E\SmartThermometer\CMSISv2p00_LPC11xx\inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -specs=redlib.specs -MMD -MP -MF"src/Software.d" -MT"src/Software.o" -MT"src/Software.d" -o "src/Software.o" "../src/Software.c"
+Finished building: ../src/Software.c
+ 
+Building target: Software.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"C:\Users\jeffrey\Documents\E7020E\SmartThermometer\CMSISv2p00_LPC11xx\Debug" -Xlinker -Map="Software.map" -Xlinker --gc-sections -mcpu=cortex-m0 -mthumb -T "Software_Debug.ld" -o "Software.axf"  ./src/Software.o ./src/cr_startup_lpc11xx.o ./src/crp.o ./src/pwm.o   -lCMSISv2p00_LPC11xx
+>>>>>>> f6c7b8f91b70bcb2482f5957e40ff145666090f9
 Finished building target: Software.axf
  
 make --no-print-directory post-build
 Performing post-build steps
 arm-none-eabi-size "Software.axf"; # arm-none-eabi-objcopy -v -O binary "Software.axf" "Software.bin" ; # checksum -p LPC11C24_301 -d "Software.bin";
    text	   data	    bss	    dec	    hex	filename
+<<<<<<< HEAD
    1488	      8	      0	   1496	    5d8	Software.axf
+=======
+   3052	      8	     32	   3092	    c14	Software.axf
+>>>>>>> f6c7b8f91b70bcb2482f5957e40ff145666090f9
+ 
+17:07:37 **** Build of configuration Debug for project CMSISv2p00_LPC11xx ****
+make -r all 
+make: Nothing to be done for `all'.
+17:07:45 **** Build of configuration Debug for project Software ****
+make -r all 
+src/pwm.d:1: *** missing separator.  Stop.
+17:07:59 **** Clean-only build of configuration Debug for project CMSISv2p00_LPC11xx ****
+make -r clean 
+rm -rf  ./src/core_cm0.o ./src/system_LPC11xx.o  ./src/core_cm0.d ./src/system_LPC11xx.d  libCMSISv2p00_LPC11xx.a
+ 
+17:08:01 **** Clean-only build of configuration Debug for project Software ****
+make -r clean 
+rm -rf  ./src/Software.o ./src/cr_startup_lpc11xx.o ./src/crp.o ./src/pwm.o ./src/uart.o  ./src/Software.d ./src/cr_startup_lpc11xx.d ./src/crp.d ./src/pwm.d ./src/uart.d  Software.axf
+ 
+17:08:09 **** Build of configuration Debug for project CMSISv2p00_LPC11xx ****
+make -r all 
+Building file: ../src/core_cm0.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -I../inc -O0 -Os -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"src/core_cm0.d" -MT"src/core_cm0.o" -MT"src/core_cm0.d" -o "src/core_cm0.o" "../src/core_cm0.c"
+Finished building: ../src/core_cm0.c
+ 
+Building file: ../src/system_LPC11xx.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -I../inc -O0 -Os -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"src/system_LPC11xx.d" -MT"src/system_LPC11xx.o" -MT"src/system_LPC11xx.d" -o "src/system_LPC11xx.o" "../src/system_LPC11xx.c"
+Finished building: ../src/system_LPC11xx.c
+ 
+Building target: libCMSISv2p00_LPC11xx.a
+Invoking: MCU Archiver
+arm-none-eabi-ar -r  "libCMSISv2p00_LPC11xx.a"  ./src/core_cm0.o ./src/system_LPC11xx.o   
+c:\nxp\LPCXpresso_7.5.0_254\lpcxpresso\tools\bin\arm-none-eabi-ar.exe: creating libCMSISv2p00_LPC11xx.a
+Finished building target: libCMSISv2p00_LPC11xx.a
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size libCMSISv2p00_LPC11xx.a ; # arm-none-eabi-objdump -h -S libCMSISv2p00_LPC11xx.a >libCMSISv2p00_LPC11xx.lss
+   text	   data	    bss	    dec	    hex	filename
+      0	      0	      0	      0	      0	core_cm0.o (ex libCMSISv2p00_LPC11xx.a)
+    368	      4	      0	    372	    174	system_LPC11xx.o (ex libCMSISv2p00_LPC11xx.a)
+ 
+17:08:15 **** Build of configuration Debug for project Software ****
+make -r all 
+Building file: ../src/Software.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M0 -D__USE_CMSIS=CMSISv2p00_LPC11xx -D__LPC11XX__ -D__REDLIB__ -I"C:\Users\Marcus\Dropbox\E7020E (LP3 14-15)\Project\CMSISv2p00_LPC11xx\inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -specs=redlib.specs -MMD -MP -MF"src/Software.d" -MT"src/Software.o" -MT"src/Software.d" -o "src/Software.o" "../src/Software.c"
+Finished building: ../src/Software.c
+ 
+Building file: ../src/cr_startup_lpc11xx.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M0 -D__USE_CMSIS=CMSISv2p00_LPC11xx -D__LPC11XX__ -D__REDLIB__ -I"C:\Users\Marcus\Dropbox\E7020E (LP3 14-15)\Project\CMSISv2p00_LPC11xx\inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -specs=redlib.specs -MMD -MP -MF"src/cr_startup_lpc11xx.d" -MT"src/cr_startup_lpc11xx.o" -MT"src/cr_startup_lpc11xx.d" -o "src/cr_startup_lpc11xx.o" "../src/cr_startup_lpc11xx.c"
+Finished building: ../src/cr_startup_lpc11xx.c
+ 
+Building file: ../src/crp.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M0 -D__USE_CMSIS=CMSISv2p00_LPC11xx -D__LPC11XX__ -D__REDLIB__ -I"C:\Users\Marcus\Dropbox\E7020E (LP3 14-15)\Project\CMSISv2p00_LPC11xx\inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -specs=redlib.specs -MMD -MP -MF"src/crp.d" -MT"src/crp.o" -MT"src/crp.d" -o "src/crp.o" "../src/crp.c"
+Finished building: ../src/crp.c
+ 
+Building file: ../src/pwm.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M0 -D__USE_CMSIS=CMSISv2p00_LPC11xx -D__LPC11XX__ -D__REDLIB__ -I"C:\Users\Marcus\Dropbox\E7020E (LP3 14-15)\Project\CMSISv2p00_LPC11xx\inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -specs=redlib.specs -MMD -MP -MF"src/pwm.d" -MT"src/pwm.o" -MT"src/pwm.d" -o "src/pwm.o" "../src/pwm.c"
+Finished building: ../src/pwm.c
+ 
+Building file: ../src/uart.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M0 -D__USE_CMSIS=CMSISv2p00_LPC11xx -D__LPC11XX__ -D__REDLIB__ -I"C:\Users\Marcus\Dropbox\E7020E (LP3 14-15)\Project\CMSISv2p00_LPC11xx\inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -specs=redlib.specs -MMD -MP -MF"src/uart.d" -MT"src/uart.o" -MT"src/uart.d" -o "src/uart.o" "../src/uart.c"
+../src/uart.c:11:6: error: variably modified 'uart_tx_buf' at file scope
+ char uart_tx_buf[uart_tx_buf_size];
+      ^
+../src/uart.c: In function 'uart_send':
+../src/uart.c:39:3: warning: implicit declaration of function 'uart_transmit' [-Wimplicit-function-declaration]
+   uart_transmit();
+   ^
+../src/uart.c: At top level:
+../src/uart.c:44:6: warning: conflicting types for 'uart_transmit' [enabled by default]
+ void uart_transmit(){
+      ^
+../src/uart.c:39:3: note: previous implicit declaration of 'uart_transmit' was here
+   uart_transmit();
+   ^
+make: *** [src/uart.o] Error 1
+17:11:10 **** Incremental Build of configuration Debug for project CMSISv2p00_LPC11xx ****
+make -r all 
+make: Nothing to be done for `all'.
+17:11:13 **** Incremental Build of configuration Debug for project Software ****
+make -r all 
+Building file: ../src/uart.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M0 -D__USE_CMSIS=CMSISv2p00_LPC11xx -D__LPC11XX__ -D__REDLIB__ -I"C:\Users\Marcus\Dropbox\E7020E (LP3 14-15)\Project\CMSISv2p00_LPC11xx\inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -specs=redlib.specs -MMD -MP -MF"src/uart.d" -MT"src/uart.o" -MT"src/uart.d" -o "src/uart.o" "../src/uart.c"
+../src/uart.c:8:28: error: expected ']' before ';' token
+ #define UART_TX_BUB_SIZE 32;
+                            ^
+../src/uart.c:11:18: note: in expansion of macro 'UART_TX_BUB_SIZE'
+ char uart_tx_buf[UART_TX_BUB_SIZE];
+                  ^
+../src/uart.c: In function 'uart_send':
+../src/uart.c:8:28: error: expected ')' before ';' token
+ #define UART_TX_BUB_SIZE 32;
+                            ^
+../src/uart.c:24:28: note: in expansion of macro 'UART_TX_BUB_SIZE'
+     ( (uart_tx_buf_end == (UART_TX_BUB_SIZE - 1) && (uart_tx_buf_start == 0) ))){
+                            ^
+../src/uart.c:8:28: error: expected ')' before ';' token
+ #define UART_TX_BUB_SIZE 32;
+                            ^
+../src/uart.c:27:26: note: in expansion of macro 'UART_TX_BUB_SIZE'
+   if(uart_tx_buf_end == (UART_TX_BUB_SIZE - 1) ){
+                          ^
+../src/uart.c:33:3: error: 'uart_tx_buf' undeclared (first use in this function)
+   uart_tx_buf[uart_tx_buf_end] = str[i];
+   ^
+../src/uart.c:33:3: note: each undeclared identifier is reported only once for each function it appears in
+../src/uart.c:39:3: warning: implicit declaration of function 'uart_transmit' [-Wimplicit-function-declaration]
+   uart_transmit();
+   ^
+../src/uart.c: At top level:
+../src/uart.c:44:6: warning: conflicting types for 'uart_transmit' [enabled by default]
+ void uart_transmit(){
+      ^
+../src/uart.c:39:3: note: previous implicit declaration of 'uart_transmit' was here
+   uart_transmit();
+   ^
+make: *** [src/uart.o] Error 1
+17:11:45 **** Incremental Build of configuration Debug for project CMSISv2p00_LPC11xx ****
+make -r all 
+make: Nothing to be done for `all'.
+17:11:48 **** Incremental Build of configuration Debug for project Software ****
+make -r all 
+Building file: ../src/uart.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M0 -D__USE_CMSIS=CMSISv2p00_LPC11xx -D__LPC11XX__ -D__REDLIB__ -I"C:\Users\Marcus\Dropbox\E7020E (LP3 14-15)\Project\CMSISv2p00_LPC11xx\inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -specs=redlib.specs -MMD -MP -MF"src/uart.d" -MT"src/uart.o" -MT"src/uart.d" -o "src/uart.o" "../src/uart.c"
+../src/uart.c: In function 'uart_send':
+../src/uart.c:39:3: warning: implicit declaration of function 'uart_transmit' [-Wimplicit-function-declaration]
+   uart_transmit();
+   ^
+../src/uart.c: At top level:
+../src/uart.c:44:6: warning: conflicting types for 'uart_transmit' [enabled by default]
+ void uart_transmit(){
+      ^
+../src/uart.c:39:3: note: previous implicit declaration of 'uart_transmit' was here
+   uart_transmit();
+   ^
+Finished building: ../src/uart.c
+ 
+Building target: Software.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"C:\Users\Marcus\Dropbox\E7020E (LP3 14-15)\Project\CMSISv2p00_LPC11xx\Debug" -Xlinker -Map="Software.map" -Xlinker --gc-sections -mcpu=cortex-m0 -mthumb -T "Software_Debug.ld" -o "Software.axf"  ./src/Software.o ./src/cr_startup_lpc11xx.o ./src/crp.o ./src/pwm.o ./src/uart.o   -lCMSISv2p00_LPC11xx
+Finished building target: Software.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "Software.axf"; # arm-none-eabi-objcopy -v -O binary "Software.axf" "Software.bin" ; # checksum -p LPC11C24_301 -d "Software.bin";
+   text	   data	    bss	    dec	    hex	filename
+   3052	      8	     32	   3092	    c14	Software.axf
  
