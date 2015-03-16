@@ -214,7 +214,7 @@ void ADC_IRQHandler (void){
 	}
 	else {
 	k = 0;
-	voltage = sum/1000;
+	voltage = sum/10000;
     voltage /= 287;
     sum = 0;
     k = 0;

@@ -203,6 +203,7 @@ void PIOINT1_IRQHandler (void){
 
 void ADC_IRQHandler (void){
 	int temp = 0;
+	LPC_ADC->INTEN = 0;							//reset interrupt
 	temp = LPC_ADC->GDR;
 	temp = temp & (0x3ff<<6);
 	temp = temp>>6;
@@ -214,7 +215,7 @@ void ADC_IRQHandler (void){
 	}
 	else {
 	k = 0;
-	voltage = sum/1000;
+	voltage = sum/10000;
     voltage /= 287;
     sum = 0;
     k = 0;

@@ -34,9 +34,9 @@ int main(void) {
 	LPC_SYSCON->SYSAHBCLKCTRL |= (1<<9);
 	LPC_TMR32B0->MCR |= 0b11;
 	LPC_TMR32B0->PR = 48 - 1;
-	LPC_TMR32B0->MR0 = 1*1000 * 1000 * 2 - 1;		//interrupt every 10 seconds
-	LPC_TMR32B0->TCR = 2;
-	LPC_TMR32B0->TCR = 1;
+	LPC_TMR32B0->MR0 = 1*1000 * 1000 * 10 - 1;		//interrupt every 10 seconds
+	LPC_TMR32B0->TCR |= 2;
+	LPC_TMR32B0->TCR |= 1;
 
 	LPC_IOCON->R_PIO1_2 = 1;
 	LPC_IOCON->R_PIO0_11 = 1;
@@ -83,7 +83,7 @@ int main(void) {
     return 0 ;
 }
 
-/*void cycle_colour(){
+void cycle_colour(){
 	static int colour = 255;
 	static int colour_inc = 1;
 
@@ -95,7 +95,7 @@ int main(void) {
 	if(colour > 511 || colour <= 0){
 		colour_inc = - colour_inc;
 	}
-}*/
+}
 
 void parser(char str[], int len){
 	/*
@@ -173,8 +173,7 @@ void parser(char str[], int len){
 
 void TIMER32_0_IRQHandler (void){
 	LPC_TMR32B0->IR = 1;
-	LPC_ADC->CR |= (1<<24);	//start AD conversion'
-	LPC_ADC->CR &= ~(1<<24);
+	LPC_ADC->CR |= (1<<24);	//start AD conversion
 
 }
 
@@ -203,18 +202,18 @@ void PIOINT1_IRQHandler (void){
 
 void ADC_IRQHandler (void){
 	int temp = 0;
+	LPC_ADC->INTEN = 0;							//reset interrupt
 	temp = LPC_ADC->GDR;
 	temp = temp & (0x3ff<<6);
 	temp = temp>>6;
 	sum = sum + temp;
 	if(k<1000){
-	LPC_ADC->CR |= (1<<24);//start conversion
-	LPC_ADC->CR &= ~(1<<24);
+	LPC_ADC->CR |= (1<<24);						//start conversion
 	k++;
 	}
 	else {
 	k = 0;
-	voltage = sum/1000;
+	voltage = sum/10000;
     voltage /= 287;
     sum = 0;
     k = 0;
