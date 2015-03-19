@@ -58,17 +58,9 @@ int main(void) {
 	LPC_SYSCON->PDRUNCFG &= ~(1<<4);			//ADC powered up
 	LPC_ADC->INTEN |= (1<<7);					//channel 7 interrupt enabled
 
-												//SPI set up code
-	LPC_SYSCON->SYSAHBCLKCTRL |= (1<<18);
-	LPC_IOCON->PIO2_1 = 2;						//table 66, SCK1
-	LPC_IOCON->PIO2_0 = 2;						//table 107, SSEL1
-	LPC_IOCON->PIO2_2 = 2;						//table 127. MISO1
-	LPC_IOCON->PIO2_3 = 2;						//table 139, MOSI1
-	LPC_SYSCON->SSP1CLKDIV |= 48;				//table 24, SCK1 is set to 1 MHz
-	LPC_SYSCON->PRESETCTRL = 1 | (1<<2);		//de-asserts reset signal
-
 	//pwm_init();
 	uart_init();
+	lcd_init();
 
 
 	__disable_irq();
@@ -182,14 +174,20 @@ void parser(char str[], int len){
 	*/
 }
 
+void delayUS(int microSecs){
+
+}
+
+void delayMS(int milliSecs){
+
+}
+
 void TIMER16_0_IRQHandler (void){
 	LPC_TMR16B0->IR = 1;
 	LPC_ADC->CR |= (1<<24);	//start AD conversion'
 	LPC_ADC->CR &= ~(1<<24);
 
 }
-
-
 
 void PIOINT1_IRQHandler (void){
 	 LPC_GPIO1->IC |= (1<<4);				//reset interrupt flag
