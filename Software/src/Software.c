@@ -59,6 +59,8 @@ int main(void) {
 	LPC_ADC->INTEN |= (1<<7);					//channel 7 interrupt enabled
 
 	//pwm_init();
+	uart_init();
+
 
 	__disable_irq();
 	NVIC_SetPriority(TIMER_32_0_IRQn, 0);		//enable timer interrupt
@@ -178,23 +180,7 @@ void TIMER32_0_IRQHandler (void){
 
 }
 
-void UART_IRQHandler (void){
-	char c = 0;
-	c = LPC_UART->RBR;
-    LPC_UART->THR = c;
-    while(!(LPC_UART->LSR & (1<<5)));
 
-    if(i < 16){
-    	string[i] = c;
-    }
-    i++;
-    if(c == '\r'){
-    	LPC_UART->THR = '\n';
-    	while(!(LPC_UART->LSR & (1<<5)));
-    	parser(string, i);
-    	i = 0;
-    }
-}
 
 void PIOINT1_IRQHandler (void){
 	 LPC_GPIO1->IC |= (1<<4);

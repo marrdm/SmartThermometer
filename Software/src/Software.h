@@ -14,7 +14,8 @@
 
 #include <cr_section_macros.h>
 
-//#include "pwm.h"
+#include "pwm.h"
+#include "uart.h"
 
 #define SYSTEM_OSCILLATOR 0		//
 #define MAIN_CLOCK 0				//

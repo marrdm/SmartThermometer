@@ -31,10 +31,14 @@ Discarded input sections
  .group         0x00000000        0x8 ./src/Software.o
  .group         0x00000000        0x8 ./src/Software.o
  .group         0x00000000        0x8 ./src/Software.o
+ .group         0x00000000        0x8 ./src/Software.o
  .text          0x00000000        0x0 ./src/Software.o
  .data          0x00000000        0x0 ./src/Software.o
  .bss           0x00000000        0x0 ./src/Software.o
  .bss.temp      0x00000000        0x4 ./src/Software.o
+ .bss.i         0x00000000        0x4 ./src/Software.o
+ .text.parser   0x00000000       0x10 ./src/Software.o
+ COMMON         0x00000000       0x10 ./src/Software.o
  .group         0x00000000        0x8 ./src/cr_startup_lpc11xx.o
  .text          0x00000000        0x0 ./src/cr_startup_lpc11xx.o
  .data          0x00000000        0x0 ./src/cr_startup_lpc11xx.o
@@ -46,6 +50,7 @@ Discarded input sections
  .data          0x00000000        0x0 ./src/crp.o
  .bss           0x00000000        0x0 ./src/crp.o
  .debug_macro   0x00000000      0x820 ./src/crp.o
+ .group         0x00000000        0x8 ./src/pwm.o
  .group         0x00000000        0x8 ./src/pwm.o
  .group         0x00000000        0x8 ./src/pwm.o
  .group         0x00000000        0x8 ./src/pwm.o
@@ -71,7 +76,7 @@ Discarded input sections
  .debug_aranges
                 0x00000000       0x38 ./src/pwm.o
  .debug_ranges  0x00000000       0x28 ./src/pwm.o
- .debug_macro   0x00000000       0x98 ./src/pwm.o
+ .debug_macro   0x00000000       0xa5 ./src/pwm.o
  .debug_macro   0x00000000      0x820 ./src/pwm.o
  .debug_macro   0x00000000       0x1c ./src/pwm.o
  .debug_macro   0x00000000       0x2e ./src/pwm.o
@@ -81,41 +86,33 @@ Discarded input sections
  .debug_macro   0x00000000      0x237 ./src/pwm.o
  .debug_macro   0x00000000      0x131 ./src/pwm.o
  .debug_macro   0x00000000       0x82 ./src/pwm.o
+ .debug_macro   0x00000000       0x10 ./src/pwm.o
  .debug_macro   0x00000000       0x16 ./src/pwm.o
- .debug_line    0x00000000      0x256 ./src/pwm.o
- .debug_str     0x00000000     0x58c3 ./src/pwm.o
+ .debug_line    0x00000000      0x260 ./src/pwm.o
+ .debug_str     0x00000000     0x58e0 ./src/pwm.o
  .comment       0x00000000       0x71 ./src/pwm.o
  .ARM.attributes
                 0x00000000       0x31 ./src/pwm.o
  .debug_frame   0x00000000       0x8c ./src/pwm.o
  .group         0x00000000        0x8 ./src/uart.o
+ .group         0x00000000        0x8 ./src/uart.o
+ .group         0x00000000        0x8 ./src/uart.o
+ .group         0x00000000        0x8 ./src/uart.o
+ .group         0x00000000        0x8 ./src/uart.o
+ .group         0x00000000        0x8 ./src/uart.o
+ .group         0x00000000        0x8 ./src/uart.o
+ .group         0x00000000        0x8 ./src/uart.o
  .text          0x00000000        0x0 ./src/uart.o
  .data          0x00000000        0x0 ./src/uart.o
  .bss           0x00000000        0x0 ./src/uart.o
- .bss.uart_tx_buf_start
-                0x00000000        0x4 ./src/uart.o
- .bss.uart_tx_buf_end
-                0x00000000        0x4 ./src/uart.o
- .bss.uart_tx_active
-                0x00000000        0x4 ./src/uart.o
- .text.uart_send
-                0x00000000       0x90 ./src/uart.o
- .text.uart_transmit
-                0x00000000       0x28 ./src/uart.o
- .debug_info    0x00000000       0xec ./src/uart.o
- .debug_abbrev  0x00000000       0xa9 ./src/uart.o
- .debug_aranges
-                0x00000000       0x28 ./src/uart.o
- .debug_ranges  0x00000000       0x18 ./src/uart.o
- .debug_macro   0x00000000       0x17 ./src/uart.o
  .debug_macro   0x00000000      0x820 ./src/uart.o
- .debug_line    0x00000000       0x70 ./src/uart.o
- .debug_str     0x00000000     0x236d ./src/uart.o
- .comment       0x00000000       0x71 ./src/uart.o
- .ARM.attributes
-                0x00000000       0x31 ./src/uart.o
- .debug_frame   0x00000000       0x4c ./src/uart.o
- COMMON         0x00000000       0x20 ./src/uart.o
+ .debug_macro   0x00000000       0x1c ./src/uart.o
+ .debug_macro   0x00000000       0x2e ./src/uart.o
+ .debug_macro   0x00000000       0x10 ./src/uart.o
+ .debug_macro   0x00000000      0x12d ./src/uart.o
+ .debug_macro   0x00000000      0x5b2 ./src/uart.o
+ .debug_macro   0x00000000      0x237 ./src/uart.o
+ .debug_macro   0x00000000      0x131 ./src/uart.o
  .group         0x00000000        0x8 C:\Users\Marcus\Dropbox\E7020E (LP3 14-15)\Project\CMSISv2p00_LPC11xx\Debug\libCMSISv2p00_LPC11xx.a(system_LPC11xx.o)
  .group         0x00000000        0x8 C:\Users\Marcus\Dropbox\E7020E (LP3 14-15)\Project\CMSISv2p00_LPC11xx\Debug\libCMSISv2p00_LPC11xx.a(system_LPC11xx.o)
  .group         0x00000000        0x8 C:\Users\Marcus\Dropbox\E7020E (LP3 14-15)\Project\CMSISv2p00_LPC11xx\Debug\libCMSISv2p00_LPC11xx.a(system_LPC11xx.o)
@@ -236,7 +233,7 @@ END GROUP
                 0x00008000                __top_MFlash32 = 0x8000
                 0x10002000                __top_RamLoc8 = 0x10002000
 
-.text           0x00000000      0xa24
+.text           0x00000000      0xb54
  FILL mask 0xff
                 0x00000000                __vectors_start__ = ABSOLUTE (.)
  *(.isr_vector)
@@ -245,13 +242,13 @@ END GROUP
                 0x000000c0                . = ALIGN (0x4)
                 0x000000c0                __section_table_start = .
                 0x000000c0                __data_section_table = .
-                0x000000c0        0x4 LONG 0xa24 LOADADDR (.data)
+                0x000000c0        0x4 LONG 0xb54 LOADADDR (.data)
                 0x000000c4        0x4 LONG 0x10000000 ADDR (.data)
                 0x000000c8        0x4 LONG 0x0 SIZEOF (.data)
                 0x000000cc                __data_section_table_end = .
                 0x000000cc                __bss_section_table = .
                 0x000000cc        0x4 LONG 0x10000000 ADDR (.bss)
-                0x000000d0        0x4 LONG 0x20 SIZEOF (.bss)
+                0x000000d0        0x4 LONG 0x38 SIZEOF (.bss)
                 0x000000d4                __bss_section_table_end = .
                 0x000000d4                __section_table_end = .
  *(.after_vectors*)
@@ -292,78 +289,86 @@ END GROUP
                 0x00000300       0x2c ./src/Software.o
  .text.NVIC_SetPriority
                 0x0000032c       0xe0 ./src/Software.o
- .text.main     0x0000040c      0x1fc ./src/Software.o
+ .text.main     0x0000040c      0x200 ./src/Software.o
                 0x0000040c                main
- .text.parser   0x00000608       0x10 ./src/Software.o
-                0x00000608                parser
  .text.TIMER32_0_IRQHandler
-                0x00000618       0x34 ./src/Software.o
-                0x00000618                TIMER32_0_IRQHandler
- .text.UART_IRQHandler
-                0x0000064c       0x88 ./src/Software.o
-                0x0000064c                UART_IRQHandler
+                0x0000060c       0x34 ./src/Software.o
+                0x0000060c                TIMER32_0_IRQHandler
  .text.PIOINT1_IRQHandler
-                0x000006d4       0x20 ./src/Software.o
-                0x000006d4                PIOINT1_IRQHandler
+                0x00000640       0x20 ./src/Software.o
+                0x00000640                PIOINT1_IRQHandler
  .text.ADC_IRQHandler
-                0x000006f4       0xc4 ./src/Software.o
-                0x000006f4                ADC_IRQHandler
+                0x00000660       0xc4 ./src/Software.o
+                0x00000660                ADC_IRQHandler
+ .text.uart_init
+                0x00000724       0x74 ./src/uart.o
+                0x00000724                uart_init
+ .text.uart_send
+                0x00000798       0x90 ./src/uart.o
+                0x00000798                uart_send
+ .text.uart_transmit
+                0x00000828       0x5c ./src/uart.o
+                0x00000828                uart_transmit
+ .text.UART_IRQHandler
+                0x00000884       0x60 ./src/uart.o
+                0x00000884                UART_IRQHandler
  .text.SystemInit
-                0x000007b8       0x90 C:\Users\Marcus\Dropbox\E7020E (LP3 14-15)\Project\CMSISv2p00_LPC11xx\Debug\libCMSISv2p00_LPC11xx.a(system_LPC11xx.o)
-                0x000007b8                SystemInit
+                0x000008e4       0x90 C:\Users\Marcus\Dropbox\E7020E (LP3 14-15)\Project\CMSISv2p00_LPC11xx\Debug\libCMSISv2p00_LPC11xx.a(system_LPC11xx.o)
+                0x000008e4                SystemInit
  .text.__weak_main
-                0x00000848        0x8 c:/nxp/lpcxpresso_7.5.0_254/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv6-m\libcr_c.a(__weak__main.o)
-                0x00000848                __weak_main
-                0x00000848                __main
+                0x00000974        0x8 c:/nxp/lpcxpresso_7.5.0_254/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv6-m\libcr_c.a(__weak__main.o)
+                0x00000974                __weak_main
+                0x00000974                __main
  .text.__aeabi_division_idivmod
-                0x00000850       0x78 c:/nxp/lpcxpresso_7.5.0_254/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/4.8.4/armv6-m\libcr_eabihelpers.a(division_32.o)
-                0x00000850                __aeabi_idivmod
-                0x00000850                __aeabi_idiv
-                0x00000856                __aeabi_uidivmod
-                0x00000856                __aeabi_uidiv
+                0x0000097c       0x78 c:/nxp/lpcxpresso_7.5.0_254/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/4.8.4/armv6-m\libcr_eabihelpers.a(division_32.o)
+                0x0000097c                __aeabi_idivmod
+                0x0000097c                __aeabi_idiv
+                0x00000982                __aeabi_uidivmod
+                0x00000982                __aeabi_uidiv
  .text.__aeabi_division_idiv0
-                0x000008c8        0x2 c:/nxp/lpcxpresso_7.5.0_254/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/4.8.4/armv6-m\libcr_eabihelpers.a(division_idiv0.o)
-                0x000008c8                __aeabi_idiv0
- *fill*         0x000008ca        0x2 
+                0x000009f4        0x2 c:/nxp/lpcxpresso_7.5.0_254/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/4.8.4/armv6-m\libcr_eabihelpers.a(division_idiv0.o)
+                0x000009f4                __aeabi_idiv0
+ *fill*         0x000009f6        0x2 
  .text.__aeabi_fdiv
-                0x000008cc       0xe0 c:/nxp/lpcxpresso_7.5.0_254/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/4.8.4/armv6-m\libcr_eabihelpers.a(float.o)
-                0x000008cc                __aeabi_fdiv
+                0x000009f8       0xe0 c:/nxp/lpcxpresso_7.5.0_254/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/4.8.4/armv6-m\libcr_eabihelpers.a(float.o)
+                0x000009f8                __aeabi_fdiv
  .text.__bhs_ui2f
-                0x000009ac       0x60 c:/nxp/lpcxpresso_7.5.0_254/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/4.8.4/armv6-m\libcr_eabihelpers.a(float.o)
-                0x000009ac                __bhs_ui2f
+                0x00000ad8       0x60 c:/nxp/lpcxpresso_7.5.0_254/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/4.8.4/armv6-m\libcr_eabihelpers.a(float.o)
+                0x00000ad8                __bhs_ui2f
  .text.__aeabi_i2f
-                0x00000a0c       0x16 c:/nxp/lpcxpresso_7.5.0_254/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/4.8.4/armv6-m\libcr_eabihelpers.a(float.o)
-                0x00000a0c                __aeabi_i2f
+                0x00000b38       0x16 c:/nxp/lpcxpresso_7.5.0_254/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/4.8.4/armv6-m\libcr_eabihelpers.a(float.o)
+                0x00000b38                __aeabi_i2f
  *(.rodata .rodata.* .constdata .constdata.*)
-                0x00000a24                . = ALIGN (0x4)
- *fill*         0x00000a22        0x2 ff
+ *fill*         0x00000b4e        0x2 
+ .rodata        0x00000b50        0x4 ./src/uart.o
+                0x00000b54                . = ALIGN (0x4)
 
-.glue_7         0x00000a24        0x0
+.glue_7         0x00000b54        0x0
  .glue_7        0x00000000        0x0 linker stubs
 
-.glue_7t        0x00000a24        0x0
+.glue_7t        0x00000b54        0x0
  .glue_7t       0x00000000        0x0 linker stubs
 
-.vfp11_veneer   0x00000a24        0x0
+.vfp11_veneer   0x00000b54        0x0
  .vfp11_veneer  0x00000000        0x0 linker stubs
 
-.v4_bx          0x00000a24        0x0
+.v4_bx          0x00000b54        0x0
  .v4_bx         0x00000000        0x0 linker stubs
 
-.iplt           0x00000a24        0x0
+.iplt           0x00000b54        0x0
  .iplt          0x00000000        0x0 ./src/Software.o
 
-.rel.dyn        0x00000a24        0x0
+.rel.dyn        0x00000b54        0x0
  .rel.iplt      0x00000000        0x0 ./src/Software.o
 
 .ARM.extab
  *(.ARM.extab* .gnu.linkonce.armextab.*)
-                0x00000a24                __exidx_start = .
+                0x00000b54                __exidx_start = .
 
 .ARM.exidx
  *(.ARM.exidx* .gnu.linkonce.armexidx.*)
-                0x00000a24                __exidx_end = .
-                0x00000a24                _etext = .
+                0x00000b54                __exidx_end = .
+                0x00000b54                _etext = .
 
 .uninit_RESERVED
                 0x10000000        0x0
@@ -371,7 +376,7 @@ END GROUP
                 0x10000000                . = ALIGN (0x4)
                 0x10000000                _end_uninit_RESERVED = .
 
-.data           0x10000000        0x0 load address 0x00000a24
+.data           0x10000000        0x0 load address 0x00000b54
  FILL mask 0xff
                 0x10000000                _data = .
  *(vtable)
@@ -380,10 +385,10 @@ END GROUP
                 0x10000000                . = ALIGN (0x4)
                 0x10000000                _edata = .
 
-.igot.plt       0x10000000        0x0 load address 0x00000a24
+.igot.plt       0x10000000        0x0 load address 0x00000b54
  .igot.plt      0x00000000        0x0 ./src/Software.o
 
-.bss            0x10000000       0x20 load address 0x00000a24
+.bss            0x10000000       0x38 load address 0x00000b54
                 0x10000000                _bss = .
  *(.bss*)
  .bss.voltage   0x10000000        0x4 ./src/Software.o
@@ -392,83 +397,100 @@ END GROUP
                 0x10000004                k
  .bss.sum       0x10000008        0x4 ./src/Software.o
                 0x10000008                sum
- .bss.i         0x1000000c        0x4 ./src/Software.o
-                0x1000000c                i
+ .bss.uart_tx_buf_start
+                0x1000000c        0x4 ./src/uart.o
+                0x1000000c                uart_tx_buf_start
+ .bss.uart_tx_buf_end
+                0x10000010        0x4 ./src/uart.o
+                0x10000010                uart_tx_buf_end
+ .bss.uart_tx_active
+                0x10000014        0x4 ./src/uart.o
+                0x10000014                uart_tx_active
  *(COMMON)
- COMMON         0x10000010       0x10 ./src/Software.o
-                0x10000010                string
-                0x10000020                . = ALIGN (0x4)
-                0x10000020                _ebss = .
-                0x10000020                PROVIDE (end, .)
+ COMMON         0x10000018       0x20 ./src/uart.o
+                0x10000018                uart_tx_buf
+                0x10000038                . = ALIGN (0x4)
+                0x10000038                _ebss = .
+                0x10000038                PROVIDE (end, .)
 
-.noinit         0x10000020        0x0 load address 0x00000a24
-                0x10000020                _noinit = .
+.noinit         0x10000038        0x0 load address 0x00000b54
+                0x10000038                _noinit = .
  *(.noinit*)
-                0x10000020                . = ALIGN (0x4)
-                0x10000020                _end_noinit = .
-                0x10000020                PROVIDE (_pvHeapStart, DEFINED (__user_heap_base)?__user_heap_base:.)
+                0x10000038                . = ALIGN (0x4)
+                0x10000038                _end_noinit = .
+                0x10000038                PROVIDE (_pvHeapStart, DEFINED (__user_heap_base)?__user_heap_base:.)
                 0x10002000                PROVIDE (_vStackTop, DEFINED (__user_stack_top)?__user_stack_top:(__top_RamLoc8 - 0x0))
 OUTPUT(Software.axf elf32-littlearm)
 
-.debug_info     0x00000000     0x1524
- .debug_info    0x00000000      0xe91 ./src/Software.o
- .debug_info    0x00000e91      0x1fe ./src/cr_startup_lpc11xx.o
- .debug_info    0x0000108f       0x3f ./src/crp.o
- .debug_info    0x000010ce      0x456 C:\Users\Marcus\Dropbox\E7020E (LP3 14-15)\Project\CMSISv2p00_LPC11xx\Debug\libCMSISv2p00_LPC11xx.a(system_LPC11xx.o)
+.debug_info     0x00000000     0x1c88
+ .debug_info    0x00000000      0xd02 ./src/Software.o
+ .debug_info    0x00000d02      0x1fe ./src/cr_startup_lpc11xx.o
+ .debug_info    0x00000f00       0x3f ./src/crp.o
+ .debug_info    0x00000f3f      0x8f3 ./src/uart.o
+ .debug_info    0x00001832      0x456 C:\Users\Marcus\Dropbox\E7020E (LP3 14-15)\Project\CMSISv2p00_LPC11xx\Debug\libCMSISv2p00_LPC11xx.a(system_LPC11xx.o)
 
-.debug_abbrev   0x00000000      0x4a8
- .debug_abbrev  0x00000000      0x286 ./src/Software.o
- .debug_abbrev  0x00000286       0xe6 ./src/cr_startup_lpc11xx.o
- .debug_abbrev  0x0000036c       0x36 ./src/crp.o
- .debug_abbrev  0x000003a2      0x106 C:\Users\Marcus\Dropbox\E7020E (LP3 14-15)\Project\CMSISv2p00_LPC11xx\Debug\libCMSISv2p00_LPC11xx.a(system_LPC11xx.o)
+.debug_abbrev   0x00000000      0x617
+ .debug_abbrev  0x00000000      0x26c ./src/Software.o
+ .debug_abbrev  0x0000026c       0xe6 ./src/cr_startup_lpc11xx.o
+ .debug_abbrev  0x00000352       0x36 ./src/crp.o
+ .debug_abbrev  0x00000388      0x189 ./src/uart.o
+ .debug_abbrev  0x00000511      0x106 C:\Users\Marcus\Dropbox\E7020E (LP3 14-15)\Project\CMSISv2p00_LPC11xx\Debug\libCMSISv2p00_LPC11xx.a(system_LPC11xx.o)
 
-.debug_aranges  0x00000000       0xf8
+.debug_aranges  0x00000000      0x128
  .debug_aranges
-                0x00000000       0x58 ./src/Software.o
+                0x00000000       0x50 ./src/Software.o
  .debug_aranges
-                0x00000058       0x60 ./src/cr_startup_lpc11xx.o
+                0x00000050       0x60 ./src/cr_startup_lpc11xx.o
  .debug_aranges
-                0x000000b8       0x18 ./src/crp.o
+                0x000000b0       0x18 ./src/crp.o
  .debug_aranges
-                0x000000d0       0x28 C:\Users\Marcus\Dropbox\E7020E (LP3 14-15)\Project\CMSISv2p00_LPC11xx\Debug\libCMSISv2p00_LPC11xx.a(system_LPC11xx.o)
+                0x000000c8       0x38 ./src/uart.o
+ .debug_aranges
+                0x00000100       0x28 C:\Users\Marcus\Dropbox\E7020E (LP3 14-15)\Project\CMSISv2p00_LPC11xx\Debug\libCMSISv2p00_LPC11xx.a(system_LPC11xx.o)
 
-.debug_ranges   0x00000000       0xb0
- .debug_ranges  0x00000000       0x48 ./src/Software.o
- .debug_ranges  0x00000048       0x50 ./src/cr_startup_lpc11xx.o
- .debug_ranges  0x00000098       0x18 C:\Users\Marcus\Dropbox\E7020E (LP3 14-15)\Project\CMSISv2p00_LPC11xx\Debug\libCMSISv2p00_LPC11xx.a(system_LPC11xx.o)
+.debug_ranges   0x00000000       0xd0
+ .debug_ranges  0x00000000       0x40 ./src/Software.o
+ .debug_ranges  0x00000040       0x50 ./src/cr_startup_lpc11xx.o
+ .debug_ranges  0x00000090       0x28 ./src/uart.o
+ .debug_ranges  0x000000b8       0x18 C:\Users\Marcus\Dropbox\E7020E (LP3 14-15)\Project\CMSISv2p00_LPC11xx\Debug\libCMSISv2p00_LPC11xx.a(system_LPC11xx.o)
 
-.debug_macro    0x00000000     0x1da7
- .debug_macro   0x00000000       0x8e ./src/Software.o
- .debug_macro   0x0000008e      0x820 ./src/Software.o
- .debug_macro   0x000008ae       0x1c ./src/Software.o
- .debug_macro   0x000008ca       0x2e ./src/Software.o
- .debug_macro   0x000008f8       0x10 ./src/Software.o
- .debug_macro   0x00000908      0x12d ./src/Software.o
- .debug_macro   0x00000a35      0x5b2 ./src/Software.o
- .debug_macro   0x00000fe7      0x237 ./src/Software.o
- .debug_macro   0x0000121e      0x131 ./src/Software.o
- .debug_macro   0x0000134f       0x82 ./src/Software.o
- .debug_macro   0x000013d1       0x16 ./src/Software.o
- .debug_macro   0x000013e7       0x1d ./src/cr_startup_lpc11xx.o
- .debug_macro   0x00001404       0x1a ./src/crp.o
- .debug_macro   0x0000141e       0x34 ./src/crp.o
- .debug_macro   0x00001452      0x13b C:\Users\Marcus\Dropbox\E7020E (LP3 14-15)\Project\CMSISv2p00_LPC11xx\Debug\libCMSISv2p00_LPC11xx.a(system_LPC11xx.o)
- .debug_macro   0x0000158d      0x81a C:\Users\Marcus\Dropbox\E7020E (LP3 14-15)\Project\CMSISv2p00_LPC11xx\Debug\libCMSISv2p00_LPC11xx.a(system_LPC11xx.o)
+.debug_macro    0x00000000     0x1e54
+ .debug_macro   0x00000000       0xa5 ./src/Software.o
+ .debug_macro   0x000000a5      0x820 ./src/Software.o
+ .debug_macro   0x000008c5       0x1c ./src/Software.o
+ .debug_macro   0x000008e1       0x2e ./src/Software.o
+ .debug_macro   0x0000090f       0x10 ./src/Software.o
+ .debug_macro   0x0000091f      0x12d ./src/Software.o
+ .debug_macro   0x00000a4c      0x5b2 ./src/Software.o
+ .debug_macro   0x00000ffe      0x237 ./src/Software.o
+ .debug_macro   0x00001235      0x131 ./src/Software.o
+ .debug_macro   0x00001366       0x82 ./src/Software.o
+ .debug_macro   0x000013e8       0x10 ./src/Software.o
+ .debug_macro   0x000013f8       0x16 ./src/Software.o
+ .debug_macro   0x0000140e       0x1d ./src/cr_startup_lpc11xx.o
+ .debug_macro   0x0000142b       0x1a ./src/crp.o
+ .debug_macro   0x00001445       0x34 ./src/crp.o
+ .debug_macro   0x00001479       0x86 ./src/uart.o
+ .debug_macro   0x000014ff      0x13b C:\Users\Marcus\Dropbox\E7020E (LP3 14-15)\Project\CMSISv2p00_LPC11xx\Debug\libCMSISv2p00_LPC11xx.a(system_LPC11xx.o)
+ .debug_macro   0x0000163a      0x81a C:\Users\Marcus\Dropbox\E7020E (LP3 14-15)\Project\CMSISv2p00_LPC11xx\Debug\libCMSISv2p00_LPC11xx.a(system_LPC11xx.o)
 
-.debug_line     0x00000000      0x5fb
- .debug_line    0x00000000      0x2fa ./src/Software.o
- .debug_line    0x000002fa       0xc2 ./src/cr_startup_lpc11xx.o
- .debug_line    0x000003bc       0x78 ./src/crp.o
- .debug_line    0x00000434      0x1c7 C:\Users\Marcus\Dropbox\E7020E (LP3 14-15)\Project\CMSISv2p00_LPC11xx\Debug\libCMSISv2p00_LPC11xx.a(system_LPC11xx.o)
+.debug_line     0x00000000      0x7ed
+ .debug_line    0x00000000      0x2e1 ./src/Software.o
+ .debug_line    0x000002e1       0xc2 ./src/cr_startup_lpc11xx.o
+ .debug_line    0x000003a3       0x78 ./src/crp.o
+ .debug_line    0x0000041b      0x20b ./src/uart.o
+ .debug_line    0x00000626      0x1c7 C:\Users\Marcus\Dropbox\E7020E (LP3 14-15)\Project\CMSISv2p00_LPC11xx\Debug\libCMSISv2p00_LPC11xx.a(system_LPC11xx.o)
 
-.debug_str      0x00000000     0x6271
- .debug_str     0x00000000     0x5b5a ./src/Software.o
-                               0x5be2 (size before relaxing)
- .debug_str     0x00005b5a      0x178 ./src/cr_startup_lpc11xx.o
+.debug_str      0x00000000     0x6309
+ .debug_str     0x00000000     0x5b3a ./src/Software.o
+                               0x5bc2 (size before relaxing)
+ .debug_str     0x00005b3a      0x178 ./src/cr_startup_lpc11xx.o
                                0x247c (size before relaxing)
- .debug_str     0x00005cd2       0xe9 ./src/crp.o
+ .debug_str     0x00005cb2       0xe9 ./src/crp.o
                                0x23de (size before relaxing)
- .debug_str     0x00005dbb      0x4b6 C:\Users\Marcus\Dropbox\E7020E (LP3 14-15)\Project\CMSISv2p00_LPC11xx\Debug\libCMSISv2p00_LPC11xx.a(system_LPC11xx.o)
+ .debug_str     0x00005d9b       0xb8 ./src/uart.o
+                               0x54b7 (size before relaxing)
+ .debug_str     0x00005e53      0x4b6 C:\Users\Marcus\Dropbox\E7020E (LP3 14-15)\Project\CMSISv2p00_LPC11xx\Debug\libCMSISv2p00_LPC11xx.a(system_LPC11xx.o)
                                0x5597 (size before relaxing)
 
 .comment        0x00000000       0xe0
@@ -476,6 +498,7 @@ OUTPUT(Software.axf elf32-littlearm)
                                  0x71 (size before relaxing)
  .comment       0x00000000       0x71 ./src/cr_startup_lpc11xx.o
  .comment       0x00000000       0x71 ./src/crp.o
+ .comment       0x00000000       0x71 ./src/uart.o
  .comment       0x00000000       0x71 C:\Users\Marcus\Dropbox\E7020E (LP3 14-15)\Project\CMSISv2p00_LPC11xx\Debug\libCMSISv2p00_LPC11xx.a(system_LPC11xx.o)
  .comment       0x00000070       0x70 c:/nxp/lpcxpresso_7.5.0_254/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv6-m\libcr_c.a(__weak__main.o)
                                  0x71 (size before relaxing)
@@ -490,20 +513,23 @@ OUTPUT(Software.axf elf32-littlearm)
  .ARM.attributes
                 0x00000062       0x31 ./src/crp.o
  .ARM.attributes
-                0x00000093       0x31 C:\Users\Marcus\Dropbox\E7020E (LP3 14-15)\Project\CMSISv2p00_LPC11xx\Debug\libCMSISv2p00_LPC11xx.a(system_LPC11xx.o)
+                0x00000093       0x31 ./src/uart.o
  .ARM.attributes
-                0x000000c4       0x31 c:/nxp/lpcxpresso_7.5.0_254/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv6-m\libcr_c.a(__weak__main.o)
+                0x000000c4       0x31 C:\Users\Marcus\Dropbox\E7020E (LP3 14-15)\Project\CMSISv2p00_LPC11xx\Debug\libCMSISv2p00_LPC11xx.a(system_LPC11xx.o)
  .ARM.attributes
-                0x000000f5       0x21 c:/nxp/lpcxpresso_7.5.0_254/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/4.8.4/armv6-m\libcr_eabihelpers.a(division_32.o)
+                0x000000f5       0x31 c:/nxp/lpcxpresso_7.5.0_254/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv6-m\libcr_c.a(__weak__main.o)
  .ARM.attributes
-                0x00000116       0x21 c:/nxp/lpcxpresso_7.5.0_254/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/4.8.4/armv6-m\libcr_eabihelpers.a(division_idiv0.o)
+                0x00000126       0x21 c:/nxp/lpcxpresso_7.5.0_254/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/4.8.4/armv6-m\libcr_eabihelpers.a(division_32.o)
  .ARM.attributes
-                0x00000137       0x31 c:/nxp/lpcxpresso_7.5.0_254/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/4.8.4/armv6-m\libcr_eabihelpers.a(float.o)
+                0x00000147       0x21 c:/nxp/lpcxpresso_7.5.0_254/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/4.8.4/armv6-m\libcr_eabihelpers.a(division_idiv0.o)
+ .ARM.attributes
+                0x00000168       0x31 c:/nxp/lpcxpresso_7.5.0_254/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/4.8.4/armv6-m\libcr_eabihelpers.a(float.o)
 
-.debug_frame    0x00000000      0x268
- .debug_frame   0x00000000      0x10c ./src/Software.o
- .debug_frame   0x0000010c      0x118 ./src/cr_startup_lpc11xx.o
- .debug_frame   0x00000224       0x44 C:\Users\Marcus\Dropbox\E7020E (LP3 14-15)\Project\CMSISv2p00_LPC11xx\Debug\libCMSISv2p00_LPC11xx.a(system_LPC11xx.o)
+.debug_frame    0x00000000      0x2d0
+ .debug_frame   0x00000000       0xec ./src/Software.o
+ .debug_frame   0x000000ec      0x118 ./src/cr_startup_lpc11xx.o
+ .debug_frame   0x00000204       0x88 ./src/uart.o
+ .debug_frame   0x0000028c       0x44 C:\Users\Marcus\Dropbox\E7020E (LP3 14-15)\Project\CMSISv2p00_LPC11xx\Debug\libCMSISv2p00_LPC11xx.a(system_LPC11xx.o)
 
 .debug_loc      0x00000000       0x84
  .debug_loc     0x00000000       0x84 C:\Users\Marcus\Dropbox\E7020E (LP3 14-15)\Project\CMSISv2p00_LPC11xx\Debug\libCMSISv2p00_LPC11xx.a(system_LPC11xx.o)

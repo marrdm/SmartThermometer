@@ -3174,3 +3174,680 @@ arm-none-eabi-size "Software.axf"; # arm-none-eabi-objcopy -v -O binary "Softwar
    text	   data	    bss	    dec	    hex	filename
    2596	      0	     32	   2628	    a44	Software.axf
  
+15:34:44 **** Build of configuration Debug for project CMSISv2p00_LPC11xx ****
+make -r all 
+make: Nothing to be done for `all'.
+15:34:54 **** Build of configuration Debug for project Software ****
+make -r all 
+Building file: ../src/Software.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M0 -D__USE_CMSIS=CMSISv2p00_LPC11xx -D__LPC11XX__ -D__REDLIB__ -I"C:\Users\Marcus\Dropbox\E7020E (LP3 14-15)\Project\CMSISv2p00_LPC11xx\inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -specs=redlib.specs -MMD -MP -MF"src/Software.d" -MT"src/Software.o" -MT"src/Software.d" -o "src/Software.o" "../src/Software.c"
+Finished building: ../src/Software.c
+ 
+Building file: ../src/pwm.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M0 -D__USE_CMSIS=CMSISv2p00_LPC11xx -D__LPC11XX__ -D__REDLIB__ -I"C:\Users\Marcus\Dropbox\E7020E (LP3 14-15)\Project\CMSISv2p00_LPC11xx\inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -specs=redlib.specs -MMD -MP -MF"src/pwm.d" -MT"src/pwm.o" -MT"src/pwm.d" -o "src/pwm.o" "../src/pwm.c"
+Finished building: ../src/pwm.c
+ 
+Building file: ../src/uart.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M0 -D__USE_CMSIS=CMSISv2p00_LPC11xx -D__LPC11XX__ -D__REDLIB__ -I"C:\Users\Marcus\Dropbox\E7020E (LP3 14-15)\Project\CMSISv2p00_LPC11xx\inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -specs=redlib.specs -MMD -MP -MF"src/uart.d" -MT"src/uart.o" -MT"src/uart.d" -o "src/uart.o" "../src/uart.c"
+../src/uart.c: In function 'uart_send':
+../src/uart.c:42:3: warning: implicit declaration of function 'uart_transmit' [-Wimplicit-function-declaration]
+   uart_transmit();
+   ^
+../src/uart.c: At top level:
+../src/uart.c:47:6: warning: conflicting types for 'uart_transmit' [enabled by default]
+ void uart_transmit(){
+      ^
+../src/uart.c:42:3: note: previous implicit declaration of 'uart_transmit' was here
+   uart_transmit();
+   ^
+../src/uart.c: In function 'UART_IRQHandler':
+../src/uart.c:56:14: error: 'LPC_UART' undeclared (first use in this function)
+  int intid = LPC_UART->IIR;
+              ^
+../src/uart.c:56:14: note: each undeclared identifier is reported only once for each function it appears in
+make: *** [src/uart.o] Error 1
+15:35:49 **** Incremental Build of configuration Debug for project CMSISv2p00_LPC11xx ****
+make -r all 
+make: Nothing to be done for `all'.
+15:35:54 **** Incremental Build of configuration Debug for project Software ****
+make -r all 
+Building file: ../src/Software.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M0 -D__USE_CMSIS=CMSISv2p00_LPC11xx -D__LPC11XX__ -D__REDLIB__ -I"C:\Users\Marcus\Dropbox\E7020E (LP3 14-15)\Project\CMSISv2p00_LPC11xx\inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -specs=redlib.specs -MMD -MP -MF"src/Software.d" -MT"src/Software.o" -MT"src/Software.d" -o "src/Software.o" "../src/Software.c"
+Finished building: ../src/Software.c
+ 
+Building file: ../src/pwm.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M0 -D__USE_CMSIS=CMSISv2p00_LPC11xx -D__LPC11XX__ -D__REDLIB__ -I"C:\Users\Marcus\Dropbox\E7020E (LP3 14-15)\Project\CMSISv2p00_LPC11xx\inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -specs=redlib.specs -MMD -MP -MF"src/pwm.d" -MT"src/pwm.o" -MT"src/pwm.d" -o "src/pwm.o" "../src/pwm.c"
+Finished building: ../src/pwm.c
+ 
+Building file: ../src/uart.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M0 -D__USE_CMSIS=CMSISv2p00_LPC11xx -D__LPC11XX__ -D__REDLIB__ -I"C:\Users\Marcus\Dropbox\E7020E (LP3 14-15)\Project\CMSISv2p00_LPC11xx\inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -specs=redlib.specs -MMD -MP -MF"src/uart.d" -MT"src/uart.o" -MT"src/uart.d" -o "src/uart.o" "../src/uart.c"
+../src/uart.c: In function 'uart_send':
+../src/uart.c:42:3: warning: implicit declaration of function 'uart_transmit' [-Wimplicit-function-declaration]
+   uart_transmit();
+   ^
+../src/uart.c: At top level:
+../src/uart.c:47:6: warning: conflicting types for 'uart_transmit' [enabled by default]
+ void uart_transmit(){
+      ^
+../src/uart.c:42:3: note: previous implicit declaration of 'uart_transmit' was here
+   uart_transmit();
+   ^
+../src/uart.c: In function 'UART_IRQHandler':
+../src/uart.c:56:14: error: 'LPC_UART' undeclared (first use in this function)
+  int intid = LPC_UART->IIR;
+              ^
+../src/uart.c:56:14: note: each undeclared identifier is reported only once for each function it appears in
+make: *** [src/uart.o] Error 1
+15:36:25 **** Incremental Build of configuration Debug for project CMSISv2p00_LPC11xx ****
+make -r all 
+make: Nothing to be done for `all'.
+15:36:29 **** Incremental Build of configuration Debug for project Software ****
+make -r all 
+Building file: ../src/uart.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M0 -D__USE_CMSIS=CMSISv2p00_LPC11xx -D__LPC11XX__ -D__REDLIB__ -I"C:\Users\Marcus\Dropbox\E7020E (LP3 14-15)\Project\CMSISv2p00_LPC11xx\inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -specs=redlib.specs -MMD -MP -MF"src/uart.d" -MT"src/uart.o" -MT"src/uart.d" -o "src/uart.o" "../src/uart.c"
+../src/uart.c: In function 'uart_send':
+../src/uart.c:42:3: warning: implicit declaration of function 'uart_transmit' [-Wimplicit-function-declaration]
+   uart_transmit();
+   ^
+../src/uart.c: At top level:
+../src/uart.c:47:6: warning: conflicting types for 'uart_transmit' [enabled by default]
+ void uart_transmit(){
+      ^
+../src/uart.c:42:3: note: previous implicit declaration of 'uart_transmit' was here
+   uart_transmit();
+   ^
+../src/uart.c: In function 'UART_IRQHandler':
+../src/uart.c:60:12: error: 'LPC_UART' undeclared (first use in this function)
+   char c = LPC_UART->RBR;
+            ^
+../src/uart.c:60:12: note: each undeclared identifier is reported only once for each function it appears in
+make: *** [src/uart.o] Error 1
+15:37:23 **** Incremental Build of configuration Debug for project CMSISv2p00_LPC11xx ****
+make -r all 
+make: Nothing to be done for `all'.
+15:37:28 **** Incremental Build of configuration Debug for project Software ****
+make -r all 
+Building file: ../src/Software.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M0 -D__USE_CMSIS=CMSISv2p00_LPC11xx -D__LPC11XX__ -D__REDLIB__ -I"C:\Users\Marcus\Dropbox\E7020E (LP3 14-15)\Project\CMSISv2p00_LPC11xx\inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -specs=redlib.specs -MMD -MP -MF"src/Software.d" -MT"src/Software.o" -MT"src/Software.d" -o "src/Software.o" "../src/Software.c"
+Finished building: ../src/Software.c
+ 
+Building file: ../src/pwm.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M0 -D__USE_CMSIS=CMSISv2p00_LPC11xx -D__LPC11XX__ -D__REDLIB__ -I"C:\Users\Marcus\Dropbox\E7020E (LP3 14-15)\Project\CMSISv2p00_LPC11xx\inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -specs=redlib.specs -MMD -MP -MF"src/pwm.d" -MT"src/pwm.o" -MT"src/pwm.d" -o "src/pwm.o" "../src/pwm.c"
+Finished building: ../src/pwm.c
+ 
+Building file: ../src/uart.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M0 -D__USE_CMSIS=CMSISv2p00_LPC11xx -D__LPC11XX__ -D__REDLIB__ -I"C:\Users\Marcus\Dropbox\E7020E (LP3 14-15)\Project\CMSISv2p00_LPC11xx\inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -specs=redlib.specs -MMD -MP -MF"src/uart.d" -MT"src/uart.o" -MT"src/uart.d" -o "src/uart.o" "../src/uart.c"
+../src/uart.c: In function 'uart_send':
+../src/uart.c:44:3: warning: implicit declaration of function 'uart_transmit' [-Wimplicit-function-declaration]
+   uart_transmit();
+   ^
+../src/uart.c: At top level:
+../src/uart.c:49:6: warning: conflicting types for 'uart_transmit' [enabled by default]
+ void uart_transmit(){
+      ^
+../src/uart.c:44:3: note: previous implicit declaration of 'uart_transmit' was here
+   uart_transmit();
+   ^
+Finished building: ../src/uart.c
+ 
+Building target: Software.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"C:\Users\Marcus\Dropbox\E7020E (LP3 14-15)\Project\CMSISv2p00_LPC11xx\Debug" -Xlinker -Map="Software.map" -Xlinker --gc-sections -mcpu=cortex-m0 -mthumb -T "Software_Debug.ld" -o "Software.axf"  ./src/Software.o ./src/cr_startup_lpc11xx.o ./src/crp.o ./src/pwm.o ./src/uart.o   -lCMSISv2p00_LPC11xx
+Finished building target: Software.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "Software.axf"; # arm-none-eabi-objcopy -v -O binary "Software.axf" "Software.bin" ; # checksum -p LPC11C24_301 -d "Software.bin";
+   text	   data	    bss	    dec	    hex	filename
+   2712	      0	     56	   2768	    ad0	Software.axf
+ 
+15:38:16 **** Incremental Build of configuration Debug for project CMSISv2p00_LPC11xx ****
+make -r all 
+make: Nothing to be done for `all'.
+15:38:19 **** Incremental Build of configuration Debug for project Software ****
+make -r all 
+Building file: ../src/uart.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M0 -D__USE_CMSIS=CMSISv2p00_LPC11xx -D__LPC11XX__ -D__REDLIB__ -I"C:\Users\Marcus\Dropbox\E7020E (LP3 14-15)\Project\CMSISv2p00_LPC11xx\inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -specs=redlib.specs -MMD -MP -MF"src/uart.d" -MT"src/uart.o" -MT"src/uart.d" -o "src/uart.o" "../src/uart.c"
+../src/uart.c: In function 'uart_send':
+../src/uart.c:44:3: warning: implicit declaration of function 'uart_transmit' [-Wimplicit-function-declaration]
+   uart_transmit();
+   ^
+../src/uart.c: At top level:
+../src/uart.c:49:6: warning: conflicting types for 'uart_transmit' [enabled by default]
+ void uart_transmit(){
+      ^
+../src/uart.c:44:3: note: previous implicit declaration of 'uart_transmit' was here
+   uart_transmit();
+   ^
+Finished building: ../src/uart.c
+ 
+Building target: Software.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"C:\Users\Marcus\Dropbox\E7020E (LP3 14-15)\Project\CMSISv2p00_LPC11xx\Debug" -Xlinker -Map="Software.map" -Xlinker --gc-sections -mcpu=cortex-m0 -mthumb -T "Software_Debug.ld" -o "Software.axf"  ./src/Software.o ./src/cr_startup_lpc11xx.o ./src/crp.o ./src/pwm.o ./src/uart.o   -lCMSISv2p00_LPC11xx
+Finished building target: Software.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "Software.axf"; # arm-none-eabi-objcopy -v -O binary "Software.axf" "Software.bin" ; # checksum -p LPC11C24_301 -d "Software.bin";
+   text	   data	    bss	    dec	    hex	filename
+   2716	      0	     56	   2772	    ad4	Software.axf
+ 
+15:39:56 **** Incremental Build of configuration Debug for project CMSISv2p00_LPC11xx ****
+make -r all 
+make: Nothing to be done for `all'.
+15:39:59 **** Incremental Build of configuration Debug for project Software ****
+make -r all 
+make: Nothing to be done for `all'.
+15:44:17 **** Incremental Build of configuration Debug for project CMSISv2p00_LPC11xx ****
+make -r all 
+make: Nothing to be done for `all'.
+15:44:21 **** Incremental Build of configuration Debug for project Software ****
+make -r all 
+make: Nothing to be done for `all'.
+15:47:46 **** Incremental Build of configuration Debug for project CMSISv2p00_LPC11xx ****
+make -r all 
+make: Nothing to be done for `all'.
+15:47:49 **** Incremental Build of configuration Debug for project Software ****
+make -r all 
+Building file: ../src/Software.c
+Command canceled
+15:47:57 **** Incremental Build of configuration Debug for project CMSISv2p00_LPC11xx ****
+make -r all 
+make: Nothing to be done for `all'.
+15:48:01 **** Build of configuration Debug for project Software ****
+make -r all 
+Building file: ../src/Software.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M0 -D__USE_CMSIS=CMSISv2p00_LPC11xx -D__LPC11XX__ -D__REDLIB__ -I"C:\Users\Marcus\Dropbox\E7020E (LP3 14-15)\Project\CMSISv2p00_LPC11xx\inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -specs=redlib.specs -MMD -MP -MF"src/Software.d" -MT"src/Software.o" -MT"src/Software.d" -o "src/Software.o" "../src/Software.c"
+../src/Software.c: In function 'main':
+../src/Software.c:62:2: warning: implicit declaration of function 'uart_init' [-Wimplicit-function-declaration]
+  uart_init();
+  ^
+Finished building: ../src/Software.c
+ 
+Building file: ../src/uart.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M0 -D__USE_CMSIS=CMSISv2p00_LPC11xx -D__LPC11XX__ -D__REDLIB__ -I"C:\Users\Marcus\Dropbox\E7020E (LP3 14-15)\Project\CMSISv2p00_LPC11xx\inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -specs=redlib.specs -MMD -MP -MF"src/uart.d" -MT"src/uart.o" -MT"src/uart.d" -o "src/uart.o" "../src/uart.c"
+../src/uart.c: In function 'uart_send':
+../src/uart.c:50:3: warning: implicit declaration of function 'uart_transmit' [-Wimplicit-function-declaration]
+   uart_transmit();
+   ^
+../src/uart.c: At top level:
+../src/uart.c:55:6: warning: conflicting types for 'uart_transmit' [enabled by default]
+ void uart_transmit(){
+      ^
+../src/uart.c:50:3: note: previous implicit declaration of 'uart_transmit' was here
+   uart_transmit();
+   ^
+Finished building: ../src/uart.c
+ 
+Building target: Software.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"C:\Users\Marcus\Dropbox\E7020E (LP3 14-15)\Project\CMSISv2p00_LPC11xx\Debug" -Xlinker -Map="Software.map" -Xlinker --gc-sections -mcpu=cortex-m0 -mthumb -T "Software_Debug.ld" -o "Software.axf"  ./src/Software.o ./src/cr_startup_lpc11xx.o ./src/crp.o ./src/pwm.o ./src/uart.o   -lCMSISv2p00_LPC11xx
+Finished building target: Software.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "Software.axf"; # arm-none-eabi-objcopy -v -O binary "Software.axf" "Software.bin" ; # checksum -p LPC11C24_301 -d "Software.bin";
+   text	   data	    bss	    dec	    hex	filename
+   2824	      0	     56	   2880	    b40	Software.axf
+ 
+15:48:20 **** Incremental Build of configuration Debug for project CMSISv2p00_LPC11xx ****
+make -r all 
+make: Nothing to be done for `all'.
+15:48:22 **** Incremental Build of configuration Debug for project Software ****
+make -r all 
+make: Nothing to be done for `all'.
+15:51:59 **** Incremental Build of configuration Debug for project CMSISv2p00_LPC11xx ****
+make -r all 
+make: Nothing to be done for `all'.
+15:52:02 **** Incremental Build of configuration Debug for project Software ****
+make -r all 
+Building file: ../src/Software.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M0 -D__USE_CMSIS=CMSISv2p00_LPC11xx -D__LPC11XX__ -D__REDLIB__ -I"C:\Users\Marcus\Dropbox\E7020E (LP3 14-15)\Project\CMSISv2p00_LPC11xx\inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -specs=redlib.specs -MMD -MP -MF"src/Software.d" -MT"src/Software.o" -MT"src/Software.d" -o "src/Software.o" "../src/Software.c"
+Finished building: ../src/Software.c
+ 
+Building target: Software.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"C:\Users\Marcus\Dropbox\E7020E (LP3 14-15)\Project\CMSISv2p00_LPC11xx\Debug" -Xlinker -Map="Software.map" -Xlinker --gc-sections -mcpu=cortex-m0 -mthumb -T "Software_Debug.ld" -o "Software.axf"  ./src/Software.o ./src/cr_startup_lpc11xx.o ./src/crp.o ./src/pwm.o ./src/uart.o   -lCMSISv2p00_LPC11xx
+Finished building target: Software.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "Software.axf"; # arm-none-eabi-objcopy -v -O binary "Software.axf" "Software.bin" ; # checksum -p LPC11C24_301 -d "Software.bin";
+   text	   data	    bss	    dec	    hex	filename
+   2804	      0	     56	   2860	    b2c	Software.axf
+ 
+15:56:10 **** Incremental Build of configuration Debug for project CMSISv2p00_LPC11xx ****
+make -r all 
+make: Nothing to be done for `all'.
+15:56:12 **** Incremental Build of configuration Debug for project Software ****
+make -r all 
+Building file: ../src/Software.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M0 -D__USE_CMSIS=CMSISv2p00_LPC11xx -D__LPC11XX__ -D__REDLIB__ -I"C:\Users\Marcus\Dropbox\E7020E (LP3 14-15)\Project\CMSISv2p00_LPC11xx\inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -specs=redlib.specs -MMD -MP -MF"src/Software.d" -MT"src/Software.o" -MT"src/Software.d" -o "src/Software.o" "../src/Software.c"
+Finished building: ../src/Software.c
+ 
+Building target: Software.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"C:\Users\Marcus\Dropbox\E7020E (LP3 14-15)\Project\CMSISv2p00_LPC11xx\Debug" -Xlinker -Map="Software.map" -Xlinker --gc-sections -mcpu=cortex-m0 -mthumb -T "Software_Debug.ld" -o "Software.axf"  ./src/Software.o ./src/cr_startup_lpc11xx.o ./src/crp.o ./src/pwm.o ./src/uart.o   -lCMSISv2p00_LPC11xx
+Finished building target: Software.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "Software.axf"; # arm-none-eabi-objcopy -v -O binary "Software.axf" "Software.bin" ; # checksum -p LPC11C24_301 -d "Software.bin";
+   text	   data	    bss	    dec	    hex	filename
+   2804	      0	     56	   2860	    b2c	Software.axf
+ 
+16:02:01 **** Incremental Build of configuration Debug for project CMSISv2p00_LPC11xx ****
+make -r all 
+make: Nothing to be done for `all'.
+16:02:04 **** Incremental Build of configuration Debug for project Software ****
+make -r all 
+Building target: Software.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"C:\Users\Marcus\Dropbox\E7020E (LP3 14-15)\Project\CMSISv2p00_LPC11xx\Debug" -Xlinker -Map="Software.map" -Xlinker --gc-sections -mcpu=cortex-m0 -mthumb -T "Software_Debug.ld" -o "Software.axf"  ./src/Software.o ./src/cr_startup_lpc11xx.o ./src/crp.o ./src/pwm.o ./src/uart.o   -lCMSISv2p00_LPC11xx
+Finished building target: Software.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "Software.axf"; # arm-none-eabi-objcopy -v -O binary "Software.axf" "Software.bin" ; # checksum -p LPC11C24_301 -d "Software.bin";
+   text	   data	    bss	    dec	    hex	filename
+   2804	      0	     56	   2860	    b2c	Software.axf
+ 
+16:03:40 **** Incremental Build of configuration Debug for project Software ****
+make -r all 
+Building file: ../src/Software.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M0 -D__USE_CMSIS=CMSISv2p00_LPC11xx -D__LPC11XX__ -D__REDLIB__ -I"C:\Users\Marcus\Dropbox\E7020E (LP3 14-15)\Project\CMSISv2p00_LPC11xx\inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -specs=redlib.specs -MMD -MP -MF"src/Software.d" -MT"src/Software.o" -MT"src/Software.d" -o "src/Software.o" "../src/Software.c"
+Finished building: ../src/Software.c
+ 
+Building target: Software.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"C:\Users\Marcus\Dropbox\E7020E (LP3 14-15)\Project\CMSISv2p00_LPC11xx\Debug" -Xlinker -Map="Software.map" -Xlinker --gc-sections -mcpu=cortex-m0 -mthumb -T "Software_Debug.ld" -o "Software.axf"  ./src/Software.o ./src/cr_startup_lpc11xx.o ./src/crp.o ./src/pwm.o ./src/uart.o   -lCMSISv2p00_LPC11xx
+Finished building target: Software.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "Software.axf"; # arm-none-eabi-objcopy -v -O binary "Software.axf" "Software.bin" ; # checksum -p LPC11C24_301 -d "Software.bin";
+   text	   data	    bss	    dec	    hex	filename
+   2804	      0	     56	   2860	    b2c	Software.axf
+ 
+16:04:29 **** Incremental Build of configuration Debug for project Software ****
+make -r all 
+make: Nothing to be done for `all'.
+16:05:04 **** Incremental Build of configuration Debug for project CMSISv2p00_LPC11xx ****
+make -r all 
+make: Nothing to be done for `all'.
+16:05:07 **** Incremental Build of configuration Debug for project Software ****
+make -r all 
+Building file: ../src/Software.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M0 -D__USE_CMSIS=CMSISv2p00_LPC11xx -D__LPC11XX__ -D__REDLIB__ -I"C:\Users\Marcus\Dropbox\E7020E (LP3 14-15)\Project\CMSISv2p00_LPC11xx\inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -specs=redlib.specs -MMD -MP -MF"src/Software.d" -MT"src/Software.o" -MT"src/Software.d" -o "src/Software.o" "../src/Software.c"
+Finished building: ../src/Software.c
+ 
+Building target: Software.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"C:\Users\Marcus\Dropbox\E7020E (LP3 14-15)\Project\CMSISv2p00_LPC11xx\Debug" -Xlinker -Map="Software.map" -Xlinker --gc-sections -mcpu=cortex-m0 -mthumb -T "Software_Debug.ld" -o "Software.axf"  ./src/Software.o ./src/cr_startup_lpc11xx.o ./src/crp.o ./src/pwm.o ./src/uart.o   -lCMSISv2p00_LPC11xx
+Finished building target: Software.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "Software.axf"; # arm-none-eabi-objcopy -v -O binary "Software.axf" "Software.bin" ; # checksum -p LPC11C24_301 -d "Software.bin";
+   text	   data	    bss	    dec	    hex	filename
+   2804	      0	     56	   2860	    b2c	Software.axf
+ 
+16:18:15 **** Incremental Build of configuration Debug for project CMSISv2p00_LPC11xx ****
+make -r all 
+make: Nothing to be done for `all'.
+16:18:17 **** Incremental Build of configuration Debug for project Software ****
+make -r all 
+Building file: ../src/uart.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M0 -D__USE_CMSIS=CMSISv2p00_LPC11xx -D__LPC11XX__ -D__REDLIB__ -I"C:\Users\Marcus\Dropbox\E7020E (LP3 14-15)\Project\CMSISv2p00_LPC11xx\inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -specs=redlib.specs -MMD -MP -MF"src/uart.d" -MT"src/uart.o" -MT"src/uart.d" -o "src/uart.o" "../src/uart.c"
+../src/uart.c: In function 'uart_send':
+../src/uart.c:50:3: warning: implicit declaration of function 'uart_transmit' [-Wimplicit-function-declaration]
+   uart_transmit();
+   ^
+../src/uart.c: At top level:
+../src/uart.c:55:6: warning: conflicting types for 'uart_transmit' [enabled by default]
+ void uart_transmit(){
+      ^
+../src/uart.c:50:3: note: previous implicit declaration of 'uart_transmit' was here
+   uart_transmit();
+   ^
+Finished building: ../src/uart.c
+ 
+Building target: Software.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"C:\Users\Marcus\Dropbox\E7020E (LP3 14-15)\Project\CMSISv2p00_LPC11xx\Debug" -Xlinker -Map="Software.map" -Xlinker --gc-sections -mcpu=cortex-m0 -mthumb -T "Software_Debug.ld" -o "Software.axf"  ./src/Software.o ./src/cr_startup_lpc11xx.o ./src/crp.o ./src/pwm.o ./src/uart.o   -lCMSISv2p00_LPC11xx
+Finished building target: Software.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "Software.axf"; # arm-none-eabi-objcopy -v -O binary "Software.axf" "Software.bin" ; # checksum -p LPC11C24_301 -d "Software.bin";
+   text	   data	    bss	    dec	    hex	filename
+   2852	      0	     56	   2908	    b5c	Software.axf
+ 
+16:20:07 **** Incremental Build of configuration Debug for project CMSISv2p00_LPC11xx ****
+make -r all 
+make: Nothing to be done for `all'.
+16:20:09 **** Incremental Build of configuration Debug for project Software ****
+make -r all 
+make: Nothing to be done for `all'.
+16:26:24 **** Incremental Build of configuration Debug for project Software ****
+make -r all 
+Building file: ../src/uart.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M0 -D__USE_CMSIS=CMSISv2p00_LPC11xx -D__LPC11XX__ -D__REDLIB__ -I"C:\Users\Marcus\Dropbox\E7020E (LP3 14-15)\Project\CMSISv2p00_LPC11xx\inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -specs=redlib.specs -MMD -MP -MF"src/uart.d" -MT"src/uart.o" -MT"src/uart.d" -o "src/uart.o" "../src/uart.c"
+../src/uart.c: In function 'uart_send':
+../src/uart.c:50:3: warning: implicit declaration of function 'uart_transmit' [-Wimplicit-function-declaration]
+   uart_transmit();
+   ^
+../src/uart.c: At top level:
+../src/uart.c:55:6: warning: conflicting types for 'uart_transmit' [enabled by default]
+ void uart_transmit(){
+      ^
+../src/uart.c:50:3: note: previous implicit declaration of 'uart_transmit' was here
+   uart_transmit();
+   ^
+Finished building: ../src/uart.c
+ 
+Building target: Software.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"C:\Users\Marcus\Dropbox\E7020E (LP3 14-15)\Project\CMSISv2p00_LPC11xx\Debug" -Xlinker -Map="Software.map" -Xlinker --gc-sections -mcpu=cortex-m0 -mthumb -T "Software_Debug.ld" -o "Software.axf"  ./src/Software.o ./src/cr_startup_lpc11xx.o ./src/crp.o ./src/pwm.o ./src/uart.o   -lCMSISv2p00_LPC11xx
+Finished building target: Software.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "Software.axf"; # arm-none-eabi-objcopy -v -O binary "Software.axf" "Software.bin" ; # checksum -p LPC11C24_301 -d "Software.bin";
+   text	   data	    bss	    dec	    hex	filename
+   2852	      0	     56	   2908	    b5c	Software.axf
+ 
+16:30:52 **** Incremental Build of configuration Debug for project CMSISv2p00_LPC11xx ****
+make -r all 
+make: Nothing to be done for `all'.
+16:30:54 **** Incremental Build of configuration Debug for project Software ****
+make -r all 
+Building file: ../src/uart.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M0 -D__USE_CMSIS=CMSISv2p00_LPC11xx -D__LPC11XX__ -D__REDLIB__ -I"C:\Users\Marcus\Dropbox\E7020E (LP3 14-15)\Project\CMSISv2p00_LPC11xx\inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -specs=redlib.specs -MMD -MP -MF"src/uart.d" -MT"src/uart.o" -MT"src/uart.d" -o "src/uart.o" "../src/uart.c"
+../src/uart.c: In function 'uart_send':
+../src/uart.c:50:3: warning: implicit declaration of function 'uart_transmit' [-Wimplicit-function-declaration]
+   uart_transmit();
+   ^
+../src/uart.c: At top level:
+../src/uart.c:55:6: warning: conflicting types for 'uart_transmit' [enabled by default]
+ void uart_transmit(){
+      ^
+../src/uart.c:50:3: note: previous implicit declaration of 'uart_transmit' was here
+   uart_transmit();
+   ^
+Finished building: ../src/uart.c
+ 
+Building target: Software.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"C:\Users\Marcus\Dropbox\E7020E (LP3 14-15)\Project\CMSISv2p00_LPC11xx\Debug" -Xlinker -Map="Software.map" -Xlinker --gc-sections -mcpu=cortex-m0 -mthumb -T "Software_Debug.ld" -o "Software.axf"  ./src/Software.o ./src/cr_startup_lpc11xx.o ./src/crp.o ./src/pwm.o ./src/uart.o   -lCMSISv2p00_LPC11xx
+Finished building target: Software.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "Software.axf"; # arm-none-eabi-objcopy -v -O binary "Software.axf" "Software.bin" ; # checksum -p LPC11C24_301 -d "Software.bin";
+   text	   data	    bss	    dec	    hex	filename
+   2864	      0	     56	   2920	    b68	Software.axf
+ 
+16:42:38 **** Incremental Build of configuration Debug for project CMSISv2p00_LPC11xx ****
+make -r all 
+make: Nothing to be done for `all'.
+16:42:42 **** Incremental Build of configuration Debug for project Software ****
+make -r all 
+make: Nothing to be done for `all'.
+16:44:34 **** Incremental Build of configuration Debug for project CMSISv2p00_LPC11xx ****
+make -r all 
+make: Nothing to be done for `all'.
+16:44:36 **** Incremental Build of configuration Debug for project Software ****
+make -r all 
+Building file: ../src/Software.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M0 -D__USE_CMSIS=CMSISv2p00_LPC11xx -D__LPC11XX__ -D__REDLIB__ -I"C:\Users\Marcus\Dropbox\E7020E (LP3 14-15)\Project\CMSISv2p00_LPC11xx\inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -specs=redlib.specs -MMD -MP -MF"src/Software.d" -MT"src/Software.o" -MT"src/Software.d" -o "src/Software.o" "../src/Software.c"
+Finished building: ../src/Software.c
+ 
+Building target: Software.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"C:\Users\Marcus\Dropbox\E7020E (LP3 14-15)\Project\CMSISv2p00_LPC11xx\Debug" -Xlinker -Map="Software.map" -Xlinker --gc-sections -mcpu=cortex-m0 -mthumb -T "Software_Debug.ld" -o "Software.axf"  ./src/Software.o ./src/cr_startup_lpc11xx.o ./src/crp.o ./src/pwm.o ./src/uart.o   -lCMSISv2p00_LPC11xx
+Finished building target: Software.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "Software.axf"; # arm-none-eabi-objcopy -v -O binary "Software.axf" "Software.bin" ; # checksum -p LPC11C24_301 -d "Software.bin";
+   text	   data	    bss	    dec	    hex	filename
+   2876	      0	     56	   2932	    b74	Software.axf
+ 
+16:47:10 **** Incremental Build of configuration Debug for project Software ****
+make -r all 
+Building file: ../src/uart.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M0 -D__USE_CMSIS=CMSISv2p00_LPC11xx -D__LPC11XX__ -D__REDLIB__ -I"C:\Users\Marcus\Dropbox\E7020E (LP3 14-15)\Project\CMSISv2p00_LPC11xx\inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -specs=redlib.specs -MMD -MP -MF"src/uart.d" -MT"src/uart.o" -MT"src/uart.d" -o "src/uart.o" "../src/uart.c"
+../src/uart.c: In function 'uart_send':
+../src/uart.c:50:3: warning: implicit declaration of function 'uart_transmit' [-Wimplicit-function-declaration]
+   uart_transmit();
+   ^
+../src/uart.c: At top level:
+../src/uart.c:55:6: warning: conflicting types for 'uart_transmit' [enabled by default]
+ void uart_transmit(){
+      ^
+../src/uart.c:50:3: note: previous implicit declaration of 'uart_transmit' was here
+   uart_transmit();
+   ^
+Finished building: ../src/uart.c
+ 
+Building target: Software.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"C:\Users\Marcus\Dropbox\E7020E (LP3 14-15)\Project\CMSISv2p00_LPC11xx\Debug" -Xlinker -Map="Software.map" -Xlinker --gc-sections -mcpu=cortex-m0 -mthumb -T "Software_Debug.ld" -o "Software.axf"  ./src/Software.o ./src/cr_startup_lpc11xx.o ./src/crp.o ./src/pwm.o ./src/uart.o   -lCMSISv2p00_LPC11xx
+Finished building target: Software.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "Software.axf"; # arm-none-eabi-objcopy -v -O binary "Software.axf" "Software.bin" ; # checksum -p LPC11C24_301 -d "Software.bin";
+   text	   data	    bss	    dec	    hex	filename
+   2876	      0	     56	   2932	    b74	Software.axf
+ 
+16:49:48 **** Incremental Build of configuration Debug for project CMSISv2p00_LPC11xx ****
+make -r all 
+make: Nothing to be done for `all'.
+16:49:50 **** Incremental Build of configuration Debug for project Software ****
+make -r all 
+make: Nothing to be done for `all'.
+16:52:41 **** Incremental Build of configuration Debug for project CMSISv2p00_LPC11xx ****
+make -r all 
+make: Nothing to be done for `all'.
+16:52:43 **** Incremental Build of configuration Debug for project Software ****
+make -r all 
+Building file: ../src/uart.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M0 -D__USE_CMSIS=CMSISv2p00_LPC11xx -D__LPC11XX__ -D__REDLIB__ -I"C:\Users\Marcus\Dropbox\E7020E (LP3 14-15)\Project\CMSISv2p00_LPC11xx\inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -specs=redlib.specs -MMD -MP -MF"src/uart.d" -MT"src/uart.o" -MT"src/uart.d" -o "src/uart.o" "../src/uart.c"
+../src/uart.c: In function 'uart_send':
+../src/uart.c:50:3: warning: implicit declaration of function 'uart_transmit' [-Wimplicit-function-declaration]
+   uart_transmit();
+   ^
+../src/uart.c: At top level:
+../src/uart.c:55:6: warning: conflicting types for 'uart_transmit' [enabled by default]
+ void uart_transmit(){
+      ^
+../src/uart.c:50:3: note: previous implicit declaration of 'uart_transmit' was here
+   uart_transmit();
+   ^
+Finished building: ../src/uart.c
+ 
+Building target: Software.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"C:\Users\Marcus\Dropbox\E7020E (LP3 14-15)\Project\CMSISv2p00_LPC11xx\Debug" -Xlinker -Map="Software.map" -Xlinker --gc-sections -mcpu=cortex-m0 -mthumb -T "Software_Debug.ld" -o "Software.axf"  ./src/Software.o ./src/cr_startup_lpc11xx.o ./src/crp.o ./src/pwm.o ./src/uart.o   -lCMSISv2p00_LPC11xx
+Finished building target: Software.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "Software.axf"; # arm-none-eabi-objcopy -v -O binary "Software.axf" "Software.bin" ; # checksum -p LPC11C24_301 -d "Software.bin";
+   text	   data	    bss	    dec	    hex	filename
+   2892	      0	     56	   2948	    b84	Software.axf
+ 
+16:57:31 **** Incremental Build of configuration Debug for project CMSISv2p00_LPC11xx ****
+make -r all 
+make: Nothing to be done for `all'.
+16:57:33 **** Incremental Build of configuration Debug for project Software ****
+make -r all 
+Building file: ../src/uart.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M0 -D__USE_CMSIS=CMSISv2p00_LPC11xx -D__LPC11XX__ -D__REDLIB__ -I"C:\Users\Marcus\Dropbox\E7020E (LP3 14-15)\Project\CMSISv2p00_LPC11xx\inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -specs=redlib.specs -MMD -MP -MF"src/uart.d" -MT"src/uart.o" -MT"src/uart.d" -o "src/uart.o" "../src/uart.c"
+../src/uart.c: In function 'uart_send':
+../src/uart.c:50:3: warning: implicit declaration of function 'uart_transmit' [-Wimplicit-function-declaration]
+   uart_transmit();
+   ^
+../src/uart.c: At top level:
+../src/uart.c:55:6: warning: conflicting types for 'uart_transmit' [enabled by default]
+ void uart_transmit(){
+      ^
+../src/uart.c:50:3: note: previous implicit declaration of 'uart_transmit' was here
+   uart_transmit();
+   ^
+Finished building: ../src/uart.c
+ 
+Building target: Software.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"C:\Users\Marcus\Dropbox\E7020E (LP3 14-15)\Project\CMSISv2p00_LPC11xx\Debug" -Xlinker -Map="Software.map" -Xlinker --gc-sections -mcpu=cortex-m0 -mthumb -T "Software_Debug.ld" -o "Software.axf"  ./src/Software.o ./src/cr_startup_lpc11xx.o ./src/crp.o ./src/pwm.o ./src/uart.o   -lCMSISv2p00_LPC11xx
+Finished building target: Software.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "Software.axf"; # arm-none-eabi-objcopy -v -O binary "Software.axf" "Software.bin" ; # checksum -p LPC11C24_301 -d "Software.bin";
+   text	   data	    bss	    dec	    hex	filename
+   2880	      0	     56	   2936	    b78	Software.axf
+ 
+10:41:17 **** Incremental Build of configuration Debug for project CMSISv2p00_LPC11xx ****
+make -r all 
+make: Nothing to be done for `all'.
+10:41:23 **** Incremental Build of configuration Debug for project Software ****
+make -r all 
+Building file: ../src/Software.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M0 -D__USE_CMSIS=CMSISv2p00_LPC11xx -D__LPC11XX__ -D__REDLIB__ -I"C:\Users\Marcus\Dropbox\E7020E (LP3 14-15)\Project\CMSISv2p00_LPC11xx\inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -specs=redlib.specs -MMD -MP -MF"src/Software.d" -MT"src/Software.o" -MT"src/Software.d" -o "src/Software.o" "../src/Software.c"
+Finished building: ../src/Software.c
+ 
+Building file: ../src/pwm.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M0 -D__USE_CMSIS=CMSISv2p00_LPC11xx -D__LPC11XX__ -D__REDLIB__ -I"C:\Users\Marcus\Dropbox\E7020E (LP3 14-15)\Project\CMSISv2p00_LPC11xx\inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -specs=redlib.specs -MMD -MP -MF"src/pwm.d" -MT"src/pwm.o" -MT"src/pwm.d" -o "src/pwm.o" "../src/pwm.c"
+Finished building: ../src/pwm.c
+ 
+Building file: ../src/uart.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M0 -D__USE_CMSIS=CMSISv2p00_LPC11xx -D__LPC11XX__ -D__REDLIB__ -I"C:\Users\Marcus\Dropbox\E7020E (LP3 14-15)\Project\CMSISv2p00_LPC11xx\inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -specs=redlib.specs -MMD -MP -MF"src/uart.d" -MT"src/uart.o" -MT"src/uart.d" -o "src/uart.o" "../src/uart.c"
+Finished building: ../src/uart.c
+ 
+Building target: Software.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"C:\Users\Marcus\Dropbox\E7020E (LP3 14-15)\Project\CMSISv2p00_LPC11xx\Debug" -Xlinker -Map="Software.map" -Xlinker --gc-sections -mcpu=cortex-m0 -mthumb -T "Software_Debug.ld" -o "Software.axf"  ./src/Software.o ./src/cr_startup_lpc11xx.o ./src/crp.o ./src/pwm.o ./src/uart.o   -lCMSISv2p00_LPC11xx
+./src/pwm.o: In function `pwm_blue':
+C:\Users\Marcus\Dropbox\E7020E (LP3 14-15)\Project\Software\Debug/../src/pwm.c:14: multiple definition of `uart_tx_buf_start'
+./src/Software.o:C:\Users\Marcus\Dropbox\E7020E (LP3 14-15)\Project\CMSISv2p00_LPC11xx\inc/core_cm0.h:452: first defined here
+./src/pwm.o: In function `pwm_blue':
+C:\Users\Marcus\Dropbox\E7020E (LP3 14-15)\Project\Software\Debug/../src/pwm.c:14: multiple definition of `uart_tx_buf_end'
+./src/Software.o:C:\Users\Marcus\Dropbox\E7020E (LP3 14-15)\Project\CMSISv2p00_LPC11xx\inc/core_cm0.h:452: first defined here
+./src/pwm.o: In function `pwm_blue':
+C:\Users\Marcus\Dropbox\E7020E (LP3 14-15)\Project\Software\Debug/../src/pwm.c:14: multiple definition of `uart_tx_active'
+./src/Software.o:C:\Users\Marcus\Dropbox\E7020E (LP3 14-15)\Project\CMSISv2p00_LPC11xx\inc/core_cm0.h:452: first defined here
+./src/uart.o: In function `uart_transmit':
+C:\Users\Marcus\Dropbox\E7020E (LP3 14-15)\Project\Software\Debug/../src/uart.c:12: multiple definition of `uart_tx_buf_start'
+./src/Software.o:C:\Users\Marcus\Dropbox\E7020E (LP3 14-15)\Project\CMSISv2p00_LPC11xx\inc/core_cm0.h:452: first defined here
+./src/uart.o: In function `uart_transmit':
+C:\Users\Marcus\Dropbox\E7020E (LP3 14-15)\Project\Software\Debug/../src/uart.c:12: multiple definition of `uart_tx_buf_end'
+./src/Software.o:C:\Users\Marcus\Dropbox\E7020E (LP3 14-15)\Project\CMSISv2p00_LPC11xx\inc/core_cm0.h:452: first defined here
+./src/uart.o: In function `uart_transmit':
+C:\Users\Marcus\Dropbox\E7020E (LP3 14-15)\Project\Software\Debug/../src/uart.c:12: multiple definition of `uart_tx_active'
+./src/Software.o:C:\Users\Marcus\Dropbox\E7020E (LP3 14-15)\Project\CMSISv2p00_LPC11xx\inc/core_cm0.h:452: first defined here
+collect2.exe: error: ld returned 1 exit status
+make: *** [Software.axf] Error 1
+10:44:11 **** Incremental Build of configuration Debug for project CMSISv2p00_LPC11xx ****
+make -r all 
+make: Nothing to be done for `all'.
+10:44:14 **** Incremental Build of configuration Debug for project Software ****
+make -r all 
+Building file: ../src/Software.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M0 -D__USE_CMSIS=CMSISv2p00_LPC11xx -D__LPC11XX__ -D__REDLIB__ -I"C:\Users\Marcus\Dropbox\E7020E (LP3 14-15)\Project\CMSISv2p00_LPC11xx\inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -specs=redlib.specs -MMD -MP -MF"src/Software.d" -MT"src/Software.o" -MT"src/Software.d" -o "src/Software.o" "../src/Software.c"
+Finished building: ../src/Software.c
+ 
+Building file: ../src/pwm.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M0 -D__USE_CMSIS=CMSISv2p00_LPC11xx -D__LPC11XX__ -D__REDLIB__ -I"C:\Users\Marcus\Dropbox\E7020E (LP3 14-15)\Project\CMSISv2p00_LPC11xx\inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -specs=redlib.specs -MMD -MP -MF"src/pwm.d" -MT"src/pwm.o" -MT"src/pwm.d" -o "src/pwm.o" "../src/pwm.c"
+Finished building: ../src/pwm.c
+ 
+Building file: ../src/uart.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M0 -D__USE_CMSIS=CMSISv2p00_LPC11xx -D__LPC11XX__ -D__REDLIB__ -I"C:\Users\Marcus\Dropbox\E7020E (LP3 14-15)\Project\CMSISv2p00_LPC11xx\inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -specs=redlib.specs -MMD -MP -MF"src/uart.d" -MT"src/uart.o" -MT"src/uart.d" -o "src/uart.o" "../src/uart.c"
+Finished building: ../src/uart.c
+ 
+Building target: Software.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"C:\Users\Marcus\Dropbox\E7020E (LP3 14-15)\Project\CMSISv2p00_LPC11xx\Debug" -Xlinker -Map="Software.map" -Xlinker --gc-sections -mcpu=cortex-m0 -mthumb -T "Software_Debug.ld" -o "Software.axf"  ./src/Software.o ./src/cr_startup_lpc11xx.o ./src/crp.o ./src/pwm.o ./src/uart.o   -lCMSISv2p00_LPC11xx
+./src/pwm.o: In function `pwm_blue':
+C:\Users\Marcus\Dropbox\E7020E (LP3 14-15)\Project\Software\Debug/../src/pwm.c:14: multiple definition of `uart_tx_buf_start'
+./src/Software.o:C:\Users\Marcus\Dropbox\E7020E (LP3 14-15)\Project\CMSISv2p00_LPC11xx\inc/core_cm0.h:452: first defined here
+./src/pwm.o: In function `pwm_blue':
+C:\Users\Marcus\Dropbox\E7020E (LP3 14-15)\Project\Software\Debug/../src/pwm.c:14: multiple definition of `uart_tx_buf_end'
+./src/Software.o:C:\Users\Marcus\Dropbox\E7020E (LP3 14-15)\Project\CMSISv2p00_LPC11xx\inc/core_cm0.h:452: first defined here
+./src/pwm.o: In function `pwm_blue':
+C:\Users\Marcus\Dropbox\E7020E (LP3 14-15)\Project\Software\Debug/../src/pwm.c:14: multiple definition of `uart_tx_active'
+./src/Software.o:C:\Users\Marcus\Dropbox\E7020E (LP3 14-15)\Project\CMSISv2p00_LPC11xx\inc/core_cm0.h:452: first defined here
+./src/uart.o: In function `uart_transmit':
+C:\Users\Marcus\Dropbox\E7020E (LP3 14-15)\Project\Software\Debug/../src/uart.c:12: multiple definition of `uart_tx_buf_start'
+./src/Software.o:C:\Users\Marcus\Dropbox\E7020E (LP3 14-15)\Project\CMSISv2p00_LPC11xx\inc/core_cm0.h:452: first defined here
+./src/uart.o: In function `uart_transmit':
+C:\Users\Marcus\Dropbox\E7020E (LP3 14-15)\Project\Software\Debug/../src/uart.c:12: multiple definition of `uart_tx_buf_end'
+./src/Software.o:C:\Users\Marcus\Dropbox\E7020E (LP3 14-15)\Project\CMSISv2p00_LPC11xx\inc/core_cm0.h:452: first defined here
+./src/uart.o: In function `uart_transmit':
+C:\Users\Marcus\Dropbox\E7020E (LP3 14-15)\Project\Software\Debug/../src/uart.c:12: multiple definition of `uart_tx_active'
+./src/Software.o:C:\Users\Marcus\Dropbox\E7020E (LP3 14-15)\Project\CMSISv2p00_LPC11xx\inc/core_cm0.h:452: first defined here
+collect2.exe: error: ld returned 1 exit status
+make: *** [Software.axf] Error 1
+10:45:26 **** Incremental Build of configuration Debug for project CMSISv2p00_LPC11xx ****
+make -r all 
+make: Nothing to be done for `all'.
+10:45:28 **** Incremental Build of configuration Debug for project Software ****
+make -r all 
+Building file: ../src/Software.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M0 -D__USE_CMSIS=CMSISv2p00_LPC11xx -D__LPC11XX__ -D__REDLIB__ -I"C:\Users\Marcus\Dropbox\E7020E (LP3 14-15)\Project\CMSISv2p00_LPC11xx\inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -specs=redlib.specs -MMD -MP -MF"src/Software.d" -MT"src/Software.o" -MT"src/Software.d" -o "src/Software.o" "../src/Software.c"
+Finished building: ../src/Software.c
+ 
+Building file: ../src/pwm.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M0 -D__USE_CMSIS=CMSISv2p00_LPC11xx -D__LPC11XX__ -D__REDLIB__ -I"C:\Users\Marcus\Dropbox\E7020E (LP3 14-15)\Project\CMSISv2p00_LPC11xx\inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -specs=redlib.specs -MMD -MP -MF"src/pwm.d" -MT"src/pwm.o" -MT"src/pwm.d" -o "src/pwm.o" "../src/pwm.c"
+Finished building: ../src/pwm.c
+ 
+Building file: ../src/uart.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M0 -D__USE_CMSIS=CMSISv2p00_LPC11xx -D__LPC11XX__ -D__REDLIB__ -I"C:\Users\Marcus\Dropbox\E7020E (LP3 14-15)\Project\CMSISv2p00_LPC11xx\inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -specs=redlib.specs -MMD -MP -MF"src/uart.d" -MT"src/uart.o" -MT"src/uart.d" -o "src/uart.o" "../src/uart.c"
+Finished building: ../src/uart.c
+ 
+Building target: Software.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"C:\Users\Marcus\Dropbox\E7020E (LP3 14-15)\Project\CMSISv2p00_LPC11xx\Debug" -Xlinker -Map="Software.map" -Xlinker --gc-sections -mcpu=cortex-m0 -mthumb -T "Software_Debug.ld" -o "Software.axf"  ./src/Software.o ./src/cr_startup_lpc11xx.o ./src/crp.o ./src/pwm.o ./src/uart.o   -lCMSISv2p00_LPC11xx
+Finished building target: Software.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "Software.axf"; # arm-none-eabi-objcopy -v -O binary "Software.axf" "Software.bin" ; # checksum -p LPC11C24_301 -d "Software.bin";
+   text	   data	    bss	    dec	    hex	filename
+   2900	      0	     56	   2956	    b8c	Software.axf
+ 
