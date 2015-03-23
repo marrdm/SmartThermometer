@@ -29,7 +29,7 @@ all: Software.axf
 Software.axf: $(OBJS) $(USER_OBJS)
 	@echo 'Building target: $@'
 	@echo 'Invoking: MCU Linker'
-	arm-none-eabi-gcc -nostdlib -L"C:\Users\Marcus\Dropbox\E7020E (LP3 14-15)\Project\CMSISv2p00_LPC11xx\Debug" -Xlinker -Map="Software.map" -Xlinker --gc-sections -mcpu=cortex-m0 -mthumb -T "Software_Debug.ld" -o "Software.axf" $(OBJS) $(USER_OBJS) $(LIBS)
+	arm-none-eabi-gcc -nostdlib -L"C:\Users\jeffrey\Documents\E7020E\SmartThermometer\CMSISv2p00_LPC11xx\Debug" -Xlinker -Map="Software.map" -Xlinker --gc-sections -mcpu=cortex-m0 -mthumb -T "Software_Debug.ld" -o "Software.axf" $(OBJS) $(USER_OBJS) $(LIBS)
 	@echo 'Finished building target: $@'
 	@echo ' '
 	$(MAKE) --no-print-directory post-build
