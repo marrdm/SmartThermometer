@@ -8,6 +8,7 @@ C_SRCS += \
 ../src/cr_startup_lpc11xx.c \
 ../src/crp.c \
 ../src/pwm.c \
+../src/str.c \
 ../src/uart.c 
 
 OBJS += \
@@ -15,6 +16,7 @@ OBJS += \
 ./src/cr_startup_lpc11xx.o \
 ./src/crp.o \
 ./src/pwm.o \
+./src/str.o \
 ./src/uart.o 
 
 C_DEPS += \
@@ -22,6 +24,7 @@ C_DEPS += \
 ./src/cr_startup_lpc11xx.d \
 ./src/crp.d \
 ./src/pwm.d \
+./src/str.d \
 ./src/uart.d 
 
 

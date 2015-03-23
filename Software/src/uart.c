@@ -28,6 +28,8 @@ int uart_send(char str[], int len){
 /*
  * Return value n > 0 indicates a buffer overflow where n is the number of characters not entered into the buffer.
  */
+	NVIC_DisableIRQ(UART_IRQn);
+
 	int i = 0;
 	while(i < len){
 
@@ -49,6 +51,7 @@ int uart_send(char str[], int len){
 	if(!uart_tx_active){
 		uart_transmit();
 	}
+	NVIC_EnableIRQ(UART_IRQn);
 	return (len - i);
 }
 
@@ -65,8 +68,6 @@ void uart_transmit(){
 	}else{
 		uart_tx_buf_start++;
 	}
-
-	//while(!(LPC_UART->LSR & (1<<5)));
 
 }
 

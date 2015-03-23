@@ -16,6 +16,7 @@
 
 #include "pwm.h"
 #include "uart.h"
+#include "str.h"
 
 #define SYSTEM_OSCILLATOR 0		//
 #define MAIN_CLOCK 0				//

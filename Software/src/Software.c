@@ -10,6 +10,7 @@
 
 #include "Software.h"
 
+#define N_SAMPLES 1000000
 // TODO: insert other include files here
 
 // TODO: insert other definitions and declarations here
@@ -76,13 +77,24 @@ int main(void) {
 	NVIC_EnableIRQ(TIMER_16_0_IRQn);
 	NVIC_SetPriority(UART_IRQn, 0);				//enable UART interrupt
 	NVIC_EnableIRQ(UART_IRQn);
-	NVIC_SetPriority(UART_IRQn, 0);				//enable UART interrupt
-	NVIC_EnableIRQ(UART_IRQn);
 	NVIC_SetPriority(EINT1_IRQn, 0);			//enable external interrupt
 	NVIC_EnableIRQ(EINT1_IRQn);
 	NVIC_SetPriority(ADC_IRQn, 0);					//enable ADC interrupt
 	NVIC_EnableIRQ(ADC_IRQn);
 	__enable_irq();								//enable all interrupts
+
+	__disable_irq();
+
+	float f = 3.0;
+	int integer = f;
+
+	int len;
+	int maxlen = 8;
+	char str[8];
+
+	float2str(f, 3, 8, str, &len);
+
+	__enable_irq();
 
     while(1) {
     	int i = 0;
@@ -202,17 +214,27 @@ void ADC_IRQHandler (void){
 	temp = temp & (0x3ff<<6);
 	temp = temp>>6;
 	sum = sum + temp;
-	if(k<1000){
+	if(k<N_SAMPLES){
 	LPC_ADC->CR |= (1<<24);//start conversion
 	LPC_ADC->CR &= ~(1<<24);
 	k++;
 	}
 	else {
-	k = 0;
-	voltage = sum/1000;
-    voltage /= 287;
-    sum = 0;
-    k = 0;
+		float average = (float) sum/N_SAMPLES;
+		voltage /= 287;
+
+		float temp_c = 247.456 - 0.4079 * average;
+
+		char temp_str[32];
+		int temp_len;
+
+		float2str(temp_c, 1, 32, temp_str, &temp_len);
+		uart_send(temp_str, temp_len);
+		uart_send("°C\r\n", 5);
+
+
+		sum = 0;
+		k = 0;
 	}
 }
 
