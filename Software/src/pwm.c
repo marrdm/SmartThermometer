@@ -40,6 +40,10 @@ void pwm_init(){
 
 	LPC_TMR32B0->TCR = 0x2;						//Reset CT32B1
 	LPC_TMR32B0->TCR = 0x1;						//Start CT32B1
+
+	pwm_red(0);
+	pwm_green(0);
+	pwm_blue(0);
 }
 
 void pwm_red(int value){

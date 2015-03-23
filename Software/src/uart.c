@@ -22,6 +22,11 @@ void uart_init(){
 	LPC_UART->FCR = 0x7;
 	LPC_UART->IER |= 1;
 	LPC_UART->IER |= (1<<1);
+
+	NVIC_SetPriority(UART_IRQn, 1);
+	NVIC_EnableIRQ(UART_IRQn);
+
+
 }
 
 int uart_send(char str[], int len){

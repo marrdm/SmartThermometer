@@ -34,6 +34,12 @@ int int2str(int num, int maxlen, char str[], int* len){
 int float2str(float num,int decimals, int maxlen, char str[], int* len){
 	int i_num = num;
 	int d_num = round( (num - i_num) * pow(10, decimals));
+	if(d_num > pow(10, decimals)-1){
+		i_num++;
+		d_num = (num - i_num) * pow(10, decimals);
+	}else{
+		d_num = round( (num - i_num) * pow(10, decimals));
+	}
 
 	int ret = int2str(i_num, maxlen-(decimals+1), str, len);
 	if(ret){

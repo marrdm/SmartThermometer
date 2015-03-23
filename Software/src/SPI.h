@@ -10,6 +10,7 @@
 
 #include "Software.h"
 
+void SPI_init();
 void lcd_init();
 void delayUS(int microSecs);
 void delayMS(int milliSecs);
