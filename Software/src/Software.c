@@ -33,9 +33,11 @@ void ADC_IRQHandler (void);
 int main(void) {
 												//timer 16B0 setup code
 	LPC_SYSCON->SYSAHBCLKCTRL |= (1<<7);
-	LPC_TMR16B0->MCR |= 0b11;
+	LPC_TMR16B0->MCR |= (0b11)|(1<<4);
 	LPC_TMR16B0->PR = 48 - 1;
-	LPC_TMR16B0->MR0 = 1*1000 * 1000 * 2 - 1;		//interrupt every 2 seconds
+	LPC_TMR16B0->MR0 = 1*1000 * 1000 * 2 - 1;	//interrupt every 2 seconds
+	LPC_TMR16B0->MR1 = 1000 - 1;				//MR1 will match every millisecond
+	LPC_TMR16B0->EMR = 2<<6,					//set EM1 high on match
 	LPC_TMR16B0->TCR = 2;
 	LPC_TMR16B0->TCR = 1;
 
@@ -43,7 +45,7 @@ int main(void) {
 	LPC_IOCON->R_PIO0_11 = 1;
 	LPC_GPIO1->DIR |= (1<<2);
 	LPC_GPIO0->DIR |= (1<<11);
-												//button initialization code
+												//button initialisation code
 	LPC_GPIO1->DIR &= ~(1<<4);
 	LPC_GPIO1->IS &= ~(1<<4);					//edge sensitive
 	LPC_GPIO1->IBE &= ~(1<<4);					// trigger interrupt only on one edge
@@ -59,7 +61,7 @@ int main(void) {
 	LPC_SYSCON->PDRUNCFG &= ~(1<<4);			//ADC powered up
 	LPC_ADC->INTEN |= (1<<7);					//channel 7 interrupt enabled
 
-	//pwm_init();
+	pwm_init();
 	uart_init();
 	lcd_init();
 
@@ -90,9 +92,11 @@ int main(void) {
 
     while(1) {
     	int i = 0;
-    	while(i<10000){
-    		i++;
-    	}
+    	//while(i<10000){
+    	//	i++;
+    	//}
+    	LPC_SSP1->DR = 0x12;
+    	for(i=0; i<0xFFFFF; i++);			//delay to make scope reading easier
     	//cycle_colour();
     }
     return 0 ;
@@ -186,13 +190,6 @@ void parser(char str[], int len){
 	*/
 }
 
-void delayUS(int microSecs){
-
-}
-
-void delayMS(int milliSecs){
-
-}
 
 void TIMER16_0_IRQHandler (void){
 	LPC_TMR16B0->IR = 1;
