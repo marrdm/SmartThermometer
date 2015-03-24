@@ -4,7 +4,7 @@
  * (c) NXP Semiconductors 2013-2015
  * Generated linker script file for LPC11C24/301
  * Created from LibIncTemplate.ld (LPCXpresso v7.5 (0 [Build 254] [2014-10-31] ))
- * By LPCXpresso v7.5.0 [Build 254] [2014-10-31]  on Mon Mar 23 15:31:38 GMT+01:00 2015
+ * By LPCXpresso v7.5.0 [Build 254] [2014-10-31]  on Mon Mar 23 19:07:57 CET 2015
  */
 
 

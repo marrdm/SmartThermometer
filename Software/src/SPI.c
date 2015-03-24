@@ -13,6 +13,9 @@
 #define ext 0b1100
 
 void SPI_init(){
+
+	LPC_SYSCON->PRESETCTRL |= (1<<2);		//de-asserts reset signal
+
 	LPC_GPIO0->DIR |= (1<<2)|(1<<3);			//GPIO CS to deMux are configured as outputs
 	LPC_GPIO0->DATA &= ~((1<<2)|(1<<3));		//set S0 S1 to 00
 												//SPI set up code
@@ -63,7 +66,7 @@ void SPISend(char device, char display){
 
 void delayMS(int milliSecs){
 	int i = 0;
-	while(i<milliSeconds){
+	while(i<milliSecs){
 		if(LPC_TMR16B0->EMR | 0b10){		//wait until EM1 is high, this means it has been a millisecond
 			LPC_TMR16B0->EMR &= ~(1<<1);	//set EM1 back low
 			i++;
@@ -71,7 +74,3 @@ void delayMS(int milliSecs){
 	}
 }
 
-void delayUS(int microSecs){
-	int t;
-	t++;
-}

@@ -19,6 +19,7 @@
 #include "str.h"
 #include "adc.h"
 #include "temp.h"
+#include "SPI.h"
 
 
 #define SYSTEM_OSCILLATOR 0		//

@@ -13,7 +13,6 @@
 // TODO: insert other include files here
 
 // TODO: insert other definitions and declarations here
-void cycle_colour();
 
 char string[16];
 
@@ -27,7 +26,7 @@ void ADC_IRQHandler (void);
 int main(void) {
 												//timer 16B0 setup code
 	LPC_SYSCON->SYSAHBCLKCTRL |= (1<<7);
-	LPC_TMR16B0->MCR |= (0b11)|(1<<4);
+	LPC_TMR16B0->MCR |= (0b11);//|(1<<4);
 	LPC_TMR16B0->PR = 48 - 1;
 	LPC_TMR16B0->MR0 = 1*1000 * 1000 * 2 - 1;	//interrupt every 2 seconds
 	LPC_TMR16B0->MR1 = 1000 - 1;				//MR1 will match every millisecond
@@ -46,7 +45,8 @@ int main(void) {
 
 
 	__disable_irq();
-	lcd_init();
+	SPI_init();
+//	lcd_init();
 	NVIC_SetPriority(TIMER_16_0_IRQn, 1);		//enable timer interrupt
 	NVIC_EnableIRQ(TIMER_16_0_IRQn);
 	uart_init();
@@ -58,30 +58,17 @@ int main(void) {
 
 
     while(1) {
-    	int i = 0;
     	//while(i<10000){
     	//	i++;
     	//}
-    	LPC_SSP1->DR = 0x12;
-    	for(i=0; i<0xFFFFF; i++);			//delay to make scope reading easier
-    	//cycle_colour();
+    	int v = 0x7E;
+//    	LPC_SSP1->DR = v;
+ //   	LPC_SSP1->DR = 73;
+//    	for(i=0; i<0xFFFFF; i++);			//delay to make scope reading easier
     }
     return 0 ;
 }
 
-/*void cycle_colour(){
-	static int colour = 255;
-	static int colour_inc = 1;
-
-	colour += colour_inc;
-	pwm_red(colour - 255);
-	pwm_blue(255 - colour);
-	pwm_green(255 - (colour/2));
-
-	if(colour > 511 || colour <= 0){
-		colour_inc = - colour_inc;
-	}
-}*/
 
 void parser(char str[], int len){
 	/*
@@ -167,7 +154,7 @@ void TIMER16_0_IRQHandler (void){
 
 void PIOINT1_IRQHandler (void){
 	switch_mode();
-	uart_send("\r\nI\r\n", 5);
+	uart_send("\r\n", 2);
 	LPC_GPIO1->IC |= (1<<4);				//reset interrupt flag
 }
 
