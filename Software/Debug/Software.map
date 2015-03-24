@@ -356,7 +356,7 @@ END GROUP
                 0x00008000                __top_MFlash32 = 0x8000
                 0x10002000                __top_RamLoc8 = 0x10002000
 
-.text           0x00000000     0x28c0
+.text           0x00000000     0x28b8
  FILL mask 0xff
                 0x00000000                __vectors_start__ = ABSOLUTE (.)
  *(.isr_vector)
@@ -365,13 +365,13 @@ END GROUP
                 0x000000c0                . = ALIGN (0x4)
                 0x000000c0                __section_table_start = .
                 0x000000c0                __data_section_table = .
-                0x000000c0        0x4 LONG 0x28c0 LOADADDR (.data)
+                0x000000c0        0x4 LONG 0x28b8 LOADADDR (.data)
                 0x000000c4        0x4 LONG 0x10000000 ADDR (.data)
-                0x000000c8        0x4 LONG 0x4 SIZEOF (.data)
+                0x000000c8        0x4 LONG 0x0 SIZEOF (.data)
                 0x000000cc                __data_section_table_end = .
                 0x000000cc                __bss_section_table = .
-                0x000000cc        0x4 LONG 0x10000004 ADDR (.bss)
-                0x000000d0        0x4 LONG 0x3c SIZEOF (.bss)
+                0x000000cc        0x4 LONG 0x10000000 ADDR (.bss)
+                0x000000d0        0x4 LONG 0x40 SIZEOF (.bss)
                 0x000000d4                __bss_section_table_end = .
                 0x000000d4                __section_table_end = .
  *(.after_vectors*)
@@ -564,45 +564,44 @@ END GROUP
                 0x00002798                __aeabi_lmul
  *(.rodata .rodata.* .constdata .constdata.*)
  *fill*         0x000027c6        0x2 
- .rodata        0x000027c8        0x8 ./src/Software.o
- .rodata        0x000027d0       0x18 ./src/temp.o
- .rodata        0x000027e8        0x4 ./src/uart.o
- *fill*         0x000027ec        0x4 
+ .rodata        0x000027c8        0x4 ./src/Software.o
+ .rodata        0x000027cc       0x18 ./src/temp.o
+ .rodata        0x000027e4        0x4 ./src/uart.o
  .rodata.a2.3921
-                0x000027f0       0x40 c:/nxp/lpcxpresso_7.5.0_254/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv6-m\libcr_c.a(pow.o)
+                0x000027e8       0x40 c:/nxp/lpcxpresso_7.5.0_254/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv6-m\libcr_c.a(pow.o)
  .rodata.a1.3920
-                0x00002830       0x88 c:/nxp/lpcxpresso_7.5.0_254/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv6-m\libcr_c.a(pow.o)
+                0x00002828       0x88 c:/nxp/lpcxpresso_7.5.0_254/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv6-m\libcr_c.a(pow.o)
  .rodata.__huge_val
-                0x000028b8        0x8 c:/nxp/lpcxpresso_7.5.0_254/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv6-m\libcr_c.a(_hugeval.o)
-                0x000028b8                __huge_val
-                0x000028c0                . = ALIGN (0x4)
+                0x000028b0        0x8 c:/nxp/lpcxpresso_7.5.0_254/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv6-m\libcr_c.a(_hugeval.o)
+                0x000028b0                __huge_val
+                0x000028b8                . = ALIGN (0x4)
 
-.glue_7         0x000028c0        0x0
+.glue_7         0x000028b8        0x0
  .glue_7        0x00000000        0x0 linker stubs
 
-.glue_7t        0x000028c0        0x0
+.glue_7t        0x000028b8        0x0
  .glue_7t       0x00000000        0x0 linker stubs
 
-.vfp11_veneer   0x000028c0        0x0
+.vfp11_veneer   0x000028b8        0x0
  .vfp11_veneer  0x00000000        0x0 linker stubs
 
-.v4_bx          0x000028c0        0x0
+.v4_bx          0x000028b8        0x0
  .v4_bx         0x00000000        0x0 linker stubs
 
-.iplt           0x000028c0        0x0
+.iplt           0x000028b8        0x0
  .iplt          0x00000000        0x0 ./src/SPI.o
 
-.rel.dyn        0x000028c0        0x0
+.rel.dyn        0x000028b8        0x0
  .rel.iplt      0x00000000        0x0 ./src/SPI.o
 
 .ARM.extab
  *(.ARM.extab* .gnu.linkonce.armextab.*)
-                0x000028c0                __exidx_start = .
+                0x000028b8                __exidx_start = .
 
 .ARM.exidx
  *(.ARM.exidx* .gnu.linkonce.armexidx.*)
-                0x000028c0                __exidx_end = .
-                0x000028c0                _etext = .
+                0x000028b8                __exidx_end = .
+                0x000028b8                _etext = .
 
 .uninit_RESERVED
                 0x10000000        0x0
@@ -610,26 +609,26 @@ END GROUP
                 0x10000000                . = ALIGN (0x4)
                 0x10000000                _end_uninit_RESERVED = .
 
-.data           0x10000000        0x4 load address 0x000028c0
+.data           0x10000000        0x0 load address 0x000028b8
  FILL mask 0xff
                 0x10000000                _data = .
  *(vtable)
  *(.ramfunc*)
  *(.data*)
- .data.temp_mode
-                0x10000000        0x4 ./src/temp.o
-                0x10000000                temp_mode
-                0x10000004                . = ALIGN (0x4)
-                0x10000004                _edata = .
+                0x10000000                . = ALIGN (0x4)
+                0x10000000                _edata = .
 
-.igot.plt       0x10000004        0x0 load address 0x000028c4
+.igot.plt       0x10000000        0x0 load address 0x000028b8
  .igot.plt      0x00000000        0x0 ./src/SPI.o
 
-.bss            0x10000004       0x3c load address 0x000028c4
-                0x10000004                _bss = .
+.bss            0x10000000       0x40 load address 0x000028b8
+                0x10000000                _bss = .
  *(.bss*)
- .bss.sum.4499  0x10000004        0x4 ./src/adc.o
- .bss.n.4498    0x10000008        0x4 ./src/adc.o
+ .bss.sum.4499  0x10000000        0x4 ./src/adc.o
+ .bss.n.4498    0x10000004        0x4 ./src/adc.o
+ .bss.temp_mode
+                0x10000008        0x4 ./src/temp.o
+                0x10000008                temp_mode
  .bss.temp.4501
                 0x1000000c        0x4 ./src/temp.o
  .bss.uart_tx_buf_start
@@ -650,7 +649,7 @@ END GROUP
                 0x10000040                _ebss = .
                 0x10000040                PROVIDE (end, .)
 
-.noinit         0x10000040        0x0 load address 0x000028c4
+.noinit         0x10000040        0x0 load address 0x000028b8
                 0x10000040                _noinit = .
  *(.noinit*)
                 0x10000040                . = ALIGN (0x4)

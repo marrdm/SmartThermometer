@@ -20,7 +20,7 @@ void pwm_init(){
 
 	LPC_TMR32B1->PR = 28;						//set prescaler
 	LPC_TMR32B1->MCR |= (1<<10);				//set timer to reset on MR3
-	LPC_TMR32B1->MR3 = 255;
+	LPC_TMR32B1->MR3 = 254;
 	LPC_TMR32B1->MR0 = 255;
 	LPC_TMR32B1->MR1 = 255;
 
@@ -33,7 +33,7 @@ void pwm_init(){
 
 	LPC_TMR32B0->PR = 28;						//set prescaler
 	LPC_TMR32B0->MCR |= (1<<1);					//set timer to reset on MR0
-	LPC_TMR32B0->MR0 = 255;
+	LPC_TMR32B0->MR0 = 254;
 	LPC_TMR32B0->MR3 = 255;
 
 	LPC_TMR32B0->PWMC |= (1<<3);				//set MR3 as PWM output
@@ -44,6 +44,7 @@ void pwm_init(){
 	pwm_red(0);
 	pwm_green(0);
 	pwm_blue(0);
+
 }
 
 void pwm_red(int value){

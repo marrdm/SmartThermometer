@@ -7,7 +7,7 @@
 
 #include "temp.h"
 
-int temp_mode = 1;		// 0 = Celcius, 1 = Fahrenheit, 2 = Kelvin
+int temp_mode = 0;		// 0 = Celcius, 1 = Fahrenheit, 2 = Kelvin
 
 void init_temp(){
 
