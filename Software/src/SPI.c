@@ -39,23 +39,23 @@ void lcd_init(){
 	LPC_GPIO2->DATA &= ~(1<<2);		//drive RS low
 	delayMS(200);
 	SPISend(lcd, 0x38);					//function set
-	delayUS(30);					//delay may not be needed
+	delayMS(2);						//delay may not be needed
 	SPISend(lcd, 0x39);					//function set
-	delayUS(30);
+	delayMS(2);
 	SPISend(lcd, 0x14);					//internal OSC frequency = 380 kHz, Bias for 3.3V
-	delayUS(30);
+	delayMS(2);
 	SPISend(lcd, 0x78);					//Contrast set
-	delayUS(30);
+	delayMS(2);
 	SPISend(lcd, 0x55);					//Power/ICOn/Contrast control
-	delayUS(30);
+	delayMS(2);;
 	SPISend(lcd, 0x6D);					//Follower control
 	delayMS(200);
 	SPISend(lcd, 0x0C);					//Display on/off control
-	delayUS(30);
-	SPISend(lcd, 0x01);
 	delayMS(2);
+	SPISend(lcd, 0x01);
+	delayMS(20);
 	SPISend(lcd, 0x06);
-	delayUS(30);
+	delayMS(2);
 }
 
 void SPISend(char device, char display){
@@ -67,10 +67,16 @@ void SPISend(char device, char display){
 void delayMS(int milliSecs){
 	int i = 0;
 	while(i<milliSecs){
-		if(LPC_TMR16B0->EMR | 0b10){		//wait until EM1 is high, this means it has been a millisecond
+		if(LPC_TMR16B1->EMR & 1){		//wait until EM1 is high, this means it has been a millisecond
 			LPC_TMR16B0->EMR &= ~(1<<1);	//set EM1 back low
 			i++;
 		}
 	}
 }
-
+/*
+void delayUS(int microSecs){
+	int i = 0;
+	while( i< microSecs) i++;
+}
+}
+*/

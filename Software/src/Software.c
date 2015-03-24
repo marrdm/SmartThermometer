@@ -29,10 +29,16 @@ int main(void) {
 	LPC_TMR16B0->MCR |= (0b11);//|(1<<4);
 	LPC_TMR16B0->PR = 48 - 1;
 	LPC_TMR16B0->MR0 = 1*1000 * 1000 * 2 - 1;	//interrupt every 2 seconds
-	LPC_TMR16B0->MR1 = 1000 - 1;				//MR1 will match every millisecond
-	LPC_TMR16B0->EMR = 2<<6,					//set EM1 high on match
 	LPC_TMR16B0->TCR = 2;
 	LPC_TMR16B0->TCR = 1;
+												//timer 16B1 setup code
+	LPC_SYSCON->SYSAHBCLKCTRL |= (1<<8);
+	LPC_TMR16B1->MCR |= 0b10;
+	LPC_TMR16B1->PR = 48 - 1;					//reset on match on MRO, no interrupt
+	LPC_TMR16B1->MR0 = 1000 - 1;				//interrupt every millisecond seconds
+	LPC_TMR16B1->EMR = 2<<4;					//set EM1 high on match
+	LPC_TMR16B1->TCR = 2;
+	LPC_TMR16B1->TCR = 1;
 												//button initialization code
 	LPC_GPIO1->DIR &= ~(1<<4);
 	LPC_GPIO1->IS &= ~(1<<4);					//edge sensitive
