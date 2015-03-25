@@ -17,6 +17,7 @@
 
 void SPI_init();
 void lcd_init();
+void lcd_clear();
 void delayUS(int microSecs);
 void delayMS(int milliSecs);
 void SPISend(char device, char display);

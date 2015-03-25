@@ -11,6 +11,7 @@
 #include "uart.h"
 #include "str.h"
 #include "pwm.h"
+#include "SPI.h"
 
 void init_temp();
 void switch_mode();

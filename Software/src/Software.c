@@ -64,12 +64,11 @@ int main(void) {
 	delayMS(200);
 
 
-
+	int i=0;
 
     while(1) {
-    	int i=0;
 
-    	int v = 0x7E;
+    	i++;
 
 //   	LPC_SSP1->DR = v;
  //   	LPC_SSP1->DR = 73;

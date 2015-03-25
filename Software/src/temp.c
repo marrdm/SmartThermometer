@@ -51,4 +51,30 @@ void conv(float value){
 		uart_send(temp_str, temp_len);
 		uart_send(" K\r\n", 4);
 	}
+
+	lcd_clear();
+	SPISend(lcd, 0xA0);
+	SPISend(lcd, 0xA0);
+	SPISend(lcd, 0xA0);
+	SPISend(lcd, 0xA0);
+	SPISend(lcd, 0xA0);
+	SPISend(lcd, temp_str[0]);
+	SPISend(lcd, temp_str[1]);
+	SPISend(lcd, temp_str[2]);
+	SPISend(lcd, temp_str[3]);
+
+	if(temp_mode == 2){
+		SPISend(lcd, temp_str[4]);
+		SPISend(lcd, 0xA0);										//degree symbol
+		SPISend(lcd, 0x4B);
+	}
+	else if(temp_mode == 1) {
+		if(temp_str[3] == '.') SPISend(lcd, temp_str[4]);
+		SPISend(lcd, 0xDF);									//degree symbol
+		SPISend(lcd, 0x46);									//F
+	}
+	else {
+		SPISend(lcd, 0xDF);									//degree symbol
+		SPISend(lcd, 0x43);									//C
+	}
 }

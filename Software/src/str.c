@@ -72,30 +72,6 @@ int float2str(float num,int decimals, int maxlen, char str[], int* len){
 		}
 		i++;
 	}
-	lcd_clear();
-	SPISend(lcd, 0xA0);
-	SPISend(lcd, 0xA0);
-	SPISend(lcd, 0xA0);
-	SPISend(lcd, 0xA0);
-	SPISend(lcd, 0xA0);
-    SPISend(lcd, str[0]);
-    SPISend(lcd, str[1]);
-    SPISend(lcd, str[2]);
-    SPISend(lcd, str[3]);
-    if(temp_mode == 2){
-    SPISend(lcd, str[4]);
-    SPISend(lcd, 0xA0);										//degree symbol
-    SPISend(lcd, 0x4B);
-    }
-    else if(temp_mode == 1) {
-    	if(str[3] == '.') SPISend(lcd, str[4]);
-    	SPISend(lcd, 0xDF);									//degree symbol
-    	SPISend(lcd, 0x46);									//F
-    }
-    else {
-    	SPISend(lcd, 0xDF);									//degree symbol
-    	SPISend(lcd, 0x43);									//C
-       }
 
 	return 0;
 }
