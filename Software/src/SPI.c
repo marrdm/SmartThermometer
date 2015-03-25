@@ -89,10 +89,4 @@ void delayMS(int milliSecs){
 		}
 	}
 }
-/*
-void delayUS(int microSecs){
-	int i = 0;
-	while( i< microSecs) i++;
-}
-}
-*/
+

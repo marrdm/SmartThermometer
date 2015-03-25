@@ -1,6 +1,6 @@
 Archive member included because of file (symbol)
 
-H:\Desktop\CMSISv2p00_LPC11xx\Debug\libCMSISv2p00_LPC11xx.a(system_LPC11xx.o)
+C:\Users\Marcus\Dropbox\E7020E (LP3 14-15)\Project\CMSISv2p00_LPC11xx\Debug\libCMSISv2p00_LPC11xx.a(system_LPC11xx.o)
                               ./src/cr_startup_lpc11xx.o (SystemInit)
 c:/nxp/lpcxpresso_7.5.0_254/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv6-m\libcr_c.a(__weak__main.o)
                               ./src/cr_startup_lpc11xx.o (__main)
@@ -225,30 +225,30 @@ Discarded input sections
  .debug_macro   0x00000000      0x5b2 ./src/uart.o
  .debug_macro   0x00000000      0x237 ./src/uart.o
  .debug_macro   0x00000000      0x131 ./src/uart.o
- .group         0x00000000        0x8 H:\Desktop\CMSISv2p00_LPC11xx\Debug\libCMSISv2p00_LPC11xx.a(system_LPC11xx.o)
- .group         0x00000000        0x8 H:\Desktop\CMSISv2p00_LPC11xx\Debug\libCMSISv2p00_LPC11xx.a(system_LPC11xx.o)
- .group         0x00000000        0x8 H:\Desktop\CMSISv2p00_LPC11xx\Debug\libCMSISv2p00_LPC11xx.a(system_LPC11xx.o)
- .group         0x00000000        0x8 H:\Desktop\CMSISv2p00_LPC11xx\Debug\libCMSISv2p00_LPC11xx.a(system_LPC11xx.o)
- .group         0x00000000        0x8 H:\Desktop\CMSISv2p00_LPC11xx\Debug\libCMSISv2p00_LPC11xx.a(system_LPC11xx.o)
- .group         0x00000000        0x8 H:\Desktop\CMSISv2p00_LPC11xx\Debug\libCMSISv2p00_LPC11xx.a(system_LPC11xx.o)
- .group         0x00000000        0x8 H:\Desktop\CMSISv2p00_LPC11xx\Debug\libCMSISv2p00_LPC11xx.a(system_LPC11xx.o)
- .group         0x00000000        0x8 H:\Desktop\CMSISv2p00_LPC11xx\Debug\libCMSISv2p00_LPC11xx.a(system_LPC11xx.o)
- .text          0x00000000        0x0 H:\Desktop\CMSISv2p00_LPC11xx\Debug\libCMSISv2p00_LPC11xx.a(system_LPC11xx.o)
- .data          0x00000000        0x0 H:\Desktop\CMSISv2p00_LPC11xx\Debug\libCMSISv2p00_LPC11xx.a(system_LPC11xx.o)
- .bss           0x00000000        0x0 H:\Desktop\CMSISv2p00_LPC11xx\Debug\libCMSISv2p00_LPC11xx.a(system_LPC11xx.o)
+ .group         0x00000000        0x8 C:\Users\Marcus\Dropbox\E7020E (LP3 14-15)\Project\CMSISv2p00_LPC11xx\Debug\libCMSISv2p00_LPC11xx.a(system_LPC11xx.o)
+ .group         0x00000000        0x8 C:\Users\Marcus\Dropbox\E7020E (LP3 14-15)\Project\CMSISv2p00_LPC11xx\Debug\libCMSISv2p00_LPC11xx.a(system_LPC11xx.o)
+ .group         0x00000000        0x8 C:\Users\Marcus\Dropbox\E7020E (LP3 14-15)\Project\CMSISv2p00_LPC11xx\Debug\libCMSISv2p00_LPC11xx.a(system_LPC11xx.o)
+ .group         0x00000000        0x8 C:\Users\Marcus\Dropbox\E7020E (LP3 14-15)\Project\CMSISv2p00_LPC11xx\Debug\libCMSISv2p00_LPC11xx.a(system_LPC11xx.o)
+ .group         0x00000000        0x8 C:\Users\Marcus\Dropbox\E7020E (LP3 14-15)\Project\CMSISv2p00_LPC11xx\Debug\libCMSISv2p00_LPC11xx.a(system_LPC11xx.o)
+ .group         0x00000000        0x8 C:\Users\Marcus\Dropbox\E7020E (LP3 14-15)\Project\CMSISv2p00_LPC11xx\Debug\libCMSISv2p00_LPC11xx.a(system_LPC11xx.o)
+ .group         0x00000000        0x8 C:\Users\Marcus\Dropbox\E7020E (LP3 14-15)\Project\CMSISv2p00_LPC11xx\Debug\libCMSISv2p00_LPC11xx.a(system_LPC11xx.o)
+ .group         0x00000000        0x8 C:\Users\Marcus\Dropbox\E7020E (LP3 14-15)\Project\CMSISv2p00_LPC11xx\Debug\libCMSISv2p00_LPC11xx.a(system_LPC11xx.o)
+ .text          0x00000000        0x0 C:\Users\Marcus\Dropbox\E7020E (LP3 14-15)\Project\CMSISv2p00_LPC11xx\Debug\libCMSISv2p00_LPC11xx.a(system_LPC11xx.o)
+ .data          0x00000000        0x0 C:\Users\Marcus\Dropbox\E7020E (LP3 14-15)\Project\CMSISv2p00_LPC11xx\Debug\libCMSISv2p00_LPC11xx.a(system_LPC11xx.o)
+ .bss           0x00000000        0x0 C:\Users\Marcus\Dropbox\E7020E (LP3 14-15)\Project\CMSISv2p00_LPC11xx\Debug\libCMSISv2p00_LPC11xx.a(system_LPC11xx.o)
  .text.SystemCoreClockUpdate
-                0x00000000       0xa0 H:\Desktop\CMSISv2p00_LPC11xx\Debug\libCMSISv2p00_LPC11xx.a(system_LPC11xx.o)
+                0x00000000       0xa0 C:\Users\Marcus\Dropbox\E7020E (LP3 14-15)\Project\CMSISv2p00_LPC11xx\Debug\libCMSISv2p00_LPC11xx.a(system_LPC11xx.o)
  .rodata.CSWTCH.7
-                0x00000000       0x40 H:\Desktop\CMSISv2p00_LPC11xx\Debug\libCMSISv2p00_LPC11xx.a(system_LPC11xx.o)
+                0x00000000       0x40 C:\Users\Marcus\Dropbox\E7020E (LP3 14-15)\Project\CMSISv2p00_LPC11xx\Debug\libCMSISv2p00_LPC11xx.a(system_LPC11xx.o)
  .data.SystemCoreClock
-                0x00000000        0x4 H:\Desktop\CMSISv2p00_LPC11xx\Debug\libCMSISv2p00_LPC11xx.a(system_LPC11xx.o)
- .debug_macro   0x00000000       0x10 H:\Desktop\CMSISv2p00_LPC11xx\Debug\libCMSISv2p00_LPC11xx.a(system_LPC11xx.o)
- .debug_macro   0x00000000      0x12d H:\Desktop\CMSISv2p00_LPC11xx\Debug\libCMSISv2p00_LPC11xx.a(system_LPC11xx.o)
- .debug_macro   0x00000000      0x5b2 H:\Desktop\CMSISv2p00_LPC11xx\Debug\libCMSISv2p00_LPC11xx.a(system_LPC11xx.o)
- .debug_macro   0x00000000       0x1c H:\Desktop\CMSISv2p00_LPC11xx\Debug\libCMSISv2p00_LPC11xx.a(system_LPC11xx.o)
- .debug_macro   0x00000000       0x2e H:\Desktop\CMSISv2p00_LPC11xx\Debug\libCMSISv2p00_LPC11xx.a(system_LPC11xx.o)
- .debug_macro   0x00000000      0x237 H:\Desktop\CMSISv2p00_LPC11xx\Debug\libCMSISv2p00_LPC11xx.a(system_LPC11xx.o)
- .debug_macro   0x00000000      0x131 H:\Desktop\CMSISv2p00_LPC11xx\Debug\libCMSISv2p00_LPC11xx.a(system_LPC11xx.o)
+                0x00000000        0x4 C:\Users\Marcus\Dropbox\E7020E (LP3 14-15)\Project\CMSISv2p00_LPC11xx\Debug\libCMSISv2p00_LPC11xx.a(system_LPC11xx.o)
+ .debug_macro   0x00000000       0x10 C:\Users\Marcus\Dropbox\E7020E (LP3 14-15)\Project\CMSISv2p00_LPC11xx\Debug\libCMSISv2p00_LPC11xx.a(system_LPC11xx.o)
+ .debug_macro   0x00000000      0x12d C:\Users\Marcus\Dropbox\E7020E (LP3 14-15)\Project\CMSISv2p00_LPC11xx\Debug\libCMSISv2p00_LPC11xx.a(system_LPC11xx.o)
+ .debug_macro   0x00000000      0x5b2 C:\Users\Marcus\Dropbox\E7020E (LP3 14-15)\Project\CMSISv2p00_LPC11xx\Debug\libCMSISv2p00_LPC11xx.a(system_LPC11xx.o)
+ .debug_macro   0x00000000       0x1c C:\Users\Marcus\Dropbox\E7020E (LP3 14-15)\Project\CMSISv2p00_LPC11xx\Debug\libCMSISv2p00_LPC11xx.a(system_LPC11xx.o)
+ .debug_macro   0x00000000       0x2e C:\Users\Marcus\Dropbox\E7020E (LP3 14-15)\Project\CMSISv2p00_LPC11xx\Debug\libCMSISv2p00_LPC11xx.a(system_LPC11xx.o)
+ .debug_macro   0x00000000      0x237 C:\Users\Marcus\Dropbox\E7020E (LP3 14-15)\Project\CMSISv2p00_LPC11xx\Debug\libCMSISv2p00_LPC11xx.a(system_LPC11xx.o)
+ .debug_macro   0x00000000      0x131 C:\Users\Marcus\Dropbox\E7020E (LP3 14-15)\Project\CMSISv2p00_LPC11xx\Debug\libCMSISv2p00_LPC11xx.a(system_LPC11xx.o)
  .text          0x00000000        0x0 c:/nxp/lpcxpresso_7.5.0_254/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv6-m\libcr_c.a(__weak__main.o)
  .data          0x00000000        0x0 c:/nxp/lpcxpresso_7.5.0_254/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv6-m\libcr_c.a(__weak__main.o)
  .bss           0x00000000        0x0 c:/nxp/lpcxpresso_7.5.0_254/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv6-m\libcr_c.a(__weak__main.o)
@@ -373,7 +373,7 @@ LOAD ./src/pwm.o
 LOAD ./src/str.o
 LOAD ./src/temp.o
 LOAD ./src/uart.o
-LOAD H:\Desktop\CMSISv2p00_LPC11xx\Debug\libCMSISv2p00_LPC11xx.a
+LOAD C:\Users\Marcus\Dropbox\E7020E (LP3 14-15)\Project\CMSISv2p00_LPC11xx\Debug\libCMSISv2p00_LPC11xx.a
 START GROUP
 LOAD c:/nxp/lpcxpresso_7.5.0_254/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv6-m\libcr_c.a
 LOAD c:/nxp/lpcxpresso_7.5.0_254/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/4.8.4/armv6-m\libcr_eabihelpers.a
@@ -510,7 +510,7 @@ END GROUP
                 0x000015c4       0x60 ./src/uart.o
                 0x000015c4                UART_IRQHandler
  .text.SystemInit
-                0x00001624       0x90 H:\Desktop\CMSISv2p00_LPC11xx\Debug\libCMSISv2p00_LPC11xx.a(system_LPC11xx.o)
+                0x00001624       0x90 C:\Users\Marcus\Dropbox\E7020E (LP3 14-15)\Project\CMSISv2p00_LPC11xx\Debug\libCMSISv2p00_LPC11xx.a(system_LPC11xx.o)
                 0x00001624                SystemInit
  .text.__weak_main
                 0x000016b4        0x8 c:/nxp/lpcxpresso_7.5.0_254/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv6-m\libcr_c.a(__weak__main.o)
@@ -703,7 +703,7 @@ OUTPUT(Software.axf elf32-littlearm)
  .debug_info    0x0000291e      0x22b ./src/str.o
  .debug_info    0x00002b49      0x127 ./src/temp.o
  .debug_info    0x00002c70      0xbd2 ./src/uart.o
- .debug_info    0x00003842      0x456 H:\Desktop\CMSISv2p00_LPC11xx\Debug\libCMSISv2p00_LPC11xx.a(system_LPC11xx.o)
+ .debug_info    0x00003842      0x456 C:\Users\Marcus\Dropbox\E7020E (LP3 14-15)\Project\CMSISv2p00_LPC11xx\Debug\libCMSISv2p00_LPC11xx.a(system_LPC11xx.o)
 
 .debug_abbrev   0x00000000      0xc77
  .debug_abbrev  0x00000000      0x1a4 ./src/SPI.o
@@ -715,7 +715,7 @@ OUTPUT(Software.axf elf32-littlearm)
  .debug_abbrev  0x00000807       0xd0 ./src/str.o
  .debug_abbrev  0x000008d7       0x9e ./src/temp.o
  .debug_abbrev  0x00000975      0x1fc ./src/uart.o
- .debug_abbrev  0x00000b71      0x106 H:\Desktop\CMSISv2p00_LPC11xx\Debug\libCMSISv2p00_LPC11xx.a(system_LPC11xx.o)
+ .debug_abbrev  0x00000b71      0x106 C:\Users\Marcus\Dropbox\E7020E (LP3 14-15)\Project\CMSISv2p00_LPC11xx\Debug\libCMSISv2p00_LPC11xx.a(system_LPC11xx.o)
 
 .debug_aranges  0x00000000      0x248
  .debug_aranges
@@ -737,7 +737,7 @@ OUTPUT(Software.axf elf32-littlearm)
  .debug_aranges
                 0x000001d0       0x50 ./src/uart.o
  .debug_aranges
-                0x00000220       0x28 H:\Desktop\CMSISv2p00_LPC11xx\Debug\libCMSISv2p00_LPC11xx.a(system_LPC11xx.o)
+                0x00000220       0x28 C:\Users\Marcus\Dropbox\E7020E (LP3 14-15)\Project\CMSISv2p00_LPC11xx\Debug\libCMSISv2p00_LPC11xx.a(system_LPC11xx.o)
 
 .debug_ranges   0x00000000      0x1a0
  .debug_ranges  0x00000000       0x30 ./src/SPI.o
@@ -748,7 +748,7 @@ OUTPUT(Software.axf elf32-littlearm)
  .debug_ranges  0x00000108       0x20 ./src/str.o
  .debug_ranges  0x00000128       0x20 ./src/temp.o
  .debug_ranges  0x00000148       0x40 ./src/uart.o
- .debug_ranges  0x00000188       0x18 H:\Desktop\CMSISv2p00_LPC11xx\Debug\libCMSISv2p00_LPC11xx.a(system_LPC11xx.o)
+ .debug_ranges  0x00000188       0x18 C:\Users\Marcus\Dropbox\E7020E (LP3 14-15)\Project\CMSISv2p00_LPC11xx\Debug\libCMSISv2p00_LPC11xx.a(system_LPC11xx.o)
 
 .debug_macro    0x00000000     0x24aa
  .debug_macro   0x00000000       0xdf ./src/SPI.o
@@ -775,42 +775,42 @@ OUTPUT(Software.axf elf32-littlearm)
  .debug_macro   0x0000191d       0xc4 ./src/str.o
  .debug_macro   0x000019e1       0xee ./src/temp.o
  .debug_macro   0x00001acf       0x86 ./src/uart.o
- .debug_macro   0x00001b55      0x13b H:\Desktop\CMSISv2p00_LPC11xx\Debug\libCMSISv2p00_LPC11xx.a(system_LPC11xx.o)
- .debug_macro   0x00001c90      0x81a H:\Desktop\CMSISv2p00_LPC11xx\Debug\libCMSISv2p00_LPC11xx.a(system_LPC11xx.o)
+ .debug_macro   0x00001b55      0x13b C:\Users\Marcus\Dropbox\E7020E (LP3 14-15)\Project\CMSISv2p00_LPC11xx\Debug\libCMSISv2p00_LPC11xx.a(system_LPC11xx.o)
+ .debug_macro   0x00001c90      0x81a C:\Users\Marcus\Dropbox\E7020E (LP3 14-15)\Project\CMSISv2p00_LPC11xx\Debug\libCMSISv2p00_LPC11xx.a(system_LPC11xx.o)
 
-.debug_line     0x00000000     0x1447
- .debug_line    0x00000000      0x295 ./src/SPI.o
- .debug_line    0x00000295      0x2c9 ./src/Software.o
- .debug_line    0x0000055e      0x26e ./src/adc.o
- .debug_line    0x000007cc       0xc2 ./src/cr_startup_lpc11xx.o
- .debug_line    0x0000088e       0x78 ./src/crp.o
- .debug_line    0x00000906      0x26b ./src/pwm.o
- .debug_line    0x00000b71      0x294 ./src/str.o
- .debug_line    0x00000e05      0x24e ./src/temp.o
- .debug_line    0x00001053      0x22d ./src/uart.o
- .debug_line    0x00001280      0x1c7 H:\Desktop\CMSISv2p00_LPC11xx\Debug\libCMSISv2p00_LPC11xx.a(system_LPC11xx.o)
+.debug_line     0x00000000     0x155f
+ .debug_line    0x00000000      0x2bd ./src/SPI.o
+ .debug_line    0x000002bd      0x2f1 ./src/Software.o
+ .debug_line    0x000005ae      0x296 ./src/adc.o
+ .debug_line    0x00000844       0xc2 ./src/cr_startup_lpc11xx.o
+ .debug_line    0x00000906       0x78 ./src/crp.o
+ .debug_line    0x0000097e      0x293 ./src/pwm.o
+ .debug_line    0x00000c11      0x2bc ./src/str.o
+ .debug_line    0x00000ecd      0x276 ./src/temp.o
+ .debug_line    0x00001143      0x255 ./src/uart.o
+ .debug_line    0x00001398      0x1c7 C:\Users\Marcus\Dropbox\E7020E (LP3 14-15)\Project\CMSISv2p00_LPC11xx\Debug\libCMSISv2p00_LPC11xx.a(system_LPC11xx.o)
 
-.debug_str      0x00000000     0x6966
- .debug_str     0x00000000     0x5dcc ./src/SPI.o
-                               0x5e4a (size before relaxing)
- .debug_str     0x00005dcc      0x2c4 ./src/Software.o
-                               0x5ee6 (size before relaxing)
- .debug_str     0x00006090       0x3b ./src/adc.o
-                               0x6060 (size before relaxing)
- .debug_str     0x000060cb      0x178 ./src/cr_startup_lpc11xx.o
-                               0x2454 (size before relaxing)
- .debug_str     0x00006243       0xe9 ./src/crp.o
-                               0x23b6 (size before relaxing)
- .debug_str     0x0000632c       0x37 ./src/pwm.o
-                               0x5dec (size before relaxing)
- .debug_str     0x00006363       0x6b ./src/str.o
-                               0x59f5 (size before relaxing)
- .debug_str     0x000063ce       0x42 ./src/temp.o
-                               0x59d7 (size before relaxing)
- .debug_str     0x00006410       0xc8 ./src/uart.o
-                               0x56ea (size before relaxing)
- .debug_str     0x000064d8      0x48e H:\Desktop\CMSISv2p00_LPC11xx\Debug\libCMSISv2p00_LPC11xx.a(system_LPC11xx.o)
-                               0x556f (size before relaxing)
+.debug_str      0x00000000     0x69b6
+ .debug_str     0x00000000     0x5df4 ./src/SPI.o
+                               0x5e72 (size before relaxing)
+ .debug_str     0x00005df4      0x2c4 ./src/Software.o
+                               0x5f0e (size before relaxing)
+ .debug_str     0x000060b8       0x3b ./src/adc.o
+                               0x6088 (size before relaxing)
+ .debug_str     0x000060f3      0x178 ./src/cr_startup_lpc11xx.o
+                               0x247c (size before relaxing)
+ .debug_str     0x0000626b       0xe9 ./src/crp.o
+                               0x23de (size before relaxing)
+ .debug_str     0x00006354       0x37 ./src/pwm.o
+                               0x5e14 (size before relaxing)
+ .debug_str     0x0000638b       0x6b ./src/str.o
+                               0x5a1d (size before relaxing)
+ .debug_str     0x000063f6       0x42 ./src/temp.o
+                               0x59ff (size before relaxing)
+ .debug_str     0x00006438       0xc8 ./src/uart.o
+                               0x5712 (size before relaxing)
+ .debug_str     0x00006500      0x4b6 C:\Users\Marcus\Dropbox\E7020E (LP3 14-15)\Project\CMSISv2p00_LPC11xx\Debug\libCMSISv2p00_LPC11xx.a(system_LPC11xx.o)
+                               0x5597 (size before relaxing)
 
 .comment        0x00000000       0xe0
  .comment       0x00000000       0x70 ./src/SPI.o
@@ -823,7 +823,7 @@ OUTPUT(Software.axf elf32-littlearm)
  .comment       0x00000000       0x71 ./src/str.o
  .comment       0x00000000       0x71 ./src/temp.o
  .comment       0x00000000       0x71 ./src/uart.o
- .comment       0x00000000       0x71 H:\Desktop\CMSISv2p00_LPC11xx\Debug\libCMSISv2p00_LPC11xx.a(system_LPC11xx.o)
+ .comment       0x00000000       0x71 C:\Users\Marcus\Dropbox\E7020E (LP3 14-15)\Project\CMSISv2p00_LPC11xx\Debug\libCMSISv2p00_LPC11xx.a(system_LPC11xx.o)
  .comment       0x00000070       0x70 c:/nxp/lpcxpresso_7.5.0_254/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv6-m\libcr_c.a(__weak__main.o)
                                  0x71 (size before relaxing)
  .comment       0x00000000       0x71 c:/nxp/lpcxpresso_7.5.0_254/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv6-m\libcr_c.a(pow.o)
@@ -855,7 +855,7 @@ OUTPUT(Software.axf elf32-littlearm)
  .ARM.attributes
                 0x00000188       0x31 ./src/uart.o
  .ARM.attributes
-                0x000001b9       0x31 H:\Desktop\CMSISv2p00_LPC11xx\Debug\libCMSISv2p00_LPC11xx.a(system_LPC11xx.o)
+                0x000001b9       0x31 C:\Users\Marcus\Dropbox\E7020E (LP3 14-15)\Project\CMSISv2p00_LPC11xx\Debug\libCMSISv2p00_LPC11xx.a(system_LPC11xx.o)
  .ARM.attributes
                 0x000001ea       0x31 c:/nxp/lpcxpresso_7.5.0_254/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv6-m\libcr_c.a(__weak__main.o)
  .ARM.attributes
@@ -888,7 +888,7 @@ OUTPUT(Software.axf elf32-littlearm)
  .debug_frame   0x000003a4       0x7c ./src/str.o
  .debug_frame   0x00000420       0x68 ./src/temp.o
  .debug_frame   0x00000488       0xec ./src/uart.o
- .debug_frame   0x00000574       0x44 H:\Desktop\CMSISv2p00_LPC11xx\Debug\libCMSISv2p00_LPC11xx.a(system_LPC11xx.o)
+ .debug_frame   0x00000574       0x44 C:\Users\Marcus\Dropbox\E7020E (LP3 14-15)\Project\CMSISv2p00_LPC11xx\Debug\libCMSISv2p00_LPC11xx.a(system_LPC11xx.o)
 
 .debug_loc      0x00000000       0x84
- .debug_loc     0x00000000       0x84 H:\Desktop\CMSISv2p00_LPC11xx\Debug\libCMSISv2p00_LPC11xx.a(system_LPC11xx.o)
+ .debug_loc     0x00000000       0x84 C:\Users\Marcus\Dropbox\E7020E (LP3 14-15)\Project\CMSISv2p00_LPC11xx\Debug\libCMSISv2p00_LPC11xx.a(system_LPC11xx.o)
