@@ -9,6 +9,7 @@
 #define STR_H_
 
 #include <math.h>
+#include "SPI.h"
 
 int int2str(int num, int maxlen, char str[], int* len);
 int float2str(float num,int decimals, int maxlen, char str[], int* len);

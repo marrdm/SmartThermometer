@@ -16,6 +16,7 @@
 
 char string[16];
 
+
 void parser(char str[], int len);
 
 void TIMER16_0_IRQHandler (void);
@@ -36,7 +37,7 @@ int main(void) {
 	LPC_TMR16B1->MCR |= 0b10;
 	LPC_TMR16B1->PR = 48 - 1;					//reset on match on MRO, no interrupt
 	LPC_TMR16B1->MR0 = 1000 - 1;				//interrupt every millisecond seconds
-	LPC_TMR16B1->EMR = 2<<4;					//set EM1 high on match
+	LPC_TMR16B1->EMR = 3<<4;					//toggle on match
 	LPC_TMR16B1->TCR = 2;
 	LPC_TMR16B1->TCR = 1;
 												//button initialization code
@@ -46,13 +47,12 @@ int main(void) {
 	LPC_GPIO1->IEV &= ~(1<<4);					//trigger on falling edge
 	LPC_GPIO1->IE |= (1<<4);					//enable interrupt
 
-
 	
 
 
 	__disable_irq();
 	SPI_init();
-//	lcd_init();
+	lcd_init();
 	NVIC_SetPriority(TIMER_16_0_IRQn, 1);		//enable timer interrupt
 	NVIC_EnableIRQ(TIMER_16_0_IRQn);
 	uart_init();
@@ -61,14 +61,17 @@ int main(void) {
 	NVIC_EnableIRQ(EINT1_IRQn);
 	adc_init();
 	__enable_irq();								//enable all interrupts
+	delayMS(200);
+
+
 
 
     while(1) {
-    	//while(i<10000){
-    	//	i++;
-    	//}
+    	int i=0;
+
     	int v = 0x7E;
-//    	LPC_SSP1->DR = v;
+
+//   	LPC_SSP1->DR = v;
  //   	LPC_SSP1->DR = 73;
 //    	for(i=0; i<0xFFFFF; i++);			//delay to make scope reading easier
     }

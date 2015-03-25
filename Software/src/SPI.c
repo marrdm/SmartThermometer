@@ -7,10 +7,7 @@
 
 #include "SPI.h"
 
-#define lcd 0b0000
-#define sd 	0b0100
-#define rtc 0b1000
-#define ext 0b1100
+
 
 void SPI_init(){
 
@@ -27,7 +24,6 @@ void SPI_init(){
 	LPC_SYSCON->SSP1CLKDIV |= 48;				//table 24, SCK1 is set to 1 MHz
 	LPC_SSP1->CR0 |= 0x7;						//8 bit mode
 	LPC_SSP1->CPSR = 126;						//prescaler down from SPI_PCLK, 380 kHz
-	LPC_SYSCON->PRESETCTRL |= (1<<2);		//de-asserts reset signal
 	LPC_SSP1->CR1 |= 2;							//enable SPI controller
 
 
@@ -38,9 +34,9 @@ void lcd_init(){
 	LPC_GPIO2->DIR = (1<<2);
 	LPC_GPIO2->DATA &= ~(1<<2);		//drive RS low
 	delayMS(200);
-	SPISend(lcd, 0x38);					//function set
+	SPISend(lcd, 0x35);					//function set
 	delayMS(2);						//delay may not be needed
-	SPISend(lcd, 0x39);					//function set
+	SPISend(lcd, 0x35);					//function set
 	delayMS(2);
 	SPISend(lcd, 0x14);					//internal OSC frequency = 380 kHz, Bias for 3.3V
 	delayMS(2);
@@ -56,20 +52,40 @@ void lcd_init(){
 	delayMS(20);
 	SPISend(lcd, 0x06);
 	delayMS(2);
+
+	LPC_GPIO2->DATA |= (1<<2);		//drive RS high
+}
+
+void lcd_clear()
+{
+	LPC_GPIO2->DATA &= ~(1<<2);		//drive RS high
+
+	SPISend(lcd, 0x1);
+	delayMS(2);
+	SPISend(lcd, 0x2);
+	delayMS(2);
+
+	LPC_GPIO2->DATA |= (1<<2);		//drive RS high
 }
 
 void SPISend(char device, char display){
 	LPC_GPIO2->DATA &= ~(device);
 	LPC_GPIO2->DATA |= device;			//set mux to select proper chip
+
 	LPC_SSP1->DR = display;				//write data to send register
+
+	while(!(LPC_SSP1->SR & (1 << 0)));
 }
 
 void delayMS(int milliSecs){
 	int i = 0;
+	int j = 0;
 	while(i<milliSecs){
-		if(LPC_TMR16B1->EMR & 1){		//wait until EM1 is high, this means it has been a millisecond
-			LPC_TMR16B0->EMR &= ~(1<<1);	//set EM1 back low
+		if(!((LPC_TMR16B1->EMR & 1) == j)){		//wait until EM1 is high, this means it has been a millisecond
+			//LPC_TMR16B1->EMR &= 0;	//set EM1 back low
+			j = LPC_TMR16B1->EMR & 1;
 			i++;
+
 		}
 	}
 }
